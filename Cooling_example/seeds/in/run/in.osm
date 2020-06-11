@@ -40019,7 +40019,7 @@ OS:WeatherFile,
   -105.24,                                !- Longitude {deg}
   -7,                                     !- Time Zone {hr}
   1689,                                   !- Elevation {m}
-  USA_CO_Boulder-Broomfield-Jefferson.County.AP.724699_TMY3.epw, !- Url
+  C:/Users/Zahra Fallahi/AppData/Local/Temp/osmodel-1591843342-0/resources/files/USA_CO_Boulder-Broomfield-Jefferson.County.AP.724699_TMY3.epw, !- Url
   AC900369;                               !- Checksum
 
 OS:RadianceParameters,

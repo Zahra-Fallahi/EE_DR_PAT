@@ -12043,9 +12043,15 @@ OS:Schedule:Day,
   Schedule Day 13,                        !- Name
   {d3f1fc5b-d673-4714-b70d-aa08e0a3a0ca}, !- Schedule Type Limits Name
   ,                                       !- Interpolate to Timestep
-  24,                                     !- Hour 1
+  9,                                      !- Hour 1
   0,                                      !- Minute 1
-  0;                                      !- Value Until Time 1
+  0,                                      !- Value Until Time 1
+  10,                                     !- Hour 2
+  0,                                      !- Minute 2
+  25.5,                                   !- Value Until Time 2
+  24,                                     !- Hour 3
+  0,                                      !- Minute 3
+  0;                                      !- Value Until Time 3
 
 OS:Schedule:Rule,
   {8d9c3522-8d08-4f3d-acf9-f7886a9728c6}, !- Handle
@@ -12100,7 +12106,7 @@ OS:Schedule:Day,
   20.5555555555556,                       !- Value Until Time 9
   10,                                     !- Hour 10
   0,                                      !- Minute 10
-  22.7777777777778,                       !- Value Until Time 10
+  25.5,                                   !- Value Until Time 10
   11,                                     !- Hour 11
   0,                                      !- Minute 11
   22.7777777777778,                       !- Value Until Time 11
@@ -12197,7 +12203,7 @@ OS:Schedule:Day,
   20.5555555555556,                       !- Value Until Time 9
   10,                                     !- Hour 10
   0,                                      !- Minute 10
-  22.7777777777778,                       !- Value Until Time 10
+  25.5,                                   !- Value Until Time 10
   11,                                     !- Hour 11
   0,                                      !- Minute 11
   22.7777777777778,                       !- Value Until Time 11
@@ -12294,7 +12300,7 @@ OS:Schedule:Day,
   20.5555555555556,                       !- Value Until Time 9
   10,                                     !- Hour 10
   0,                                      !- Minute 10
-  22.7777777777778,                       !- Value Until Time 10
+  25.5,                                   !- Value Until Time 10
   11,                                     !- Hour 11
   0,                                      !- Minute 11
   22.7777777777778,                       !- Value Until Time 11
@@ -12391,7 +12397,7 @@ OS:Schedule:Day,
   20.5555555555556,                       !- Value Until Time 9
   10,                                     !- Hour 10
   0,                                      !- Minute 10
-  22.7777777777778,                       !- Value Until Time 10
+  25.5,                                   !- Value Until Time 10
   11,                                     !- Hour 11
   0,                                      !- Minute 11
   22.7777777777778,                       !- Value Until Time 11
@@ -12488,7 +12494,7 @@ OS:Schedule:Day,
   20.5555555555556,                       !- Value Until Time 9
   10,                                     !- Hour 10
   0,                                      !- Minute 10
-  22.7777777777778,                       !- Value Until Time 10
+  25.5,                                   !- Value Until Time 10
   11,                                     !- Hour 11
   0,                                      !- Minute 11
   22.7777777777778,                       !- Value Until Time 11
@@ -12585,7 +12591,7 @@ OS:Schedule:Day,
   20.5555555555556,                       !- Value Until Time 9
   10,                                     !- Hour 10
   0,                                      !- Minute 10
-  22.7777777777778,                       !- Value Until Time 10
+  25.5,                                   !- Value Until Time 10
   11,                                     !- Hour 11
   0,                                      !- Minute 11
   22.7777777777778,                       !- Value Until Time 11
@@ -12682,7 +12688,7 @@ OS:Schedule:Day,
   20.5555555555556,                       !- Value Until Time 9
   10,                                     !- Hour 10
   0,                                      !- Minute 10
-  22.7777777777778,                       !- Value Until Time 10
+  25.5,                                   !- Value Until Time 10
   11,                                     !- Hour 11
   0,                                      !- Minute 11
   22.7777777777778,                       !- Value Until Time 11
@@ -12779,7 +12785,7 @@ OS:Schedule:Day,
   20.5555555555556,                       !- Value Until Time 9
   10,                                     !- Hour 10
   0,                                      !- Minute 10
-  22.7777777777778,                       !- Value Until Time 10
+  25.5,                                   !- Value Until Time 10
   11,                                     !- Hour 11
   0,                                      !- Minute 11
   22.7777777777778,                       !- Value Until Time 11
@@ -12876,7 +12882,7 @@ OS:Schedule:Day,
   20.5555555555556,                       !- Value Until Time 9
   10,                                     !- Hour 10
   0,                                      !- Minute 10
-  22.7777777777778,                       !- Value Until Time 10
+  25.5,                                   !- Value Until Time 10
   11,                                     !- Hour 11
   0,                                      !- Minute 11
   22.7777777777778,                       !- Value Until Time 11
@@ -12973,7 +12979,7 @@ OS:Schedule:Day,
   20.5555555555556,                       !- Value Until Time 9
   10,                                     !- Hour 10
   0,                                      !- Minute 10
-  22.7777777777778,                       !- Value Until Time 10
+  25.5,                                   !- Value Until Time 10
   11,                                     !- Hour 11
   0,                                      !- Minute 11
   22.7777777777778,                       !- Value Until Time 11
@@ -13070,7 +13076,7 @@ OS:Schedule:Day,
   20.5555555555556,                       !- Value Until Time 9
   10,                                     !- Hour 10
   0,                                      !- Minute 10
-  22.7777777777778,                       !- Value Until Time 10
+  25.5,                                   !- Value Until Time 10
   11,                                     !- Hour 11
   0,                                      !- Minute 11
   22.7777777777778,                       !- Value Until Time 11
@@ -13167,7 +13173,7 @@ OS:Schedule:Day,
   20.5555555555556,                       !- Value Until Time 9
   10,                                     !- Hour 10
   0,                                      !- Minute 10
-  22.7777777777778,                       !- Value Until Time 10
+  25.5,                                   !- Value Until Time 10
   11,                                     !- Hour 11
   0,                                      !- Minute 11
   22.7777777777778,                       !- Value Until Time 11
@@ -40019,7 +40025,7 @@ OS:WeatherFile,
   -105.24,                                !- Longitude {deg}
   -7,                                     !- Time Zone {hr}
   1689,                                   !- Elevation {m}
-  USA_CO_Boulder-Broomfield-Jefferson.County.AP.724699_TMY3.epw, !- Url
+  C:/Users/Zahra Fallahi/AppData/Local/Temp/osmodel-1591844027-0/resources/files/USA_CO_Boulder-Broomfield-Jefferson.County.AP.724699_TMY3.epw, !- Url
   AC900369;                               !- Checksum
 
 OS:RadianceParameters,

@@ -1,0 +1,1371 @@
+*************************************************
+Starting Hour = 9.0
+Ending Hour = 
+*************************************************
+
+Modifiying ScheduleRuleset res cooling setpoint
+
+    Modifiying ScheduleDay Schedule Day 13
+
+        Checking data pair: Time = 24.0; Value = 0.0
+            Day time (24.0) is greater than Starting hour (9.0)
+            Adding a Starting Hour data pair: Time = 9.0; Value = 0.0
+            Day time (24.0) is greater than Ending hour (10.0)
+            Adding an Ending Hour data pair with specified Cooling Setpoint: Time = 10.0; Value = 25.5
+            Adding data pair as is: Time = 24:00:00; Value = 0.0
+
+    Modifiying ScheduleDay res cooling setpoint allday12
+
+        Checking data pair: Time = 1.0; Value = 22.7777777777778
+            Day time (1.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 01:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 2.0; Value = 22.7777777777778
+            Day time (2.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 02:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 3.0; Value = 22.7777777777778
+            Day time (3.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 03:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 4.0; Value = 22.7777777777778
+            Day time (4.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 04:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 5.0; Value = 22.7777777777778
+            Day time (5.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 05:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 6.0; Value = 22.7777777777778
+            Day time (6.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 06:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 7.0; Value = 22.7777777777778
+            Day time (7.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 07:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 8.0; Value = 20.5555555555556
+            Day time (8.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 08:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 9.0; Value = 20.5555555555556
+            Day time (9.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 09:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 10.0; Value = 22.7777777777778
+            Day time (10.0) is greater than Starting hour (9.0)
+            Day time (10.0) is less than or equal to Ending hour (10.0)
+            Adding data pair with specified Cooling Setpoint: Time = 10:00:00; Value = 25.5
+
+        Checking data pair: Time = 11.0; Value = 22.7777777777778
+            Day time (11.0) is greater than Starting hour (9.0)
+            Day time (11.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 11:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 12.0; Value = 22.7777777777778
+            Day time (12.0) is greater than Starting hour (9.0)
+            Day time (12.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 12:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 13.0; Value = 22.7777777777778
+            Day time (13.0) is greater than Starting hour (9.0)
+            Day time (13.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 13:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 14.0; Value = 22.7777777777778
+            Day time (14.0) is greater than Starting hour (9.0)
+            Day time (14.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 14:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 15.0; Value = 22.7777777777778
+            Day time (15.0) is greater than Starting hour (9.0)
+            Day time (15.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 15:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 16.0; Value = 22.7777777777778
+            Day time (16.0) is greater than Starting hour (9.0)
+            Day time (16.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 16:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 17.0; Value = 22.7777777777778
+            Day time (17.0) is greater than Starting hour (9.0)
+            Day time (17.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 17:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 18.0; Value = 20.5555555555556
+            Day time (18.0) is greater than Starting hour (9.0)
+            Day time (18.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 18:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 19.0; Value = 20.5555555555556
+            Day time (19.0) is greater than Starting hour (9.0)
+            Day time (19.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 19:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 20.0; Value = 20.5555555555556
+            Day time (20.0) is greater than Starting hour (9.0)
+            Day time (20.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 20:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 21.0; Value = 20.5555555555556
+            Day time (21.0) is greater than Starting hour (9.0)
+            Day time (21.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 21:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 22.0; Value = 20.5555555555556
+            Day time (22.0) is greater than Starting hour (9.0)
+            Day time (22.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 22:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 23.0; Value = 22.7777777777778
+            Day time (23.0) is greater than Starting hour (9.0)
+            Day time (23.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 23:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 24.0; Value = 22.7777777777778
+            Day time (24.0) is greater than Starting hour (9.0)
+            Day time (24.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 24:00:00; Value = 22.7777777777778
+
+    Modifiying ScheduleDay res cooling setpoint allday11
+
+        Checking data pair: Time = 1.0; Value = 22.7777777777778
+            Day time (1.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 01:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 2.0; Value = 22.7777777777778
+            Day time (2.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 02:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 3.0; Value = 22.7777777777778
+            Day time (3.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 03:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 4.0; Value = 22.7777777777778
+            Day time (4.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 04:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 5.0; Value = 22.7777777777778
+            Day time (5.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 05:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 6.0; Value = 22.7777777777778
+            Day time (6.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 06:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 7.0; Value = 22.7777777777778
+            Day time (7.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 07:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 8.0; Value = 20.5555555555556
+            Day time (8.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 08:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 9.0; Value = 20.5555555555556
+            Day time (9.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 09:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 10.0; Value = 22.7777777777778
+            Day time (10.0) is greater than Starting hour (9.0)
+            Day time (10.0) is less than or equal to Ending hour (10.0)
+            Adding data pair with specified Cooling Setpoint: Time = 10:00:00; Value = 25.5
+
+        Checking data pair: Time = 11.0; Value = 22.7777777777778
+            Day time (11.0) is greater than Starting hour (9.0)
+            Day time (11.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 11:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 12.0; Value = 22.7777777777778
+            Day time (12.0) is greater than Starting hour (9.0)
+            Day time (12.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 12:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 13.0; Value = 22.7777777777778
+            Day time (13.0) is greater than Starting hour (9.0)
+            Day time (13.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 13:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 14.0; Value = 22.7777777777778
+            Day time (14.0) is greater than Starting hour (9.0)
+            Day time (14.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 14:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 15.0; Value = 22.7777777777778
+            Day time (15.0) is greater than Starting hour (9.0)
+            Day time (15.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 15:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 16.0; Value = 22.7777777777778
+            Day time (16.0) is greater than Starting hour (9.0)
+            Day time (16.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 16:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 17.0; Value = 22.7777777777778
+            Day time (17.0) is greater than Starting hour (9.0)
+            Day time (17.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 17:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 18.0; Value = 20.5555555555556
+            Day time (18.0) is greater than Starting hour (9.0)
+            Day time (18.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 18:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 19.0; Value = 20.5555555555556
+            Day time (19.0) is greater than Starting hour (9.0)
+            Day time (19.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 19:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 20.0; Value = 20.5555555555556
+            Day time (20.0) is greater than Starting hour (9.0)
+            Day time (20.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 20:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 21.0; Value = 20.5555555555556
+            Day time (21.0) is greater than Starting hour (9.0)
+            Day time (21.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 21:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 22.0; Value = 20.5555555555556
+            Day time (22.0) is greater than Starting hour (9.0)
+            Day time (22.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 22:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 23.0; Value = 22.7777777777778
+            Day time (23.0) is greater than Starting hour (9.0)
+            Day time (23.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 23:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 24.0; Value = 22.7777777777778
+            Day time (24.0) is greater than Starting hour (9.0)
+            Day time (24.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 24:00:00; Value = 22.7777777777778
+
+    Modifiying ScheduleDay res cooling setpoint allday10
+
+        Checking data pair: Time = 1.0; Value = 22.7777777777778
+            Day time (1.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 01:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 2.0; Value = 22.7777777777778
+            Day time (2.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 02:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 3.0; Value = 22.7777777777778
+            Day time (3.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 03:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 4.0; Value = 22.7777777777778
+            Day time (4.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 04:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 5.0; Value = 22.7777777777778
+            Day time (5.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 05:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 6.0; Value = 22.7777777777778
+            Day time (6.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 06:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 7.0; Value = 22.7777777777778
+            Day time (7.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 07:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 8.0; Value = 20.5555555555556
+            Day time (8.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 08:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 9.0; Value = 20.5555555555556
+            Day time (9.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 09:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 10.0; Value = 22.7777777777778
+            Day time (10.0) is greater than Starting hour (9.0)
+            Day time (10.0) is less than or equal to Ending hour (10.0)
+            Adding data pair with specified Cooling Setpoint: Time = 10:00:00; Value = 25.5
+
+        Checking data pair: Time = 11.0; Value = 22.7777777777778
+            Day time (11.0) is greater than Starting hour (9.0)
+            Day time (11.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 11:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 12.0; Value = 22.7777777777778
+            Day time (12.0) is greater than Starting hour (9.0)
+            Day time (12.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 12:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 13.0; Value = 22.7777777777778
+            Day time (13.0) is greater than Starting hour (9.0)
+            Day time (13.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 13:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 14.0; Value = 22.7777777777778
+            Day time (14.0) is greater than Starting hour (9.0)
+            Day time (14.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 14:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 15.0; Value = 22.7777777777778
+            Day time (15.0) is greater than Starting hour (9.0)
+            Day time (15.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 15:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 16.0; Value = 22.7777777777778
+            Day time (16.0) is greater than Starting hour (9.0)
+            Day time (16.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 16:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 17.0; Value = 22.7777777777778
+            Day time (17.0) is greater than Starting hour (9.0)
+            Day time (17.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 17:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 18.0; Value = 20.5555555555556
+            Day time (18.0) is greater than Starting hour (9.0)
+            Day time (18.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 18:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 19.0; Value = 20.5555555555556
+            Day time (19.0) is greater than Starting hour (9.0)
+            Day time (19.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 19:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 20.0; Value = 20.5555555555556
+            Day time (20.0) is greater than Starting hour (9.0)
+            Day time (20.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 20:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 21.0; Value = 20.5555555555556
+            Day time (21.0) is greater than Starting hour (9.0)
+            Day time (21.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 21:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 22.0; Value = 20.5555555555556
+            Day time (22.0) is greater than Starting hour (9.0)
+            Day time (22.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 22:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 23.0; Value = 22.7777777777778
+            Day time (23.0) is greater than Starting hour (9.0)
+            Day time (23.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 23:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 24.0; Value = 22.7777777777778
+            Day time (24.0) is greater than Starting hour (9.0)
+            Day time (24.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 24:00:00; Value = 22.7777777777778
+
+    Modifiying ScheduleDay res cooling setpoint allday9
+
+        Checking data pair: Time = 1.0; Value = 22.7777777777778
+            Day time (1.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 01:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 2.0; Value = 22.7777777777778
+            Day time (2.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 02:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 3.0; Value = 22.7777777777778
+            Day time (3.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 03:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 4.0; Value = 22.7777777777778
+            Day time (4.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 04:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 5.0; Value = 22.7777777777778
+            Day time (5.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 05:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 6.0; Value = 22.7777777777778
+            Day time (6.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 06:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 7.0; Value = 22.7777777777778
+            Day time (7.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 07:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 8.0; Value = 20.5555555555556
+            Day time (8.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 08:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 9.0; Value = 20.5555555555556
+            Day time (9.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 09:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 10.0; Value = 22.7777777777778
+            Day time (10.0) is greater than Starting hour (9.0)
+            Day time (10.0) is less than or equal to Ending hour (10.0)
+            Adding data pair with specified Cooling Setpoint: Time = 10:00:00; Value = 25.5
+
+        Checking data pair: Time = 11.0; Value = 22.7777777777778
+            Day time (11.0) is greater than Starting hour (9.0)
+            Day time (11.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 11:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 12.0; Value = 22.7777777777778
+            Day time (12.0) is greater than Starting hour (9.0)
+            Day time (12.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 12:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 13.0; Value = 22.7777777777778
+            Day time (13.0) is greater than Starting hour (9.0)
+            Day time (13.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 13:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 14.0; Value = 22.7777777777778
+            Day time (14.0) is greater than Starting hour (9.0)
+            Day time (14.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 14:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 15.0; Value = 22.7777777777778
+            Day time (15.0) is greater than Starting hour (9.0)
+            Day time (15.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 15:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 16.0; Value = 22.7777777777778
+            Day time (16.0) is greater than Starting hour (9.0)
+            Day time (16.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 16:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 17.0; Value = 22.7777777777778
+            Day time (17.0) is greater than Starting hour (9.0)
+            Day time (17.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 17:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 18.0; Value = 20.5555555555556
+            Day time (18.0) is greater than Starting hour (9.0)
+            Day time (18.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 18:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 19.0; Value = 20.5555555555556
+            Day time (19.0) is greater than Starting hour (9.0)
+            Day time (19.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 19:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 20.0; Value = 20.5555555555556
+            Day time (20.0) is greater than Starting hour (9.0)
+            Day time (20.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 20:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 21.0; Value = 20.5555555555556
+            Day time (21.0) is greater than Starting hour (9.0)
+            Day time (21.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 21:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 22.0; Value = 20.5555555555556
+            Day time (22.0) is greater than Starting hour (9.0)
+            Day time (22.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 22:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 23.0; Value = 22.7777777777778
+            Day time (23.0) is greater than Starting hour (9.0)
+            Day time (23.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 23:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 24.0; Value = 22.7777777777778
+            Day time (24.0) is greater than Starting hour (9.0)
+            Day time (24.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 24:00:00; Value = 22.7777777777778
+
+    Modifiying ScheduleDay res cooling setpoint allday8
+
+        Checking data pair: Time = 1.0; Value = 22.7777777777778
+            Day time (1.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 01:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 2.0; Value = 22.7777777777778
+            Day time (2.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 02:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 3.0; Value = 22.7777777777778
+            Day time (3.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 03:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 4.0; Value = 22.7777777777778
+            Day time (4.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 04:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 5.0; Value = 22.7777777777778
+            Day time (5.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 05:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 6.0; Value = 22.7777777777778
+            Day time (6.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 06:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 7.0; Value = 22.7777777777778
+            Day time (7.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 07:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 8.0; Value = 20.5555555555556
+            Day time (8.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 08:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 9.0; Value = 20.5555555555556
+            Day time (9.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 09:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 10.0; Value = 22.7777777777778
+            Day time (10.0) is greater than Starting hour (9.0)
+            Day time (10.0) is less than or equal to Ending hour (10.0)
+            Adding data pair with specified Cooling Setpoint: Time = 10:00:00; Value = 25.5
+
+        Checking data pair: Time = 11.0; Value = 22.7777777777778
+            Day time (11.0) is greater than Starting hour (9.0)
+            Day time (11.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 11:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 12.0; Value = 22.7777777777778
+            Day time (12.0) is greater than Starting hour (9.0)
+            Day time (12.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 12:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 13.0; Value = 22.7777777777778
+            Day time (13.0) is greater than Starting hour (9.0)
+            Day time (13.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 13:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 14.0; Value = 22.7777777777778
+            Day time (14.0) is greater than Starting hour (9.0)
+            Day time (14.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 14:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 15.0; Value = 22.7777777777778
+            Day time (15.0) is greater than Starting hour (9.0)
+            Day time (15.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 15:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 16.0; Value = 22.7777777777778
+            Day time (16.0) is greater than Starting hour (9.0)
+            Day time (16.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 16:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 17.0; Value = 22.7777777777778
+            Day time (17.0) is greater than Starting hour (9.0)
+            Day time (17.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 17:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 18.0; Value = 20.5555555555556
+            Day time (18.0) is greater than Starting hour (9.0)
+            Day time (18.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 18:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 19.0; Value = 20.5555555555556
+            Day time (19.0) is greater than Starting hour (9.0)
+            Day time (19.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 19:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 20.0; Value = 20.5555555555556
+            Day time (20.0) is greater than Starting hour (9.0)
+            Day time (20.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 20:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 21.0; Value = 20.5555555555556
+            Day time (21.0) is greater than Starting hour (9.0)
+            Day time (21.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 21:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 22.0; Value = 20.5555555555556
+            Day time (22.0) is greater than Starting hour (9.0)
+            Day time (22.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 22:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 23.0; Value = 22.7777777777778
+            Day time (23.0) is greater than Starting hour (9.0)
+            Day time (23.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 23:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 24.0; Value = 22.7777777777778
+            Day time (24.0) is greater than Starting hour (9.0)
+            Day time (24.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 24:00:00; Value = 22.7777777777778
+
+    Modifiying ScheduleDay res cooling setpoint allday7
+
+        Checking data pair: Time = 1.0; Value = 22.7777777777778
+            Day time (1.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 01:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 2.0; Value = 22.7777777777778
+            Day time (2.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 02:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 3.0; Value = 22.7777777777778
+            Day time (3.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 03:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 4.0; Value = 22.7777777777778
+            Day time (4.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 04:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 5.0; Value = 22.7777777777778
+            Day time (5.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 05:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 6.0; Value = 22.7777777777778
+            Day time (6.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 06:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 7.0; Value = 22.7777777777778
+            Day time (7.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 07:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 8.0; Value = 20.5555555555556
+            Day time (8.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 08:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 9.0; Value = 20.5555555555556
+            Day time (9.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 09:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 10.0; Value = 22.7777777777778
+            Day time (10.0) is greater than Starting hour (9.0)
+            Day time (10.0) is less than or equal to Ending hour (10.0)
+            Adding data pair with specified Cooling Setpoint: Time = 10:00:00; Value = 25.5
+
+        Checking data pair: Time = 11.0; Value = 22.7777777777778
+            Day time (11.0) is greater than Starting hour (9.0)
+            Day time (11.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 11:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 12.0; Value = 22.7777777777778
+            Day time (12.0) is greater than Starting hour (9.0)
+            Day time (12.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 12:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 13.0; Value = 22.7777777777778
+            Day time (13.0) is greater than Starting hour (9.0)
+            Day time (13.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 13:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 14.0; Value = 22.7777777777778
+            Day time (14.0) is greater than Starting hour (9.0)
+            Day time (14.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 14:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 15.0; Value = 22.7777777777778
+            Day time (15.0) is greater than Starting hour (9.0)
+            Day time (15.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 15:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 16.0; Value = 22.7777777777778
+            Day time (16.0) is greater than Starting hour (9.0)
+            Day time (16.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 16:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 17.0; Value = 22.7777777777778
+            Day time (17.0) is greater than Starting hour (9.0)
+            Day time (17.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 17:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 18.0; Value = 20.5555555555556
+            Day time (18.0) is greater than Starting hour (9.0)
+            Day time (18.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 18:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 19.0; Value = 20.5555555555556
+            Day time (19.0) is greater than Starting hour (9.0)
+            Day time (19.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 19:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 20.0; Value = 20.5555555555556
+            Day time (20.0) is greater than Starting hour (9.0)
+            Day time (20.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 20:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 21.0; Value = 20.5555555555556
+            Day time (21.0) is greater than Starting hour (9.0)
+            Day time (21.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 21:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 22.0; Value = 20.5555555555556
+            Day time (22.0) is greater than Starting hour (9.0)
+            Day time (22.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 22:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 23.0; Value = 22.7777777777778
+            Day time (23.0) is greater than Starting hour (9.0)
+            Day time (23.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 23:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 24.0; Value = 22.7777777777778
+            Day time (24.0) is greater than Starting hour (9.0)
+            Day time (24.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 24:00:00; Value = 22.7777777777778
+
+    Modifiying ScheduleDay res cooling setpoint allday6
+
+        Checking data pair: Time = 1.0; Value = 22.7777777777778
+            Day time (1.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 01:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 2.0; Value = 22.7777777777778
+            Day time (2.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 02:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 3.0; Value = 22.7777777777778
+            Day time (3.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 03:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 4.0; Value = 22.7777777777778
+            Day time (4.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 04:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 5.0; Value = 22.7777777777778
+            Day time (5.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 05:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 6.0; Value = 22.7777777777778
+            Day time (6.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 06:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 7.0; Value = 22.7777777777778
+            Day time (7.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 07:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 8.0; Value = 20.5555555555556
+            Day time (8.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 08:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 9.0; Value = 20.5555555555556
+            Day time (9.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 09:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 10.0; Value = 22.7777777777778
+            Day time (10.0) is greater than Starting hour (9.0)
+            Day time (10.0) is less than or equal to Ending hour (10.0)
+            Adding data pair with specified Cooling Setpoint: Time = 10:00:00; Value = 25.5
+
+        Checking data pair: Time = 11.0; Value = 22.7777777777778
+            Day time (11.0) is greater than Starting hour (9.0)
+            Day time (11.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 11:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 12.0; Value = 22.7777777777778
+            Day time (12.0) is greater than Starting hour (9.0)
+            Day time (12.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 12:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 13.0; Value = 22.7777777777778
+            Day time (13.0) is greater than Starting hour (9.0)
+            Day time (13.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 13:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 14.0; Value = 22.7777777777778
+            Day time (14.0) is greater than Starting hour (9.0)
+            Day time (14.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 14:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 15.0; Value = 22.7777777777778
+            Day time (15.0) is greater than Starting hour (9.0)
+            Day time (15.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 15:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 16.0; Value = 22.7777777777778
+            Day time (16.0) is greater than Starting hour (9.0)
+            Day time (16.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 16:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 17.0; Value = 22.7777777777778
+            Day time (17.0) is greater than Starting hour (9.0)
+            Day time (17.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 17:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 18.0; Value = 20.5555555555556
+            Day time (18.0) is greater than Starting hour (9.0)
+            Day time (18.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 18:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 19.0; Value = 20.5555555555556
+            Day time (19.0) is greater than Starting hour (9.0)
+            Day time (19.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 19:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 20.0; Value = 20.5555555555556
+            Day time (20.0) is greater than Starting hour (9.0)
+            Day time (20.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 20:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 21.0; Value = 20.5555555555556
+            Day time (21.0) is greater than Starting hour (9.0)
+            Day time (21.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 21:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 22.0; Value = 20.5555555555556
+            Day time (22.0) is greater than Starting hour (9.0)
+            Day time (22.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 22:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 23.0; Value = 22.7777777777778
+            Day time (23.0) is greater than Starting hour (9.0)
+            Day time (23.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 23:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 24.0; Value = 22.7777777777778
+            Day time (24.0) is greater than Starting hour (9.0)
+            Day time (24.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 24:00:00; Value = 22.7777777777778
+
+    Modifiying ScheduleDay res cooling setpoint allday5
+
+        Checking data pair: Time = 1.0; Value = 22.7777777777778
+            Day time (1.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 01:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 2.0; Value = 22.7777777777778
+            Day time (2.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 02:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 3.0; Value = 22.7777777777778
+            Day time (3.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 03:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 4.0; Value = 22.7777777777778
+            Day time (4.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 04:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 5.0; Value = 22.7777777777778
+            Day time (5.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 05:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 6.0; Value = 22.7777777777778
+            Day time (6.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 06:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 7.0; Value = 22.7777777777778
+            Day time (7.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 07:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 8.0; Value = 20.5555555555556
+            Day time (8.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 08:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 9.0; Value = 20.5555555555556
+            Day time (9.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 09:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 10.0; Value = 22.7777777777778
+            Day time (10.0) is greater than Starting hour (9.0)
+            Day time (10.0) is less than or equal to Ending hour (10.0)
+            Adding data pair with specified Cooling Setpoint: Time = 10:00:00; Value = 25.5
+
+        Checking data pair: Time = 11.0; Value = 22.7777777777778
+            Day time (11.0) is greater than Starting hour (9.0)
+            Day time (11.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 11:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 12.0; Value = 22.7777777777778
+            Day time (12.0) is greater than Starting hour (9.0)
+            Day time (12.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 12:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 13.0; Value = 22.7777777777778
+            Day time (13.0) is greater than Starting hour (9.0)
+            Day time (13.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 13:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 14.0; Value = 22.7777777777778
+            Day time (14.0) is greater than Starting hour (9.0)
+            Day time (14.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 14:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 15.0; Value = 22.7777777777778
+            Day time (15.0) is greater than Starting hour (9.0)
+            Day time (15.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 15:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 16.0; Value = 22.7777777777778
+            Day time (16.0) is greater than Starting hour (9.0)
+            Day time (16.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 16:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 17.0; Value = 22.7777777777778
+            Day time (17.0) is greater than Starting hour (9.0)
+            Day time (17.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 17:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 18.0; Value = 20.5555555555556
+            Day time (18.0) is greater than Starting hour (9.0)
+            Day time (18.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 18:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 19.0; Value = 20.5555555555556
+            Day time (19.0) is greater than Starting hour (9.0)
+            Day time (19.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 19:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 20.0; Value = 20.5555555555556
+            Day time (20.0) is greater than Starting hour (9.0)
+            Day time (20.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 20:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 21.0; Value = 20.5555555555556
+            Day time (21.0) is greater than Starting hour (9.0)
+            Day time (21.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 21:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 22.0; Value = 20.5555555555556
+            Day time (22.0) is greater than Starting hour (9.0)
+            Day time (22.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 22:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 23.0; Value = 22.7777777777778
+            Day time (23.0) is greater than Starting hour (9.0)
+            Day time (23.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 23:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 24.0; Value = 22.7777777777778
+            Day time (24.0) is greater than Starting hour (9.0)
+            Day time (24.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 24:00:00; Value = 22.7777777777778
+
+    Modifiying ScheduleDay res cooling setpoint allday4
+
+        Checking data pair: Time = 1.0; Value = 22.7777777777778
+            Day time (1.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 01:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 2.0; Value = 22.7777777777778
+            Day time (2.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 02:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 3.0; Value = 22.7777777777778
+            Day time (3.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 03:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 4.0; Value = 22.7777777777778
+            Day time (4.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 04:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 5.0; Value = 22.7777777777778
+            Day time (5.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 05:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 6.0; Value = 22.7777777777778
+            Day time (6.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 06:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 7.0; Value = 22.7777777777778
+            Day time (7.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 07:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 8.0; Value = 20.5555555555556
+            Day time (8.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 08:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 9.0; Value = 20.5555555555556
+            Day time (9.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 09:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 10.0; Value = 22.7777777777778
+            Day time (10.0) is greater than Starting hour (9.0)
+            Day time (10.0) is less than or equal to Ending hour (10.0)
+            Adding data pair with specified Cooling Setpoint: Time = 10:00:00; Value = 25.5
+
+        Checking data pair: Time = 11.0; Value = 22.7777777777778
+            Day time (11.0) is greater than Starting hour (9.0)
+            Day time (11.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 11:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 12.0; Value = 22.7777777777778
+            Day time (12.0) is greater than Starting hour (9.0)
+            Day time (12.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 12:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 13.0; Value = 22.7777777777778
+            Day time (13.0) is greater than Starting hour (9.0)
+            Day time (13.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 13:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 14.0; Value = 22.7777777777778
+            Day time (14.0) is greater than Starting hour (9.0)
+            Day time (14.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 14:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 15.0; Value = 22.7777777777778
+            Day time (15.0) is greater than Starting hour (9.0)
+            Day time (15.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 15:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 16.0; Value = 22.7777777777778
+            Day time (16.0) is greater than Starting hour (9.0)
+            Day time (16.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 16:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 17.0; Value = 22.7777777777778
+            Day time (17.0) is greater than Starting hour (9.0)
+            Day time (17.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 17:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 18.0; Value = 20.5555555555556
+            Day time (18.0) is greater than Starting hour (9.0)
+            Day time (18.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 18:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 19.0; Value = 20.5555555555556
+            Day time (19.0) is greater than Starting hour (9.0)
+            Day time (19.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 19:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 20.0; Value = 20.5555555555556
+            Day time (20.0) is greater than Starting hour (9.0)
+            Day time (20.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 20:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 21.0; Value = 20.5555555555556
+            Day time (21.0) is greater than Starting hour (9.0)
+            Day time (21.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 21:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 22.0; Value = 20.5555555555556
+            Day time (22.0) is greater than Starting hour (9.0)
+            Day time (22.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 22:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 23.0; Value = 22.7777777777778
+            Day time (23.0) is greater than Starting hour (9.0)
+            Day time (23.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 23:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 24.0; Value = 22.7777777777778
+            Day time (24.0) is greater than Starting hour (9.0)
+            Day time (24.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 24:00:00; Value = 22.7777777777778
+
+    Modifiying ScheduleDay res cooling setpoint allday3
+
+        Checking data pair: Time = 1.0; Value = 22.7777777777778
+            Day time (1.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 01:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 2.0; Value = 22.7777777777778
+            Day time (2.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 02:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 3.0; Value = 22.7777777777778
+            Day time (3.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 03:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 4.0; Value = 22.7777777777778
+            Day time (4.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 04:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 5.0; Value = 22.7777777777778
+            Day time (5.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 05:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 6.0; Value = 22.7777777777778
+            Day time (6.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 06:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 7.0; Value = 22.7777777777778
+            Day time (7.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 07:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 8.0; Value = 20.5555555555556
+            Day time (8.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 08:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 9.0; Value = 20.5555555555556
+            Day time (9.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 09:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 10.0; Value = 22.7777777777778
+            Day time (10.0) is greater than Starting hour (9.0)
+            Day time (10.0) is less than or equal to Ending hour (10.0)
+            Adding data pair with specified Cooling Setpoint: Time = 10:00:00; Value = 25.5
+
+        Checking data pair: Time = 11.0; Value = 22.7777777777778
+            Day time (11.0) is greater than Starting hour (9.0)
+            Day time (11.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 11:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 12.0; Value = 22.7777777777778
+            Day time (12.0) is greater than Starting hour (9.0)
+            Day time (12.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 12:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 13.0; Value = 22.7777777777778
+            Day time (13.0) is greater than Starting hour (9.0)
+            Day time (13.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 13:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 14.0; Value = 22.7777777777778
+            Day time (14.0) is greater than Starting hour (9.0)
+            Day time (14.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 14:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 15.0; Value = 22.7777777777778
+            Day time (15.0) is greater than Starting hour (9.0)
+            Day time (15.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 15:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 16.0; Value = 22.7777777777778
+            Day time (16.0) is greater than Starting hour (9.0)
+            Day time (16.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 16:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 17.0; Value = 22.7777777777778
+            Day time (17.0) is greater than Starting hour (9.0)
+            Day time (17.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 17:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 18.0; Value = 20.5555555555556
+            Day time (18.0) is greater than Starting hour (9.0)
+            Day time (18.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 18:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 19.0; Value = 20.5555555555556
+            Day time (19.0) is greater than Starting hour (9.0)
+            Day time (19.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 19:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 20.0; Value = 20.5555555555556
+            Day time (20.0) is greater than Starting hour (9.0)
+            Day time (20.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 20:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 21.0; Value = 20.5555555555556
+            Day time (21.0) is greater than Starting hour (9.0)
+            Day time (21.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 21:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 22.0; Value = 20.5555555555556
+            Day time (22.0) is greater than Starting hour (9.0)
+            Day time (22.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 22:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 23.0; Value = 22.7777777777778
+            Day time (23.0) is greater than Starting hour (9.0)
+            Day time (23.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 23:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 24.0; Value = 22.7777777777778
+            Day time (24.0) is greater than Starting hour (9.0)
+            Day time (24.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 24:00:00; Value = 22.7777777777778
+
+    Modifiying ScheduleDay res cooling setpoint allday2
+
+        Checking data pair: Time = 1.0; Value = 22.7777777777778
+            Day time (1.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 01:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 2.0; Value = 22.7777777777778
+            Day time (2.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 02:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 3.0; Value = 22.7777777777778
+            Day time (3.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 03:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 4.0; Value = 22.7777777777778
+            Day time (4.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 04:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 5.0; Value = 22.7777777777778
+            Day time (5.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 05:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 6.0; Value = 22.7777777777778
+            Day time (6.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 06:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 7.0; Value = 22.7777777777778
+            Day time (7.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 07:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 8.0; Value = 20.5555555555556
+            Day time (8.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 08:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 9.0; Value = 20.5555555555556
+            Day time (9.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 09:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 10.0; Value = 22.7777777777778
+            Day time (10.0) is greater than Starting hour (9.0)
+            Day time (10.0) is less than or equal to Ending hour (10.0)
+            Adding data pair with specified Cooling Setpoint: Time = 10:00:00; Value = 25.5
+
+        Checking data pair: Time = 11.0; Value = 22.7777777777778
+            Day time (11.0) is greater than Starting hour (9.0)
+            Day time (11.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 11:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 12.0; Value = 22.7777777777778
+            Day time (12.0) is greater than Starting hour (9.0)
+            Day time (12.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 12:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 13.0; Value = 22.7777777777778
+            Day time (13.0) is greater than Starting hour (9.0)
+            Day time (13.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 13:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 14.0; Value = 22.7777777777778
+            Day time (14.0) is greater than Starting hour (9.0)
+            Day time (14.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 14:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 15.0; Value = 22.7777777777778
+            Day time (15.0) is greater than Starting hour (9.0)
+            Day time (15.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 15:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 16.0; Value = 22.7777777777778
+            Day time (16.0) is greater than Starting hour (9.0)
+            Day time (16.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 16:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 17.0; Value = 22.7777777777778
+            Day time (17.0) is greater than Starting hour (9.0)
+            Day time (17.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 17:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 18.0; Value = 20.5555555555556
+            Day time (18.0) is greater than Starting hour (9.0)
+            Day time (18.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 18:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 19.0; Value = 20.5555555555556
+            Day time (19.0) is greater than Starting hour (9.0)
+            Day time (19.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 19:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 20.0; Value = 20.5555555555556
+            Day time (20.0) is greater than Starting hour (9.0)
+            Day time (20.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 20:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 21.0; Value = 20.5555555555556
+            Day time (21.0) is greater than Starting hour (9.0)
+            Day time (21.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 21:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 22.0; Value = 20.5555555555556
+            Day time (22.0) is greater than Starting hour (9.0)
+            Day time (22.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 22:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 23.0; Value = 22.7777777777778
+            Day time (23.0) is greater than Starting hour (9.0)
+            Day time (23.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 23:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 24.0; Value = 22.7777777777778
+            Day time (24.0) is greater than Starting hour (9.0)
+            Day time (24.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 24:00:00; Value = 22.7777777777778
+
+    Modifiying ScheduleDay res cooling setpoint allday1
+
+        Checking data pair: Time = 1.0; Value = 22.7777777777778
+            Day time (1.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 01:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 2.0; Value = 22.7777777777778
+            Day time (2.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 02:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 3.0; Value = 22.7777777777778
+            Day time (3.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 03:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 4.0; Value = 22.7777777777778
+            Day time (4.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 04:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 5.0; Value = 22.7777777777778
+            Day time (5.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 05:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 6.0; Value = 22.7777777777778
+            Day time (6.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 06:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 7.0; Value = 22.7777777777778
+            Day time (7.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 07:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 8.0; Value = 20.5555555555556
+            Day time (8.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 08:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 9.0; Value = 20.5555555555556
+            Day time (9.0) is less than or equal to Starting hour (9.0)
+            Adding data pair as is: Time = 09:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 10.0; Value = 22.7777777777778
+            Day time (10.0) is greater than Starting hour (9.0)
+            Day time (10.0) is less than or equal to Ending hour (10.0)
+            Adding data pair with specified Cooling Setpoint: Time = 10:00:00; Value = 25.5
+
+        Checking data pair: Time = 11.0; Value = 22.7777777777778
+            Day time (11.0) is greater than Starting hour (9.0)
+            Day time (11.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 11:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 12.0; Value = 22.7777777777778
+            Day time (12.0) is greater than Starting hour (9.0)
+            Day time (12.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 12:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 13.0; Value = 22.7777777777778
+            Day time (13.0) is greater than Starting hour (9.0)
+            Day time (13.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 13:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 14.0; Value = 22.7777777777778
+            Day time (14.0) is greater than Starting hour (9.0)
+            Day time (14.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 14:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 15.0; Value = 22.7777777777778
+            Day time (15.0) is greater than Starting hour (9.0)
+            Day time (15.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 15:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 16.0; Value = 22.7777777777778
+            Day time (16.0) is greater than Starting hour (9.0)
+            Day time (16.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 16:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 17.0; Value = 22.7777777777778
+            Day time (17.0) is greater than Starting hour (9.0)
+            Day time (17.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 17:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 18.0; Value = 20.5555555555556
+            Day time (18.0) is greater than Starting hour (9.0)
+            Day time (18.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 18:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 19.0; Value = 20.5555555555556
+            Day time (19.0) is greater than Starting hour (9.0)
+            Day time (19.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 19:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 20.0; Value = 20.5555555555556
+            Day time (20.0) is greater than Starting hour (9.0)
+            Day time (20.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 20:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 21.0; Value = 20.5555555555556
+            Day time (21.0) is greater than Starting hour (9.0)
+            Day time (21.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 21:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 22.0; Value = 20.5555555555556
+            Day time (22.0) is greater than Starting hour (9.0)
+            Day time (22.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 22:00:00; Value = 20.5555555555556
+
+        Checking data pair: Time = 23.0; Value = 22.7777777777778
+            Day time (23.0) is greater than Starting hour (9.0)
+            Day time (23.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 23:00:00; Value = 22.7777777777778
+
+        Checking data pair: Time = 24.0; Value = 22.7777777777778
+            Day time (24.0) is greater than Starting hour (9.0)
+            Day time (24.0) is greater than Ending hour (10.0)
+            Adding data pair as is: Time = 24:00:00; Value = 22.7777777777778

@@ -1,0 +1,20 @@
+{
+   "created_at" : "20200611T024222Z",
+   "seed_file" : "../in_modif.osm",
+   "steps" : 
+   [
+      {
+         "arguments" : 
+         {
+            "cooling_setpoint" : 25.5,
+            "hour_of_the_day" : 10.0
+         },
+         "description" : "Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
+         "measure_dir_name" : "cooling_setpoints_hourly_adjusted_by_degrees_1",
+         "modeler_description" : "Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load",
+         "name" : "CoolingSetpointsHourlyAdjustedByDegrees1"
+      }
+   ],
+   "updated_at" : "20200611T025729Z",
+   "weather_file" : "USA_CO_Boulder-Broomfield-Jefferson.County.AP.724699_TMY3.epw"
+}

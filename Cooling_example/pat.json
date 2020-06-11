@@ -4,7 +4,7 @@
   "analysisName": "ResStock_osm_cooling",
   "seed": "in.osm",
   "weatherFile": "USA_CO_Boulder-Broomfield-Jefferson.County.AP.724699_TMY3.epw",
-  "analysis_type": "Algorithmic",
+  "analysis_type": "Manual",
   "cliDebug": "",
   "cliVerbose": "",
   "timeoutWorkflow": 28800,
@@ -75,155 +75,11 @@
     }
   },
   "samplingMethod": {
-    "id": "pso",
-    "name": "analysis.type.pso",
-    "link": "https://cran.r-project.org/web/packages/hydroPSO/hydroPSO.pdf"
+    "id": "single_run",
+    "name": "analysis.type.singleRun",
+    "link": null
   },
   "algorithmSettings": [
-    {
-      "name": "npart",
-      "displayName": "Number of Particles",
-      "description": "Number of particles in the swarm",
-      "defaultValue": 4,
-      "type": "number",
-      "value": 4,
-      "$$hashKey": "object:55923"
-    },
-    {
-      "name": "maxit",
-      "displayName": "Max Iterations",
-      "description": "Maximum number of iterations",
-      "defaultValue": 20,
-      "type": "number",
-      "value": 20,
-      "$$hashKey": "object:55924"
-    },
-    {
-      "name": "maxfn",
-      "displayName": "Max Function Evaluations",
-      "description": "Maximum number of function evaluations",
-      "defaultValue": 1000,
-      "type": "number",
-      "value": 1000,
-      "$$hashKey": "object:55925"
-    },
-    {
-      "name": "lambda",
-      "displayName": "Lambda",
-      "description": "[0,1] a percentage to limit the maximum velocity (Vmax) for each dimension",
-      "defaultValue": 0.9,
-      "type": "number",
-      "value": 0.9,
-      "$$hashKey": "object:55926"
-    },
-    {
-      "name": "c2",
-      "displayName": "C2",
-      "description": "Social acceleration coefficient",
-      "defaultValue": 1.193147,
-      "type": "number",
-      "value": 1.193147,
-      "$$hashKey": "object:55927"
-    },
-    {
-      "name": "c1",
-      "displayName": "C1",
-      "description": "Cognitive acceleration coefficient",
-      "defaultValue": 1.193147,
-      "type": "number",
-      "value": 1.193147,
-      "$$hashKey": "object:55928"
-    },
-    {
-      "name": "boundary",
-      "displayName": "Boundary",
-      "description": "Options: invisible, damping, reflecting, absorbing2007, absorbing2011, default",
-      "defaultValue": "reflecting",
-      "type": "string",
-      "value": "reflecting",
-      "$$hashKey": "object:55929"
-    },
-    {
-      "name": "topology",
-      "displayName": "Topology",
-      "description": "Options: gbest, lbest, vonneumann, random",
-      "defaultValue": "random",
-      "type": "string",
-      "value": "random",
-      "$$hashKey": "object:55930"
-    },
-    {
-      "name": "xini",
-      "displayName": "Xini",
-      "description": "Options: lhs, random",
-      "defaultValue": "lhs",
-      "type": "string",
-      "value": "lhs",
-      "$$hashKey": "object:55931"
-    },
-    {
-      "name": "vini",
-      "displayName": "Vini",
-      "description": "Options: zero, lhs2011, random2011, lhs2007, random2007, default",
-      "defaultValue": "lhs2011",
-      "type": "string",
-      "value": "lhs2011",
-      "$$hashKey": "object:55932"
-    },
-    {
-      "name": "abstol",
-      "displayName": "Abs Tol",
-      "description": "Absolute convergence tolerance",
-      "defaultValue": 0.01,
-      "type": "number",
-      "value": 0.01,
-      "$$hashKey": "object:55933"
-    },
-    {
-      "name": "reltol",
-      "displayName": "Rel Tol",
-      "description": "Relative convergence tolerance",
-      "defaultValue": 0.01,
-      "type": "number",
-      "value": 0.01,
-      "$$hashKey": "object:55934"
-    },
-    {
-      "name": "method",
-      "displayName": "Method",
-      "description": "Options: spso2007, spso2011, ipso, fips, wfips",
-      "defaultValue": "spso2011",
-      "type": "string",
-      "value": "spso2011",
-      "$$hashKey": "object:55935"
-    },
-    {
-      "name": "norm_type",
-      "displayName": "Norm Type",
-      "description": "Options: minkowski, maximum, euclidean, binary, manhattan",
-      "defaultValue": "minkowski",
-      "type": "string",
-      "value": "minkowski",
-      "$$hashKey": "object:55936"
-    },
-    {
-      "name": "p_power",
-      "displayName": "P Power",
-      "description": "Lp norm power (must be non-negative)",
-      "defaultValue": 2,
-      "type": "number",
-      "value": 2,
-      "$$hashKey": "object:55937"
-    },
-    {
-      "name": "exit_on_guideline_14",
-      "displayName": "Exit on Guideline 14?",
-      "description": "Options: O (off), 1 (both electric and gas), 2 (just electric), 3 (just gas)",
-      "defaultValue": 0,
-      "type": "number",
-      "value": 0,
-      "$$hashKey": "object:55938"
-    },
     {
       "name": "seed",
       "displayName": "Seed",
@@ -250,15 +106,6 @@
       "type": "number",
       "value": 0,
       "$$hashKey": "object:46473"
-    },
-    {
-      "name": "max_queued_jobs",
-      "displayName": "Max Queued Jobs",
-      "description": "Integer specifying the maximum number of queued jobs",
-      "defaultValue": 100,
-      "type": "number",
-      "value": 100,
-      "$$hashKey": "object:55939"
     }
   ],
   "rubyMD5": "",
@@ -397,7 +244,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": false
+            "showWarningIcon": true
           }
         },
         {
@@ -460,12 +307,12 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.5321520167644722,
+      "instanceId": 0.27552156064606903,
       "numberOfOptions": -10,
       "$$hashKey": "object:962",
       "outputMeasure": false,
       "skip": false,
-      "showWarningText": false,
+      "showWarningText": true,
       "unlockStatus": false
     },
     {
@@ -592,7 +439,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": false
+            "showWarningIcon": true
           },
           "units": "",
           "minimum": 21.7,
@@ -635,7 +482,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/5/2020",
       "author": "",
@@ -659,11 +506,11 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.945212163222725,
+      "instanceId": 0.029141877728265486,
       "numberOfOptions": 1,
       "$$hashKey": "object:39119",
       "skip": false,
-      "showWarningText": false,
+      "showWarningText": true,
       "unlockStatus": false,
       "outputMeasure": false
     },
@@ -790,7 +637,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": false
+            "showWarningIcon": true
           },
           "$$hashKey": "uiGrid-0KZF",
           "units": "",
@@ -834,7 +681,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/5/2020",
       "author": "",
@@ -858,10 +705,10 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.4359198766996557,
+      "instanceId": 0.6882768919255406,
       "numberOfOptions": 1,
       "skip": false,
-      "showWarningText": false,
+      "showWarningText": true,
       "$$hashKey": "object:65845",
       "unlockStatus": false,
       "outputMeasure": false
@@ -989,7 +836,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": false
+            "showWarningIcon": true
           },
           "$$hashKey": "uiGrid-0P07",
           "units": "",
@@ -1033,7 +880,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/5/2020",
       "author": "",
@@ -1057,10 +904,10 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.004749594559963155,
+      "instanceId": 0.8685320494321422,
       "numberOfOptions": 1,
       "skip": false,
-      "showWarningText": false,
+      "showWarningText": true,
       "unlockStatus": false,
       "$$hashKey": "object:75666",
       "outputMeasure": false
@@ -1188,7 +1035,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": false
+            "showWarningIcon": true
           },
           "$$hashKey": "uiGrid-0QMM",
           "units": "",
@@ -1232,7 +1079,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/5/2020",
       "author": "",
@@ -1256,10 +1103,10 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.6660841518107303,
+      "instanceId": 0.14025939182569402,
       "numberOfOptions": 1,
       "skip": false,
-      "showWarningText": false,
+      "showWarningText": true,
       "unlockStatus": false,
       "$$hashKey": "object:78941",
       "outputMeasure": false
@@ -1387,7 +1234,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": false
+            "showWarningIcon": true
           },
           "$$hashKey": "uiGrid-0S9J",
           "units": "",
@@ -1431,7 +1278,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/5/2020",
       "author": "",
@@ -1455,10 +1302,10 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.8425189470263774,
+      "instanceId": 0.41536984823532785,
       "numberOfOptions": 1,
       "skip": false,
-      "showWarningText": false,
+      "showWarningText": true,
       "unlockStatus": false,
       "$$hashKey": "object:82261",
       "outputMeasure": false
@@ -1586,7 +1433,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": false
+            "showWarningIcon": true
           },
           "$$hashKey": "uiGrid-0TWY",
           "units": "",
@@ -1630,7 +1477,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/5/2020",
       "author": "",
@@ -1654,10 +1501,10 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.29634423647138686,
+      "instanceId": 0.9616929809044321,
       "numberOfOptions": 1,
       "skip": false,
-      "showWarningText": false,
+      "showWarningText": true,
       "unlockStatus": false,
       "$$hashKey": "object:85634",
       "outputMeasure": false
@@ -1785,7 +1632,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": false
+            "showWarningIcon": true
           },
           "$$hashKey": "uiGrid-0VKV",
           "units": "",
@@ -1829,7 +1676,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/5/2020",
       "author": "",
@@ -1853,10 +1700,10 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.9915707744136288,
+      "instanceId": 0.39842249075782976,
       "numberOfOptions": 1,
       "skip": false,
-      "showWarningText": false,
+      "showWarningText": true,
       "unlockStatus": false,
       "$$hashKey": "object:89048",
       "outputMeasure": false
@@ -1984,7 +1831,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": false
+            "showWarningIcon": true
           },
           "$$hashKey": "uiGrid-0X9A",
           "units": "",
@@ -2028,7 +1875,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/5/2020",
       "author": "",
@@ -2052,10 +1899,10 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.5332708452861246,
+      "instanceId": 0.9825828748224179,
       "numberOfOptions": 1,
       "skip": false,
-      "showWarningText": false,
+      "showWarningText": true,
       "unlockStatus": false,
       "$$hashKey": "object:92525",
       "outputMeasure": false
@@ -2183,7 +2030,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": false
+            "showWarningIcon": true
           },
           "$$hashKey": "uiGrid-0YY7",
           "units": "",
@@ -2227,7 +2074,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/5/2020",
       "author": "",
@@ -2251,10 +2098,10 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.6224825143187804,
+      "instanceId": 0.3536324784339482,
       "numberOfOptions": 1,
       "skip": false,
-      "showWarningText": false,
+      "showWarningText": true,
       "unlockStatus": false,
       "$$hashKey": "object:96056",
       "outputMeasure": false
@@ -2382,7 +2229,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": false
+            "showWarningIcon": true
           },
           "$$hashKey": "uiGrid-10NM",
           "units": "",
@@ -2426,7 +2273,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/5/2020",
       "author": "",
@@ -2450,10 +2297,10 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.1946437517707298,
+      "instanceId": 0.6762417192733143,
       "numberOfOptions": 1,
       "skip": false,
-      "showWarningText": false,
+      "showWarningText": true,
       "unlockStatus": false,
       "$$hashKey": "object:99629",
       "outputMeasure": false
@@ -2581,7 +2428,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": false
+            "showWarningIcon": true
           },
           "$$hashKey": "uiGrid-12DJ",
           "units": "",
@@ -2625,7 +2472,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/5/2020",
       "author": "",
@@ -2649,10 +2496,10 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.3443578264264524,
+      "instanceId": 0.6986892678167862,
       "numberOfOptions": 1,
       "skip": false,
-      "showWarningText": false,
+      "showWarningText": true,
       "unlockStatus": false,
       "$$hashKey": "object:103253",
       "outputMeasure": false
@@ -2780,7 +2627,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": false
+            "showWarningIcon": true
           },
           "$$hashKey": "uiGrid-143Y",
           "units": "",
@@ -2824,7 +2671,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/5/2020",
       "author": "",
@@ -2848,10 +2695,10 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.3746228603092123,
+      "instanceId": 0.8527748479978823,
       "numberOfOptions": 1,
       "skip": false,
-      "showWarningText": false,
+      "showWarningText": true,
       "unlockStatus": false,
       "$$hashKey": "object:106928",
       "outputMeasure": false
@@ -2979,7 +2826,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": false
+            "showWarningIcon": true
           },
           "$$hashKey": "uiGrid-15UV",
           "units": "",
@@ -3023,7 +2870,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/5/2020",
       "author": "",
@@ -3047,10 +2894,10 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.8326105971844344,
+      "instanceId": 0.9413121086541265,
       "numberOfOptions": 1,
       "skip": false,
-      "showWarningText": false,
+      "showWarningText": true,
       "unlockStatus": false,
       "$$hashKey": "object:110660",
       "outputMeasure": false
@@ -3178,7 +3025,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": false
+            "showWarningIcon": true
           },
           "$$hashKey": "uiGrid-17MA",
           "units": "",
@@ -3222,7 +3069,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/5/2020",
       "author": "",
@@ -3246,10 +3093,10 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.742246897558174,
+      "instanceId": 0.20259498425588296,
       "numberOfOptions": 1,
       "skip": false,
-      "showWarningText": false,
+      "showWarningText": true,
       "unlockStatus": false,
       "$$hashKey": "object:114437",
       "outputMeasure": false
@@ -3377,7 +3224,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": false
+            "showWarningIcon": true
           },
           "$$hashKey": "uiGrid-19E7",
           "units": "",
@@ -3421,7 +3268,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/5/2020",
       "author": "",
@@ -3445,10 +3292,10 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.5892634142075872,
+      "instanceId": 0.879304154000276,
       "numberOfOptions": 1,
       "skip": false,
-      "showWarningText": false,
+      "showWarningText": true,
       "unlockStatus": false,
       "$$hashKey": "object:118265",
       "outputMeasure": false
@@ -3576,7 +3423,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": false
+            "showWarningIcon": true
           },
           "$$hashKey": "uiGrid-1B6M",
           "units": "",
@@ -3620,7 +3467,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/5/2020",
       "author": "",
@@ -3644,10 +3491,10 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.1627221615055976,
+      "instanceId": 0.7475964038414695,
       "numberOfOptions": 1,
       "skip": false,
-      "showWarningText": false,
+      "showWarningText": true,
       "unlockStatus": false,
       "$$hashKey": "object:122144",
       "outputMeasure": false
@@ -3775,7 +3622,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": false
+            "showWarningIcon": true
           },
           "$$hashKey": "uiGrid-1CZJ",
           "units": "",
@@ -3819,7 +3666,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/5/2020",
       "author": "",
@@ -3843,10 +3690,10 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.8578914749655433,
+      "instanceId": 0.03997139201313904,
       "numberOfOptions": 1,
       "skip": false,
-      "showWarningText": false,
+      "showWarningText": true,
       "unlockStatus": false,
       "$$hashKey": "object:126074",
       "outputMeasure": false
@@ -3974,7 +3821,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": false
+            "showWarningIcon": true
           },
           "$$hashKey": "uiGrid-1ESY",
           "units": "",
@@ -4018,7 +3865,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/5/2020",
       "author": "",
@@ -4042,10 +3889,10 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.11127597544609857,
+      "instanceId": 0.9863218292331479,
       "numberOfOptions": 1,
       "skip": false,
-      "showWarningText": false,
+      "showWarningText": true,
       "unlockStatus": false,
       "$$hashKey": "object:130055",
       "outputMeasure": false
@@ -4173,7 +4020,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": false
+            "showWarningIcon": true
           },
           "$$hashKey": "uiGrid-1GMV",
           "units": "",
@@ -4217,7 +4064,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/5/2020",
       "author": "",
@@ -4241,10 +4088,10 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.9938085359739848,
+      "instanceId": 0.3594508780547041,
       "numberOfOptions": 1,
       "skip": false,
-      "showWarningText": false,
+      "showWarningText": true,
       "unlockStatus": false,
       "$$hashKey": "object:134087",
       "outputMeasure": false
@@ -4372,7 +4219,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": false
+            "showWarningIcon": true
           },
           "$$hashKey": "uiGrid-1IHA",
           "units": "",
@@ -4416,7 +4263,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/5/2020",
       "author": "",
@@ -4440,10 +4287,10 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.685812737563591,
+      "instanceId": 0.6184951937956011,
       "numberOfOptions": 1,
       "skip": false,
-      "showWarningText": false,
+      "showWarningText": true,
       "unlockStatus": false,
       "$$hashKey": "object:138170",
       "outputMeasure": false
@@ -4571,7 +4418,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": false
+            "showWarningIcon": true
           },
           "$$hashKey": "uiGrid-1KC7",
           "units": "",
@@ -4615,7 +4462,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/5/2020",
       "author": "",
@@ -4639,10 +4486,10 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.10944324495489499,
+      "instanceId": 0.398583546388517,
       "numberOfOptions": 1,
       "skip": false,
-      "showWarningText": false,
+      "showWarningText": true,
       "unlockStatus": false,
       "$$hashKey": "object:142304",
       "outputMeasure": false
@@ -4770,7 +4617,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": false
+            "showWarningIcon": true
           },
           "$$hashKey": "uiGrid-1M7M",
           "units": "",
@@ -4814,7 +4661,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/5/2020",
       "author": "",
@@ -4838,10 +4685,10 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.08879537320717978,
+      "instanceId": 0.5843649993964493,
       "numberOfOptions": 1,
       "skip": false,
-      "showWarningText": false,
+      "showWarningText": true,
       "unlockStatus": false,
       "$$hashKey": "object:146489",
       "outputMeasure": false
@@ -4969,7 +4816,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": false
+            "showWarningIcon": true
           },
           "$$hashKey": "uiGrid-1O3J",
           "units": "",
@@ -5013,7 +4860,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/5/2020",
       "author": "",
@@ -5037,10 +4884,10 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.9494546464808402,
+      "instanceId": 0.29514409580360956,
       "numberOfOptions": 1,
       "skip": false,
-      "showWarningText": false,
+      "showWarningText": true,
       "unlockStatus": false,
       "$$hashKey": "object:150725",
       "outputMeasure": false
@@ -5408,7 +5255,7 @@
           "model_dependent": false,
           "default_value": true,
           "$$hashKey": "uiGrid-0494",
-          "variable": false,
+          "variable": true,
           "option_1": true,
           "option_2": true,
           "option_3": true,
@@ -5447,7 +5294,11 @@
             "stdDev": true,
             "default_value": true,
             "showWarningIcon": false
-          }
+          },
+          "units": "",
+          "minimum": true,
+          "maximum": true,
+          "mode": 1
         },
         {
           "name": "annual_overview_section",
@@ -6509,7 +6360,7 @@
       "bcl_update": false,
       "location": "local",
       "add": "",
-      "open": false,
+      "open": true,
       "addedToProject": true,
       "date": "12/18/2019",
       "author": "",
@@ -8894,7 +8745,7 @@
           "description": "Option 24 Description: This measure creates high level tables and charts pulling both from model inputs and EnergyPlus results. It has building level information as well as detail on space types, thermal zones, HVAC systems, envelope characteristics, and economics. Click the heading above a chart to view a table of the chart data."
         }
       ],
-      "instanceId": 0.3682397012470575,
+      "instanceId": 0.7503944685268358,
       "numberOfOptions": 24,
       "$$hashKey": "object:13763",
       "outputMeasure": true,
@@ -8903,9 +8754,747 @@
       "descOpen": true,
       "skip": false,
       "showWarningText": false
+    },
+    {
+      "measure_dir": "C:\\github_local\\EE_DR_git\\EE_DR_PAT\\Cooling_example\\measures\\TimeseriesObjectiveFunction",
+      "name": "timeseries_objective_function",
+      "directory": "C:/Users/Zahra Fallahi/OpenStudio/Measures/TimeseriesObjectiveFunction",
+      "uid": "6804217d-4737-45f3-82df-b81393c29ce3",
+      "uuid": "{6804217d-4737-45f3-82df-b81393c29ce3}",
+      "version_id": "d41b5fec-0640-4337-965c-e1515b34d80e",
+      "version_uuid": "{d41b5fec-0640-4337-965c-e1515b34d80e}",
+      "version_modified": "20180322T191228Z",
+      "xml_checksum": "FFE04372",
+      "display_name": "TimeSeries Objective Function",
+      "class_name": "TimeseriesObjectiveFunction",
+      "description": "Creates Objective Function from Timeseries Data",
+      "modeler_description": "Creates Objective Function from Timeseries Data.  The measure applies a Norm at each timestep between the difference of CSV metered data and SQL model data. A timeseries plot can also be created.  Possible outputs are 'cvrmse', 'nmbe', 'simdata' = sum of the simulated data, 'csvdata' = sum of metered data, 'diff' = P Norm between the metered and simulated data if Norm is 1 or 2, else its just the Difference.",
+      "tags": "Reporting.QAQC",
+      "outputs": [
+        {
+          "name": "diff",
+          "display_name": "diff",
+          "short_name": "diff",
+          "description": "",
+          "type": "Double",
+          "units": "",
+          "model_dependent": false
+        },
+        {
+          "name": "simdata",
+          "display_name": "simdata",
+          "short_name": "simdata",
+          "description": "",
+          "type": "Double",
+          "units": "",
+          "model_dependent": false
+        },
+        {
+          "name": "csvdata",
+          "display_name": "csvdata",
+          "short_name": "csvdata",
+          "description": "",
+          "type": "Double",
+          "units": "",
+          "model_dependent": false
+        },
+        {
+          "name": "cvrmse",
+          "display_name": "cvrmse",
+          "short_name": "cvrmse",
+          "description": "",
+          "type": "Double",
+          "units": "",
+          "model_dependent": false
+        },
+        {
+          "name": "nmbe",
+          "display_name": "nmbe",
+          "short_name": "nmbe",
+          "description": "",
+          "type": "Double",
+          "units": "",
+          "model_dependent": false
+        }
+      ],
+      "attributes": [
+        {
+          "name": "Intended Software Tool",
+          "display_name": "Intended Software Tool",
+          "value": "OpenStudio Application"
+        },
+        {
+          "name": "Intended Software Tool",
+          "display_name": "Intended Software Tool",
+          "value": "Parametric Analysis Tool"
+        },
+        {
+          "name": "Measure Type",
+          "display_name": "Measure Type",
+          "value": "ReportingMeasure"
+        }
+      ],
+      "arguments": [
+        {
+          "specialRowId": "optionDelete",
+          "$$hashKey": "uiGrid-00D6",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": null,
+            "minimum": null,
+            "mean": null,
+            "deltaX": null,
+            "stdDev": null,
+            "default_value": null,
+            "showWarningIcon": false
+          }
+        },
+        {
+          "specialRowId": "optionName",
+          "type": "String",
+          "$$hashKey": "uiGrid-00D8",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
+        },
+        {
+          "specialRowId": "optionDescription",
+          "type": "String",
+          "$$hashKey": "uiGrid-00DA",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
+        },
+        {
+          "name": "csv_name",
+          "display_name": "Path to CSV file for the metered data",
+          "description": "Path to CSV file including file name.",
+          "type": "String",
+          "required": true,
+          "model_dependent": false,
+          "default_value": "../../../lib/resources/mtr.csv",
+          "display_name_short": "csv_name",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "../../../lib/resources/mtr.csv",
+            "minimum": "../../../lib/resources/mtr.csv",
+            "mean": "../../../lib/resources/mtr.csv",
+            "deltaX": "../../../lib/resources/mtr.csv",
+            "stdDev": "../../../lib/resources/mtr.csv",
+            "default_value": "../../../lib/resources/in.csv",
+            "showWarningIcon": false
+          },
+          "$$hashKey": "object:5400"
+        },
+        {
+          "name": "csv_time_header",
+          "display_name": "CSV Time Header",
+          "description": "CSV Time Header Value. Used to determine the timestamp column in the CSV file",
+          "type": "String",
+          "required": true,
+          "model_dependent": false,
+          "default_value": "Date/Time",
+          "display_name_short": "csv_time_header",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "Date/Time",
+            "minimum": "Date/Time",
+            "mean": "Date/Time",
+            "deltaX": "Date/Time",
+            "stdDev": "Date/Time",
+            "default_value": "Date/Time",
+            "showWarningIcon": false
+          },
+          "$$hashKey": "object:5401"
+        },
+        {
+          "name": "csv_var",
+          "display_name": "CSV variable name",
+          "description": "CSV variable name. Used to determine the variable column in the CSV file",
+          "type": "String",
+          "required": true,
+          "model_dependent": false,
+          "default_value": "Whole Building:Facility Total Electric Demand Power [W](TimeStep)",
+          "display_name_short": "csv_var",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "Whole Building:Facility Total Electric Demand Power [W](TimeStep)",
+            "minimum": "Whole Building:Facility Total Electric Demand Power [W](TimeStep)",
+            "mean": "Whole Building:Facility Total Electric Demand Power [W](TimeStep)",
+            "deltaX": "Whole Building:Facility Total Electric Demand Power [W](TimeStep)",
+            "stdDev": "Whole Building:Facility Total Electric Demand Power [W](TimeStep)",
+            "default_value": "Electricity:Facility [J](TimeStep)",
+            "showWarningIcon": false
+          },
+          "$$hashKey": "object:5402"
+        },
+        {
+          "name": "convert_data",
+          "display_name": "Convert Units",
+          "description": "Convert Units in Metered Data",
+          "type": "Choice",
+          "required": true,
+          "model_dependent": false,
+          "default_value": "None",
+          "choice_values": [
+            "F to C",
+            "WH to J",
+            "CFM to m3/s",
+            "PSI to Pa",
+            "None"
+          ],
+          "choice_display_names": [
+            "F to C",
+            "WH to J",
+            "CFM to m3/s",
+            "PSI to Pa",
+            "None"
+          ],
+          "display_name_short": "convert_data",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [
+              "F to C",
+              "WH to J",
+              "CFM to m3/s",
+              "PSI to Pa",
+              "None"
+            ],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "None",
+            "minimum": "None",
+            "mean": "None",
+            "deltaX": "None",
+            "stdDev": "None",
+            "default_value": "None",
+            "showWarningIcon": false
+          },
+          "$$hashKey": "object:5403"
+        },
+        {
+          "name": "csv_var_dn",
+          "display_name": "CSV variable display name",
+          "description": "CSV variable display name. Not yet Implemented",
+          "type": "String",
+          "required": true,
+          "model_dependent": false,
+          "default_value": "",
+          "display_name_short": "csv_var_dn",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "Electricity:Facility [J](TimeStep)",
+            "showWarningIcon": false
+          },
+          "$$hashKey": "object:5404"
+        },
+        {
+          "name": "year",
+          "display_name": "Year in csv data timestamp",
+          "description": "Is the Year in the csv data timestamp => mm:dd:yy or mm:dd (true/false)",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "display_name_short": "year",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": false,
+            "showWarningIcon": false
+          },
+          "$$hashKey": "object:5405"
+        },
+        {
+          "name": "seconds",
+          "display_name": "Seconds in csv data timestamp",
+          "description": "Is the Seconds in the csv data timestamp => hh:mm:ss or hh:mm (true/false)",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "display_name_short": "seconds",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true,
+            "showWarningIcon": false
+          },
+          "$$hashKey": "object:5406"
+        },
+        {
+          "name": "key_value",
+          "display_name": "SQL key value",
+          "description": "SQL key value for the SQL query to find the variable in the SQL file",
+          "type": "String",
+          "required": true,
+          "model_dependent": false,
+          "default_value": "",
+          "display_name_short": "key_value",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "Electricity:Facility [J](TimeStep)",
+            "showWarningIcon": false
+          },
+          "$$hashKey": "object:5407"
+        },
+        {
+          "name": "timeseries_name",
+          "display_name": "TimeSeries Name",
+          "description": "TimeSeries Name for the SQL query to find the variable in the SQL file",
+          "type": "String",
+          "required": true,
+          "model_dependent": false,
+          "default_value": "Facility Total Electric Demand Power",
+          "display_name_short": "timeseries_name",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "Facility Total Electric Demand Power",
+            "minimum": "Facility Total Electric Demand Power",
+            "mean": "Facility Total Electric Demand Power",
+            "deltaX": "Facility Total Electric Demand Power",
+            "stdDev": "Facility Total Electric Demand Power",
+            "default_value": "Facility Total Electric Demand Power",
+            "showWarningIcon": false
+          },
+          "$$hashKey": "object:5408"
+        },
+        {
+          "name": "reporting_frequency",
+          "display_name": "Reporting Frequency",
+          "description": "Reporting Frequency for SQL Query",
+          "type": "Choice",
+          "required": true,
+          "model_dependent": false,
+          "default_value": "",
+          "choice_values": [
+            "Detailed",
+            "Timestep",
+            "Hourly",
+            "Daily",
+            "Monthly",
+            "RunPeriod"
+          ],
+          "choice_display_names": [
+            "Detailed",
+            "Timestep",
+            "Hourly",
+            "Daily",
+            "Monthly",
+            "RunPeriod"
+          ],
+          "display_name_short": "reporting_frequency",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [
+              "Detailed",
+              "Timestep",
+              "Hourly",
+              "Daily",
+              "Monthly",
+              "RunPeriod"
+            ],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "Timestep",
+            "showWarningIcon": false
+          },
+          "$$hashKey": "object:5409"
+        },
+        {
+          "name": "environment_period",
+          "display_name": "Environment Period",
+          "description": "Environment Period for SQL query",
+          "type": "String",
+          "required": true,
+          "model_dependent": false,
+          "default_value": "RUN PERIOD 1",
+          "display_name_short": "environment_period",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "RUN PERIOD 1",
+            "minimum": "RUN PERIOD 1",
+            "mean": "RUN PERIOD 1",
+            "deltaX": "RUN PERIOD 1",
+            "stdDev": "RUN PERIOD 1",
+            "default_value": "RUN PERIOD 1",
+            "showWarningIcon": false
+          },
+          "$$hashKey": "object:5410"
+        },
+        {
+          "name": "norm",
+          "display_name": "Norm of the difference of csv and sql",
+          "description": "Norm of the difference of csv and sql. 1 is absolute value. 2 is euclidean distance. 3 is raw difference.",
+          "type": "Double",
+          "required": true,
+          "model_dependent": false,
+          "units": "",
+          "default_value": 1,
+          "min_value": 0,
+          "max_value": 0,
+          "display_name_short": "norm",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 1,
+            "minimum": 1,
+            "mean": 1,
+            "deltaX": 1,
+            "stdDev": 1,
+            "default_value": 1,
+            "showWarningIcon": false
+          },
+          "$$hashKey": "object:5411"
+        },
+        {
+          "name": "scale",
+          "display_name": "Scale factor to apply to the difference",
+          "description": "Scale factor to apply to the difference (1 is no scale)",
+          "type": "Double",
+          "required": true,
+          "model_dependent": false,
+          "units": "",
+          "default_value": 1,
+          "min_value": 0,
+          "max_value": 0,
+          "display_name_short": "scale",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 1,
+            "minimum": 1,
+            "mean": 1,
+            "deltaX": 1,
+            "stdDev": 1,
+            "default_value": 1,
+            "showWarningIcon": false
+          },
+          "$$hashKey": "object:5412"
+        },
+        {
+          "name": "find_avail",
+          "display_name": "Find Available data in the SQL file",
+          "description": "Will RegisterInfo all the 'EnvPeriod', 'ReportingFrequencies', 'VariableNames', 'KeyValues' in the SQL file.  Useful for debugging SQL issues.",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "display_name_short": "find_avail",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true,
+            "showWarningIcon": false
+          },
+          "$$hashKey": "object:5413"
+        },
+        {
+          "name": "algorithm_download",
+          "display_name": "algorithm_download",
+          "description": "Make JSON data available for algorithm_download (true/false)",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": false,
+          "display_name_short": "algorithm_download",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": false,
+            "minimum": false,
+            "mean": false,
+            "deltaX": false,
+            "stdDev": false,
+            "default_value": false,
+            "showWarningIcon": false
+          },
+          "$$hashKey": "object:5414"
+        },
+        {
+          "name": "plot_flag",
+          "display_name": "plot_flag timeseries data",
+          "description": "Create plot of timeseries data (true/false)",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "display_name_short": "plot_flag",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true,
+            "showWarningIcon": false
+          },
+          "$$hashKey": "object:5415"
+        },
+        {
+          "name": "plot_name",
+          "display_name": "Plot name",
+          "description": "Name to include in reporting file name.",
+          "type": "String",
+          "required": true,
+          "model_dependent": false,
+          "default_value": "",
+          "display_name_short": "plot_name",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "electricity_test",
+            "showWarningIcon": false
+          },
+          "$$hashKey": "object:5416"
+        },
+        {
+          "name": "verbose_messages",
+          "display_name": "verbose_messages",
+          "description": "verbose messages.  Useful for debugging but MAJOR Performance Hit.",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": false,
+          "display_name_short": "verbose_messages",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": false,
+            "minimum": false,
+            "mean": false,
+            "deltaX": false,
+            "stdDev": false,
+            "default_value": false,
+            "showWarningIcon": false
+          },
+          "$$hashKey": "object:5417"
+        },
+        {
+          "name": "warning_messages",
+          "display_name": "warning_messages",
+          "description": "Warn on missing data.",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "display_name_short": "warning_messages",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true,
+            "showWarningIcon": false
+          },
+          "$$hashKey": "object:5418"
+        },
+        {
+          "name": "add_first_zero_for_plots",
+          "display_name": "add_first_zero_for_plots",
+          "description": "Add a point of zero value to the plot at the beginning of the runperiod.",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": false,
+          "display_name_short": "add_first_zero_for_plots",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": false,
+            "minimum": false,
+            "mean": false,
+            "deltaX": false,
+            "stdDev": false,
+            "default_value": false,
+            "showWarningIcon": false
+          },
+          "$$hashKey": "object:5419"
+        },
+        {
+          "name": "add_last_zero_for_plots",
+          "display_name": "add_last_zero_for_plots",
+          "description": "Add a point of zero value to the plot at the end of the runperiod.",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": false,
+          "display_name_short": "add_last_zero_for_plots",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": false,
+            "minimum": false,
+            "mean": false,
+            "deltaX": false,
+            "stdDev": false,
+            "default_value": false,
+            "showWarningIcon": false
+          },
+          "$$hashKey": "object:5420"
+        }
+      ],
+      "edit": "",
+      "status": "",
+      "bcl_update": false,
+      "location": "my",
+      "add": "",
+      "open": false,
+      "addedToProject": true,
+      "date": "3/22/2018",
+      "author": "",
+      "type": "ReportingMeasure",
+      "seed": "in.osm",
+      "workflow_index": 25,
+      "options": [],
+      "instanceId": 0.9276692310096237,
+      "skip": false,
+      "$$hashKey": "object:5352",
+      "numberOfOptions": 0,
+      "descOpen": false,
+      "showWarningText": false,
+      "outputMeasure": false
     }
   ],
-  "filesToInclude": [],
+  "filesToInclude": [
+    {
+      "dirToInclude": "calibration_data",
+      "unpackDirName": "resources",
+      "$$hashKey": "object:6189"
+    }
+  ],
   "serverScripts": {
     "server_initialization": {
       "file": null,
@@ -8954,7 +9543,8 @@
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
-      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None"
+      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
+      "timeseries_objective_function": "None"
     },
     {
       "name": "Hour 2",
@@ -8985,7 +9575,8 @@
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
-      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None"
+      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
+      "timeseries_objective_function": "None"
     },
     {
       "name": "Hour 3",
@@ -9016,7 +9607,8 @@
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
-      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None"
+      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
+      "timeseries_objective_function": "None"
     },
     {
       "name": "Hour 4",
@@ -9047,7 +9639,8 @@
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
-      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None"
+      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
+      "timeseries_objective_function": "None"
     },
     {
       "name": "Hour 5",
@@ -9078,7 +9671,8 @@
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
-      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None"
+      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
+      "timeseries_objective_function": "None"
     },
     {
       "name": "Hour 6",
@@ -9109,7 +9703,8 @@
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
-      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None"
+      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
+      "timeseries_objective_function": "None"
     },
     {
       "name": "Hour 7",
@@ -9140,7 +9735,8 @@
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
-      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None"
+      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
+      "timeseries_objective_function": "None"
     },
     {
       "name": "Hour 8",
@@ -9171,7 +9767,8 @@
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
-      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None"
+      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
+      "timeseries_objective_function": "None"
     },
     {
       "name": "Hour 9",
@@ -9202,7 +9799,8 @@
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
-      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None"
+      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
+      "timeseries_objective_function": "None"
     },
     {
       "name": "Hour 10",
@@ -9233,7 +9831,8 @@
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
-      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None"
+      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
+      "timeseries_objective_function": "None"
     },
     {
       "name": "Hoiur 11",
@@ -9264,7 +9863,8 @@
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
-      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None"
+      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
+      "timeseries_objective_function": "None"
     },
     {
       "name": "Hour 12-Noon",
@@ -9295,7 +9895,8 @@
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
-      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None"
+      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
+      "timeseries_objective_function": "None"
     },
     {
       "name": "Hour 13",
@@ -9326,7 +9927,8 @@
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
-      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None"
+      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
+      "timeseries_objective_function": "None"
     },
     {
       "name": "Hour 14",
@@ -9357,7 +9959,8 @@
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
-      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None"
+      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
+      "timeseries_objective_function": "None"
     },
     {
       "name": "Hour 15",
@@ -9388,7 +9991,8 @@
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
-      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None"
+      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
+      "timeseries_objective_function": "None"
     },
     {
       "name": "Hour 16",
@@ -9419,7 +10023,8 @@
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
-      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None"
+      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
+      "timeseries_objective_function": "None"
     },
     {
       "name": "Hour 17",
@@ -9450,7 +10055,8 @@
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
-      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None"
+      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
+      "timeseries_objective_function": "None"
     },
     {
       "name": "Hour 18",
@@ -9481,7 +10087,8 @@
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
-      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None"
+      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
+      "timeseries_objective_function": "None"
     },
     {
       "name": "Hour 19",
@@ -9512,7 +10119,8 @@
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
-      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None"
+      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
+      "timeseries_objective_function": "None"
     },
     {
       "name": "Hour 20",
@@ -9543,7 +10151,8 @@
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
-      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None"
+      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
+      "timeseries_objective_function": "None"
     },
     {
       "name": "Hour 21",
@@ -9574,7 +10183,8 @@
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "Hour 21",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
-      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None"
+      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
+      "timeseries_objective_function": "None"
     },
     {
       "name": "Hour 22",
@@ -9605,7 +10215,8 @@
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "Hour 22",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
-      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None"
+      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
+      "timeseries_objective_function": "None"
     },
     {
       "name": "Hour 23",
@@ -9636,7 +10247,8 @@
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "Hour 23",
-      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None"
+      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
+      "timeseries_objective_function": "None"
     },
     {
       "name": "Hour 24-Midnight",
@@ -9667,9 +10279,179 @@
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
       "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "None",
-      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "Hour 24-Midnight"
+      "cooling_setpoints_hourly_adjusted_by_degrees_1_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "Hour 24-Midnight",
+      "timeseries_objective_function": "None"
     }
   ],
-  "analysisID": "9a85a133-9b2e-4e06-b425-b789df2cd940\r",
-  "datapoints": []
+  "analysisID": null,
+  "datapoints": [
+    {
+      "name": "Hour 1",
+      "id": "Hour 1",
+      "run": false,
+      "modified": false,
+      "selected": false
+    },
+    {
+      "name": "Hour 2",
+      "id": "Hour 2",
+      "run": false,
+      "modified": false,
+      "selected": false
+    },
+    {
+      "name": "Hour 3",
+      "id": "Hour 3",
+      "run": false,
+      "modified": false,
+      "selected": false
+    },
+    {
+      "name": "Hour 4",
+      "id": "Hour 4",
+      "run": false,
+      "modified": false,
+      "selected": false
+    },
+    {
+      "name": "Hour 5",
+      "id": "Hour 5",
+      "run": false,
+      "modified": false,
+      "selected": false
+    },
+    {
+      "name": "Hour 6",
+      "id": "Hour 6",
+      "run": false,
+      "modified": false,
+      "selected": false
+    },
+    {
+      "name": "Hour 7",
+      "id": "Hour 7",
+      "run": false,
+      "modified": false,
+      "selected": false
+    },
+    {
+      "name": "Hour 8",
+      "id": "Hour 8",
+      "run": false,
+      "modified": false,
+      "selected": false
+    },
+    {
+      "name": "Hour 9",
+      "id": "Hour 9",
+      "run": false,
+      "modified": false,
+      "selected": false
+    },
+    {
+      "name": "Hour 10",
+      "id": "Hour 10",
+      "run": false,
+      "modified": false,
+      "selected": false
+    },
+    {
+      "name": "Hoiur 11",
+      "id": "Hoiur 11",
+      "run": false,
+      "modified": false,
+      "selected": false
+    },
+    {
+      "name": "Hour 12-Noon",
+      "id": "Hour 12-Noon",
+      "run": false,
+      "modified": false,
+      "selected": false
+    },
+    {
+      "name": "Hour 13",
+      "id": "Hour 13",
+      "run": false,
+      "modified": false,
+      "selected": false
+    },
+    {
+      "name": "Hour 14",
+      "id": "Hour 14",
+      "run": false,
+      "modified": false,
+      "selected": false
+    },
+    {
+      "name": "Hour 15",
+      "id": "Hour 15",
+      "run": false,
+      "modified": false,
+      "selected": false
+    },
+    {
+      "name": "Hour 16",
+      "id": "Hour 16",
+      "run": false,
+      "modified": false,
+      "selected": false
+    },
+    {
+      "name": "Hour 17",
+      "id": "Hour 17",
+      "run": false,
+      "modified": false,
+      "selected": false
+    },
+    {
+      "name": "Hour 18",
+      "id": "Hour 18",
+      "run": false,
+      "modified": false,
+      "selected": false
+    },
+    {
+      "name": "Hour 19",
+      "id": "Hour 19",
+      "run": false,
+      "modified": false,
+      "selected": false
+    },
+    {
+      "name": "Hour 20",
+      "id": "Hour 20",
+      "run": false,
+      "modified": false,
+      "selected": false
+    },
+    {
+      "name": "Hour 21",
+      "id": "Hour 21",
+      "run": false,
+      "modified": false,
+      "selected": false
+    },
+    {
+      "name": "Hour 22",
+      "id": "Hour 22",
+      "run": false,
+      "modified": false,
+      "selected": false
+    },
+    {
+      "name": "Hour 23",
+      "id": "Hour 23",
+      "run": false,
+      "modified": false,
+      "selected": false
+    },
+    {
+      "name": "Hour 24-Midnight",
+      "id": "Hour 24-Midnight",
+      "run": false,
+      "modified": false,
+      "selected": false
+    }
+  ]
 }

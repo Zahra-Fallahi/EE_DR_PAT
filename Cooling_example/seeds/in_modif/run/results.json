@@ -1,0 +1,7 @@
+{
+  "CoolingSetpointsHourlyAdjustedByDegrees1": {
+    "cooling_setpoint": 25.5,
+    "hour_of_the_day": 10.0,
+    "applicable": true
+  }
+}
