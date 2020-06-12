@@ -1,7 +1,0 @@
-{
-   "created_at" : "20200611T024222Z",
-   "seed_file" : "../in.osm",
-   "steps" : [],
-   "updated_at" : "20200611T024334Z",
-   "weather_file" : "USA_CO_Boulder-Broomfield-Jefferson.County.AP.724699_TMY3.epw"
-}

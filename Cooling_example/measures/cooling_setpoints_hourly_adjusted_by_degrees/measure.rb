@@ -55,10 +55,10 @@ class CoolingSetpointsHourlyAdjustedByDegrees < OpenStudio::Measure::ModelMeasur
 
 		#input test
 		if cooling_setpoint < 21.1
-			runner.registerError('Cooling setpoint temperature (#{cooling_setpoint}) is less than 21.1 degrees Celsius')
+			runner.registerError("Cooling setpoint temperature (#{cooling_setpoint}) is less than 21.1 degrees Celsius")
 			return false
 		elsif cooling_setpoint.abs > 26.0
-			runner.registerError('Cooling setpoint temperature (#{cooling_setpoint}) is greater than 26.0 degrees Celsius')
+			runner.registerError("Cooling setpoint temperature (#{cooling_setpoint}) is greater than 26.0 degrees Celsius")
 			return false
 		end
 
@@ -66,10 +66,10 @@ class CoolingSetpointsHourlyAdjustedByDegrees < OpenStudio::Measure::ModelMeasur
 
 		#input test
 		if hour_of_the_day < 1
-			runner.registerError('Hour of the day (#{hour_of_the_day}) is less than 1')
+			runner.registerError("Hour of the day (#{hour_of_the_day}) is less than 1")
 			return false
 		elsif hour_of_the_day.abs > 24
-			runner.registerError('Hour of the day (#{hour_of_the_day}) is greater than 24')
+			runner.registerError("Hour of the day (#{hour_of_the_day}) is greater than 24")
 			return false
 		end
 

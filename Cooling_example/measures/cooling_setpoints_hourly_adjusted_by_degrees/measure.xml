@@ -2,8 +2,8 @@
   <schema_version>3.0</schema_version>
   <name>cooling_setpoints_hourly_adjusted_by_degrees</name>
   <uid>30ea2885-8a6f-40ba-b02c-b1ae70569479</uid>
-  <version_id>c889d0dd-64cc-458e-bb57-e8bec333729a</version_id>
-  <version_modified>20200519T214754Z</version_modified>
+  <version_id>291f0c70-762b-42fc-a832-8c0340c13227</version_id>
+  <version_modified>20200611T223003Z</version_modified>
   <xml_checksum>356BE47F</xml_checksum>
   <class_name>CoolingSetpointsHourlyAdjustedByDegrees</class_name>
   <display_name>CoolingSetpointsHourlyAdjustedByDegrees</display_name>
@@ -81,6 +81,12 @@
       <checksum>8286F681</checksum>
     </file>
     <file>
+      <filename>example_model.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>53D14E69</checksum>
+    </file>
+    <file>
       <filename>README.md</filename>
       <filetype>md</filetype>
       <usage_type>readme</usage_type>
@@ -95,13 +101,7 @@
       <filename>measure.rb</filename>
       <filetype>rb</filetype>
       <usage_type>script</usage_type>
-      <checksum>3E51C14F</checksum>
-    </file>
-    <file>
-      <filename>example_model.osm</filename>
-      <filetype>osm</filetype>
-      <usage_type>test</usage_type>
-      <checksum>B36C983F</checksum>
+      <checksum>C0EB31A0</checksum>
     </file>
   </files>
 </measure>
