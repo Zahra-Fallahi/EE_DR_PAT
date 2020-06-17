@@ -1124,9 +1124,9 @@
           "measure_definition_name": "timeseries_objective_function",
           "measure_definition_name_xml": null,
           "measure_definition_uuid": "6804217d-4737-45f3-82df-b81393c29ce3",
-          "measure_definition_version_uuid": "d41b5fec-0640-4337-965c-e1515b34d80e",
+          "measure_definition_version_uuid": "b49a9711-be10-4194-9d29-485f3b28e925",
           "uuid": "6804217d-4737-45f3-82df-b81393c29ce3",
-          "version_uuid": "d41b5fec-0640-4337-965c-e1515b34d80e",
+          "version_uuid": "b49a9711-be10-4194-9d29-485f3b28e925",
           "description": "Creates Objective Function from Timeseries Data",
           "taxonomy": "Reporting.QAQC",
           "arguments": [
@@ -1191,8 +1191,8 @@
               "display_name_short": "key_value",
               "name": "key_value",
               "value_type": "string",
-              "default_value": "Electricity:Facility",
-              "value": "Electricity:Facility"
+              "default_value": "no_key",
+              "value": "no_key"
             },
             {
               "display_name": "TimeSeries Name",
@@ -1272,7 +1272,7 @@
               "name": "verbose_messages",
               "value_type": "boolean",
               "default_value": false,
-              "value": true
+              "value": false
             },
             {
               "display_name": "warning_messages",
@@ -1322,8 +1322,8 @@
       "path": "./weather/USA_CO_Boulder-Broomfield-Jefferson.County.AP.724699_TMY3.epw"
     },
     "file_format_version": 1,
-    "cli_debug": "",
-    "cli_verbose": "",
+    "cli_debug": "--debug",
+    "cli_verbose": "--verbose",
     "run_workflow_timeout": 28800,
     "upload_results_timeout": 28800,
     "initialize_worker_timeout": 28800,

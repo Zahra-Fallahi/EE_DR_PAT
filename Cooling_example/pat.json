@@ -5,8 +5,8 @@
   "seed": "in.osm",
   "weatherFile": "USA_CO_Boulder-Broomfield-Jefferson.County.AP.724699_TMY3.epw",
   "analysis_type": "Algorithmic",
-  "cliDebug": "",
-  "cliVerbose": "",
+  "cliDebug": "--debug",
+  "cliVerbose": "--verbose",
   "timeoutWorkflow": 28800,
   "timeoutUploadResults": 28800,
   "timeoutInitWorker": 28800,
@@ -14,10 +14,63 @@
     "open": true,
     "remoteType": "Existing Remote Server",
     "remoteServerURL": "http://localhost:8080/",
-    "aws": {},
+    "aws": {
+      "cluster_name": "EE_DR_test",
+      "connected": false,
+      "server_instance_type": {
+        "name": "m3.2xlarge",
+        "cpus": "8",
+        "memory": "30 GiB",
+        "storage": "2 x 80 GB",
+        "cost": "$0.56/hr"
+      },
+      "worker_instance_type": {
+        "name": "m3.medium",
+        "cpus": "1",
+        "memory": "3.75 GiB",
+        "storage": "1 x 4 GB",
+        "cost": "$0.07/hr"
+      },
+      "user_id": "zfallahi",
+      "worker_node_number": 0,
+      "aws_tags": [],
+      "openstudio_server_version": {
+        "name": "3.0.0",
+        "notes": null,
+        "standards": {
+          "ref": "0.2.11",
+          "repo": "nrel/openstudio-standards"
+        },
+        "workflow": {
+          "ref": "2.0.0",
+          "repo": "nrel/openstudio-workflow-gem"
+        },
+        "energyplus": "9.3",
+        "radiance": "NREL 5.0.a",
+        "analysis": {
+          "ref": "1.0.2",
+          "repo": "nrel/openstudio-analysis-gem"
+        },
+        "openstudio": {
+          "version_number": "3.0.0",
+          "version_sha": "1c9617fa4e",
+          "url_base": "https://s3.amazonaws.com/openstudio-builds/NUMBER/OpenStudio-NUMBER.SHA-Linux.deb"
+        },
+        "server": {
+          "ref": "a43d33438a8fd6f904c1a4a58b154db5fcb2b24b",
+          "repo": "nrel/openstudio-server"
+        },
+        "R": "3.6.1",
+        "ami": "ami-037ca03cca51aef46"
+      },
+      "cluster_status": "terminated",
+      "server": {
+        "dns": null
+      }
+    },
     "credentials": {
-      "yamlFilename": null,
-      "accessKey": null,
+      "yamlFilename": "zfallahi",
+      "accessKey": "AKIA****",
       "region": "us-east-1"
     }
   },
@@ -252,7 +305,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.6635418207245891,
+      "instanceId": 0.9590396853654917,
       "numberOfOptions": 1,
       "$$hashKey": "object:6880",
       "unlockStatus": true,
@@ -451,7 +504,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.7670018676835457,
+      "instanceId": 0.14697864475878752,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:7170",
@@ -650,7 +703,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.6895245147582119,
+      "instanceId": 0.43554881328409234,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:7492",
@@ -849,7 +902,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.3243773617411143,
+      "instanceId": 0.7947443119826914,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:7864",
@@ -1048,7 +1101,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.18891399048375623,
+      "instanceId": 0.7430172716892998,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:8287",
@@ -1247,7 +1300,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.7213833177790694,
+      "instanceId": 0.5862765191445194,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:8761",
@@ -1446,7 +1499,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.07852513306433928,
+      "instanceId": 0.3921699058582906,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:9286",
@@ -1645,7 +1698,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.6181500847166792,
+      "instanceId": 0.4923134238430662,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:9862",
@@ -1844,7 +1897,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.5387985706962084,
+      "instanceId": 0.2587420755442864,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:10489",
@@ -2043,7 +2096,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.354343883162902,
+      "instanceId": 0.8523768605597772,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:11167",
@@ -2242,7 +2295,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.24268025379995528,
+      "instanceId": 0.29033390029179595,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:11896",
@@ -2441,7 +2494,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.5707653513908226,
+      "instanceId": 0.5696883911821435,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:12676",
@@ -2640,7 +2693,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.27575575544926156,
+      "instanceId": 0.07291183415664482,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:13441",
@@ -2839,7 +2892,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.47956058487373454,
+      "instanceId": 0.3837479217522066,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:14155",
@@ -3038,7 +3091,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.9940119776070502,
+      "instanceId": 0.7648347116048222,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:14806",
@@ -3237,7 +3290,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.7631200272255432,
+      "instanceId": 0.24011124552004315,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:15361",
@@ -3436,7 +3489,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.9571775440412151,
+      "instanceId": 0.35238982506735317,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:15844",
@@ -3635,7 +3688,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.7405658291918407,
+      "instanceId": 0.2605706560134289,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:16345",
@@ -3834,7 +3887,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.2775736334238472,
+      "instanceId": 0.4373116985966985,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:16777",
@@ -4033,7 +4086,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.3132757026575177,
+      "instanceId": 0.9975915876309813,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:17260",
@@ -4232,7 +4285,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.8166967877945654,
+      "instanceId": 0.632662284506319,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:19855",
@@ -4431,7 +4484,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.8478094662774787,
+      "instanceId": 0.47160037554878276,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:20704",
@@ -4630,7 +4683,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.17957241971307414,
+      "instanceId": 0.5923118889446688,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:21232",
@@ -4829,7 +4882,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.046467619431804774,
+      "instanceId": 0.5658738234415308,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:21688",
@@ -5684,7 +5737,7 @@
       "seed": "in.osm",
       "workflow_index": 24,
       "options": [],
-      "instanceId": 0.3515199912860776,
+      "instanceId": 0.6974608192048675,
       "numberOfOptions": 0,
       "$$hashKey": "object:7037",
       "skip": false,
@@ -5699,9 +5752,9 @@
       "directory": "C:/Users/zahra/OpenStudio_git/measure_directory_my/TimeseriesObjectiveFunction",
       "uid": "6804217d-4737-45f3-82df-b81393c29ce3",
       "uuid": "{6804217d-4737-45f3-82df-b81393c29ce3}",
-      "version_id": "d41b5fec-0640-4337-965c-e1515b34d80e",
-      "version_uuid": "{d41b5fec-0640-4337-965c-e1515b34d80e}",
-      "version_modified": "20180322T191228Z",
+      "version_id": "b49a9711-be10-4194-9d29-485f3b28e925",
+      "version_uuid": "{b49a9711-be10-4194-9d29-485f3b28e925}",
+      "version_modified": "20200617T224727Z",
       "xml_checksum": "FFE04372",
       "display_name": "TimeSeries Objective Function",
       "class_name": "TimeseriesObjectiveFunction",
@@ -5717,7 +5770,7 @@
           "type": "Double",
           "units": "",
           "model_dependent": false,
-          "$$hashKey": "object:31125"
+          "$$hashKey": "object:6426"
         },
         {
           "name": "simdata",
@@ -5727,7 +5780,7 @@
           "type": "Double",
           "units": "",
           "model_dependent": false,
-          "$$hashKey": "object:31126"
+          "$$hashKey": "object:6427"
         },
         {
           "name": "csvdata",
@@ -5737,7 +5790,7 @@
           "type": "Double",
           "units": "",
           "model_dependent": false,
-          "$$hashKey": "object:31127"
+          "$$hashKey": "object:6428"
         },
         {
           "name": "cvrmse",
@@ -5747,7 +5800,7 @@
           "type": "Double",
           "units": "",
           "model_dependent": false,
-          "$$hashKey": "object:31128",
+          "$$hashKey": "object:6429",
           "checked": true,
           "visualize": "true",
           "objective_function": "true",
@@ -5763,7 +5816,7 @@
           "type": "Double",
           "units": "",
           "model_dependent": false,
-          "$$hashKey": "object:31129"
+          "$$hashKey": "object:6430"
         }
       ],
       "attributes": [
@@ -5806,7 +5859,7 @@
             "stdDev": "../../../lib/resources/mtr.csv",
             "default_value": "../../../lib/resources/in.csv"
           },
-          "$$hashKey": "object:13396"
+          "$$hashKey": "object:5246"
         },
         {
           "name": "csv_time_header",
@@ -5830,7 +5883,7 @@
             "stdDev": "Date/Time",
             "default_value": "Date/Time"
           },
-          "$$hashKey": "object:13397"
+          "$$hashKey": "object:5247"
         },
         {
           "name": "csv_var",
@@ -5854,7 +5907,7 @@
             "stdDev": "Whole Building:Facility Total Electric Demand Power [W](TimeStep)",
             "default_value": "Electricity:Facility [J](TimeStep)"
           },
-          "$$hashKey": "object:13398"
+          "$$hashKey": "object:5248"
         },
         {
           "name": "convert_data",
@@ -5898,7 +5951,7 @@
             "stdDev": "None",
             "default_value": "None"
           },
-          "$$hashKey": "object:13399"
+          "$$hashKey": "object:5249"
         },
         {
           "name": "csv_var_dn",
@@ -5922,7 +5975,7 @@
             "stdDev": "",
             "default_value": "Electricity:Facility [J](TimeStep)"
           },
-          "$$hashKey": "object:13400"
+          "$$hashKey": "object:5250"
         },
         {
           "name": "year",
@@ -5946,7 +5999,7 @@
             "stdDev": true,
             "default_value": false
           },
-          "$$hashKey": "object:13401"
+          "$$hashKey": "object:5251"
         },
         {
           "name": "seconds",
@@ -5970,7 +6023,7 @@
             "stdDev": true,
             "default_value": true
           },
-          "$$hashKey": "object:13402"
+          "$$hashKey": "object:5252"
         },
         {
           "name": "key_value",
@@ -5992,9 +6045,9 @@
             "mean": "",
             "deltaX": "",
             "stdDev": "",
-            "default_value": "Electricity:Facility"
+            "default_value": "no_key"
           },
-          "$$hashKey": "object:13403"
+          "$$hashKey": "object:5253"
         },
         {
           "name": "timeseries_name",
@@ -6018,7 +6071,7 @@
             "stdDev": "Facility Total Electric Demand Power",
             "default_value": "Electricity:Facility"
           },
-          "$$hashKey": "object:13404"
+          "$$hashKey": "object:5254"
         },
         {
           "name": "reporting_frequency",
@@ -6065,7 +6118,7 @@
             "stdDev": "",
             "default_value": "Timestep"
           },
-          "$$hashKey": "object:13405"
+          "$$hashKey": "object:5255"
         },
         {
           "name": "environment_period",
@@ -6089,7 +6142,7 @@
             "stdDev": "RUN PERIOD 1",
             "default_value": "RUN PERIOD 1"
           },
-          "$$hashKey": "object:13406"
+          "$$hashKey": "object:5256"
         },
         {
           "name": "norm",
@@ -6116,7 +6169,7 @@
             "stdDev": 1,
             "default_value": 1
           },
-          "$$hashKey": "object:13407"
+          "$$hashKey": "object:5257"
         },
         {
           "name": "scale",
@@ -6143,7 +6196,7 @@
             "stdDev": 1,
             "default_value": 1
           },
-          "$$hashKey": "object:13408"
+          "$$hashKey": "object:5258"
         },
         {
           "name": "find_avail",
@@ -6167,7 +6220,7 @@
             "stdDev": true,
             "default_value": true
           },
-          "$$hashKey": "object:13409"
+          "$$hashKey": "object:5259"
         },
         {
           "name": "algorithm_download",
@@ -6191,7 +6244,7 @@
             "stdDev": false,
             "default_value": false
           },
-          "$$hashKey": "object:13410"
+          "$$hashKey": "object:5260"
         },
         {
           "name": "plot_flag",
@@ -6215,7 +6268,7 @@
             "stdDev": true,
             "default_value": true
           },
-          "$$hashKey": "object:13411"
+          "$$hashKey": "object:5261"
         },
         {
           "name": "plot_name",
@@ -6239,7 +6292,7 @@
             "stdDev": "",
             "default_value": "electricity"
           },
-          "$$hashKey": "object:13412"
+          "$$hashKey": "object:5262"
         },
         {
           "name": "verbose_messages",
@@ -6261,9 +6314,9 @@
             "mean": false,
             "deltaX": false,
             "stdDev": false,
-            "default_value": true
+            "default_value": false
           },
-          "$$hashKey": "object:13413"
+          "$$hashKey": "object:5263"
         },
         {
           "name": "warning_messages",
@@ -6287,7 +6340,7 @@
             "stdDev": true,
             "default_value": true
           },
-          "$$hashKey": "object:13414"
+          "$$hashKey": "object:5264"
         },
         {
           "name": "add_first_zero_for_plots",
@@ -6311,7 +6364,7 @@
             "stdDev": false,
             "default_value": false
           },
-          "$$hashKey": "object:13415"
+          "$$hashKey": "object:5265"
         },
         {
           "name": "add_last_zero_for_plots",
@@ -6335,7 +6388,7 @@
             "stdDev": false,
             "default_value": false
           },
-          "$$hashKey": "object:13416"
+          "$$hashKey": "object:5266"
         }
       ],
       "edit": "",
@@ -6345,15 +6398,15 @@
       "add": "",
       "open": true,
       "addedToProject": true,
-      "date": "3/22/2018",
+      "date": "6/17/2020",
       "author": "",
       "type": "ReportingMeasure",
       "seed": "in.osm",
       "workflow_index": 25,
       "options": [],
-      "instanceId": 0.1614383324378479,
+      "instanceId": 0.6073673306841019,
       "skip": false,
-      "$$hashKey": "object:13353",
+      "$$hashKey": "object:5202",
       "outputMeasure": true,
       "userDefinedOutputs": [],
       "analysisOutputs": [
@@ -6365,7 +6418,7 @@
           "type": "Double",
           "units": "",
           "model_dependent": false,
-          "$$hashKey": "object:31128",
+          "$$hashKey": "object:6429",
           "checked": true,
           "visualize": "true",
           "objective_function": "true",
@@ -6435,6 +6488,6 @@
       "timeseries_objective_function": "None"
     }
   ],
-  "analysisID": "1bc134d7-07fc-4e46-a72f-1dfc23622fc9\r",
+  "analysisID": "08f1e2b7-1c77-4eff-99cd-9cde46cd6842\r",
   "datapoints": []
 }
