@@ -1,0 +1,1126 @@
+{
+  "analysis": {
+    "display_name": "Cooling_example",
+    "name": "Cooling_example",
+    "output_variables": [],
+    "problem": {
+      "workflow": [
+        {
+          "name": "cooling_setpoints_hourly_adjusted_by_degrees",
+          "display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour1",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "CoolingSetpointsHourlyAdjustedByDegrees",
+          "measure_definition_directory": "./measures/cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_directory_local": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour1",
+          "measure_definition_name": "cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "measure_definition_version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "description": "Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
+          "taxonomy": "HVAC.HVAC Controls",
+          "arguments": [
+            {
+              "display_name": "Cooling Setpoint",
+              "display_name_short": "cooling_setpoint",
+              "name": "cooling_setpoint",
+              "value_type": "double",
+              "default_value": 24,
+              "value": 24
+            },
+            {
+              "display_name": "Hour of the Day",
+              "display_name_short": "hour_of_the_day",
+              "name": "hour_of_the_day",
+              "value_type": "double",
+              "default_value": 1,
+              "value": 1
+            }
+          ],
+          "variables": [],
+          "workflow_index": 0
+        },
+        {
+          "name": "cooling_setpoints_hourly_adjusted_by_degrees_2",
+          "display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour2",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "CoolingSetpointsHourlyAdjustedByDegrees",
+          "measure_definition_directory": "./measures/cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_directory_local": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour2",
+          "measure_definition_name": "cooling_setpoints_hourly_adjusted_by_degrees_2",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "measure_definition_version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "description": "Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
+          "taxonomy": "HVAC.HVAC Controls",
+          "arguments": [
+            {
+              "display_name": "Cooling Setpoint",
+              "display_name_short": "cooling_setpoint",
+              "name": "cooling_setpoint",
+              "value_type": "double",
+              "default_value": 24,
+              "value": 24
+            },
+            {
+              "display_name": "Hour of the Day",
+              "display_name_short": "hour_of_the_day",
+              "name": "hour_of_the_day",
+              "value_type": "double",
+              "default_value": 2,
+              "value": 2
+            }
+          ],
+          "variables": [],
+          "workflow_index": 1
+        },
+        {
+          "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2",
+          "display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour3",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "CoolingSetpointsHourlyAdjustedByDegrees",
+          "measure_definition_directory": "./measures/cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_directory_local": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour3",
+          "measure_definition_name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "measure_definition_version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "description": "Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
+          "taxonomy": "HVAC.HVAC Controls",
+          "arguments": [
+            {
+              "display_name": "Cooling Setpoint",
+              "display_name_short": "cooling_setpoint",
+              "name": "cooling_setpoint",
+              "value_type": "double",
+              "default_value": 24,
+              "value": 24
+            },
+            {
+              "display_name": "Hour of the Day",
+              "display_name_short": "hour_of_the_day",
+              "name": "hour_of_the_day",
+              "value_type": "double",
+              "default_value": 3,
+              "value": 3
+            }
+          ],
+          "variables": [],
+          "workflow_index": 2
+        },
+        {
+          "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2",
+          "display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour4",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "CoolingSetpointsHourlyAdjustedByDegrees",
+          "measure_definition_directory": "./measures/cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_directory_local": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour4",
+          "measure_definition_name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "measure_definition_version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "description": "Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
+          "taxonomy": "HVAC.HVAC Controls",
+          "arguments": [
+            {
+              "display_name": "Cooling Setpoint",
+              "display_name_short": "cooling_setpoint",
+              "name": "cooling_setpoint",
+              "value_type": "double",
+              "default_value": 24,
+              "value": 24
+            },
+            {
+              "display_name": "Hour of the Day",
+              "display_name_short": "hour_of_the_day",
+              "name": "hour_of_the_day",
+              "value_type": "double",
+              "default_value": 4,
+              "value": 4
+            }
+          ],
+          "variables": [],
+          "workflow_index": 3
+        },
+        {
+          "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2",
+          "display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour5",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "CoolingSetpointsHourlyAdjustedByDegrees",
+          "measure_definition_directory": "./measures/cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_directory_local": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour5",
+          "measure_definition_name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "measure_definition_version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "description": "Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
+          "taxonomy": "HVAC.HVAC Controls",
+          "arguments": [
+            {
+              "display_name": "Cooling Setpoint",
+              "display_name_short": "cooling_setpoint",
+              "name": "cooling_setpoint",
+              "value_type": "double",
+              "default_value": 24,
+              "value": 24
+            },
+            {
+              "display_name": "Hour of the Day",
+              "display_name_short": "hour_of_the_day",
+              "name": "hour_of_the_day",
+              "value_type": "double",
+              "default_value": 5,
+              "value": 5
+            }
+          ],
+          "variables": [],
+          "workflow_index": 4
+        },
+        {
+          "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2",
+          "display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour6",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "CoolingSetpointsHourlyAdjustedByDegrees",
+          "measure_definition_directory": "./measures/cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_directory_local": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour6",
+          "measure_definition_name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "measure_definition_version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "description": "Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
+          "taxonomy": "HVAC.HVAC Controls",
+          "arguments": [
+            {
+              "display_name": "Cooling Setpoint",
+              "display_name_short": "cooling_setpoint",
+              "name": "cooling_setpoint",
+              "value_type": "double",
+              "default_value": 24,
+              "value": 24
+            },
+            {
+              "display_name": "Hour of the Day",
+              "display_name_short": "hour_of_the_day",
+              "name": "hour_of_the_day",
+              "value_type": "double",
+              "default_value": 6,
+              "value": 6
+            }
+          ],
+          "variables": [],
+          "workflow_index": 5
+        },
+        {
+          "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2",
+          "display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour7",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "CoolingSetpointsHourlyAdjustedByDegrees",
+          "measure_definition_directory": "./measures/cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_directory_local": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour7",
+          "measure_definition_name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "measure_definition_version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "description": "Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
+          "taxonomy": "HVAC.HVAC Controls",
+          "arguments": [
+            {
+              "display_name": "Cooling Setpoint",
+              "display_name_short": "cooling_setpoint",
+              "name": "cooling_setpoint",
+              "value_type": "double",
+              "default_value": 24,
+              "value": 24
+            },
+            {
+              "display_name": "Hour of the Day",
+              "display_name_short": "hour_of_the_day",
+              "name": "hour_of_the_day",
+              "value_type": "double",
+              "default_value": 7,
+              "value": 7
+            }
+          ],
+          "variables": [],
+          "workflow_index": 6
+        },
+        {
+          "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2",
+          "display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour8",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "CoolingSetpointsHourlyAdjustedByDegrees",
+          "measure_definition_directory": "./measures/cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_directory_local": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour8",
+          "measure_definition_name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "measure_definition_version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "description": "Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
+          "taxonomy": "HVAC.HVAC Controls",
+          "arguments": [
+            {
+              "display_name": "Cooling Setpoint",
+              "display_name_short": "cooling_setpoint",
+              "name": "cooling_setpoint",
+              "value_type": "double",
+              "default_value": 24,
+              "value": 24
+            },
+            {
+              "display_name": "Hour of the Day",
+              "display_name_short": "hour_of_the_day",
+              "name": "hour_of_the_day",
+              "value_type": "double",
+              "default_value": 8,
+              "value": 8
+            }
+          ],
+          "variables": [],
+          "workflow_index": 7
+        },
+        {
+          "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2",
+          "display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour9",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "CoolingSetpointsHourlyAdjustedByDegrees",
+          "measure_definition_directory": "./measures/cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_directory_local": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour9",
+          "measure_definition_name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "measure_definition_version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "description": "Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
+          "taxonomy": "HVAC.HVAC Controls",
+          "arguments": [
+            {
+              "display_name": "Cooling Setpoint",
+              "display_name_short": "cooling_setpoint",
+              "name": "cooling_setpoint",
+              "value_type": "double",
+              "default_value": 24,
+              "value": 24
+            },
+            {
+              "display_name": "Hour of the Day",
+              "display_name_short": "hour_of_the_day",
+              "name": "hour_of_the_day",
+              "value_type": "double",
+              "default_value": 9,
+              "value": 9
+            }
+          ],
+          "variables": [],
+          "workflow_index": 8
+        },
+        {
+          "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2",
+          "display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour10",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "CoolingSetpointsHourlyAdjustedByDegrees",
+          "measure_definition_directory": "./measures/cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_directory_local": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour10",
+          "measure_definition_name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "measure_definition_version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "description": "Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
+          "taxonomy": "HVAC.HVAC Controls",
+          "arguments": [
+            {
+              "display_name": "Cooling Setpoint",
+              "display_name_short": "cooling_setpoint",
+              "name": "cooling_setpoint",
+              "value_type": "double",
+              "default_value": 24,
+              "value": 24
+            },
+            {
+              "display_name": "Hour of the Day",
+              "display_name_short": "hour_of_the_day",
+              "name": "hour_of_the_day",
+              "value_type": "double",
+              "default_value": 10,
+              "value": 10
+            }
+          ],
+          "variables": [],
+          "workflow_index": 9
+        },
+        {
+          "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2",
+          "display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour11",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "CoolingSetpointsHourlyAdjustedByDegrees",
+          "measure_definition_directory": "./measures/cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_directory_local": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour11",
+          "measure_definition_name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "measure_definition_version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "description": "Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
+          "taxonomy": "HVAC.HVAC Controls",
+          "arguments": [
+            {
+              "display_name": "Cooling Setpoint",
+              "display_name_short": "cooling_setpoint",
+              "name": "cooling_setpoint",
+              "value_type": "double",
+              "default_value": 24,
+              "value": 24
+            },
+            {
+              "display_name": "Hour of the Day",
+              "display_name_short": "hour_of_the_day",
+              "name": "hour_of_the_day",
+              "value_type": "double",
+              "default_value": 11,
+              "value": 11
+            }
+          ],
+          "variables": [],
+          "workflow_index": 10
+        },
+        {
+          "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2",
+          "display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour12",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "CoolingSetpointsHourlyAdjustedByDegrees",
+          "measure_definition_directory": "./measures/cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_directory_local": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour12",
+          "measure_definition_name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "measure_definition_version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "description": "Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
+          "taxonomy": "HVAC.HVAC Controls",
+          "arguments": [
+            {
+              "display_name": "Cooling Setpoint",
+              "display_name_short": "cooling_setpoint",
+              "name": "cooling_setpoint",
+              "value_type": "double",
+              "default_value": 24,
+              "value": 24
+            },
+            {
+              "display_name": "Hour of the Day",
+              "display_name_short": "hour_of_the_day",
+              "name": "hour_of_the_day",
+              "value_type": "double",
+              "default_value": 12,
+              "value": 12
+            }
+          ],
+          "variables": [],
+          "workflow_index": 11
+        },
+        {
+          "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2",
+          "display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour13",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "CoolingSetpointsHourlyAdjustedByDegrees",
+          "measure_definition_directory": "./measures/cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_directory_local": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour13",
+          "measure_definition_name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "measure_definition_version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "description": "Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
+          "taxonomy": "HVAC.HVAC Controls",
+          "arguments": [
+            {
+              "display_name": "Cooling Setpoint",
+              "display_name_short": "cooling_setpoint",
+              "name": "cooling_setpoint",
+              "value_type": "double",
+              "default_value": 24,
+              "value": 24
+            },
+            {
+              "display_name": "Hour of the Day",
+              "display_name_short": "hour_of_the_day",
+              "name": "hour_of_the_day",
+              "value_type": "double",
+              "default_value": 13,
+              "value": 13
+            }
+          ],
+          "variables": [],
+          "workflow_index": 12
+        },
+        {
+          "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2",
+          "display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour14",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "CoolingSetpointsHourlyAdjustedByDegrees",
+          "measure_definition_directory": "./measures/cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_directory_local": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour14",
+          "measure_definition_name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "measure_definition_version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "description": "Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
+          "taxonomy": "HVAC.HVAC Controls",
+          "arguments": [
+            {
+              "display_name": "Cooling Setpoint",
+              "display_name_short": "cooling_setpoint",
+              "name": "cooling_setpoint",
+              "value_type": "double",
+              "default_value": 24,
+              "value": 24
+            },
+            {
+              "display_name": "Hour of the Day",
+              "display_name_short": "hour_of_the_day",
+              "name": "hour_of_the_day",
+              "value_type": "double",
+              "default_value": 14,
+              "value": 14
+            }
+          ],
+          "variables": [],
+          "workflow_index": 13
+        },
+        {
+          "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
+          "display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour15",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "CoolingSetpointsHourlyAdjustedByDegrees",
+          "measure_definition_directory": "./measures/cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_directory_local": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour15",
+          "measure_definition_name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "measure_definition_version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "description": "Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
+          "taxonomy": "HVAC.HVAC Controls",
+          "arguments": [
+            {
+              "display_name": "Cooling Setpoint",
+              "display_name_short": "cooling_setpoint",
+              "name": "cooling_setpoint",
+              "value_type": "double",
+              "default_value": 24,
+              "value": 24
+            },
+            {
+              "display_name": "Hour of the Day",
+              "display_name_short": "hour_of_the_day",
+              "name": "hour_of_the_day",
+              "value_type": "double",
+              "default_value": 15,
+              "value": 15
+            }
+          ],
+          "variables": [],
+          "workflow_index": 14
+        },
+        {
+          "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
+          "display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour16",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "CoolingSetpointsHourlyAdjustedByDegrees",
+          "measure_definition_directory": "./measures/cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_directory_local": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour16",
+          "measure_definition_name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "measure_definition_version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "description": "Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
+          "taxonomy": "HVAC.HVAC Controls",
+          "arguments": [
+            {
+              "display_name": "Cooling Setpoint",
+              "display_name_short": "cooling_setpoint",
+              "name": "cooling_setpoint",
+              "value_type": "double",
+              "default_value": 24,
+              "value": 24
+            },
+            {
+              "display_name": "Hour of the Day",
+              "display_name_short": "hour_of_the_day",
+              "name": "hour_of_the_day",
+              "value_type": "double",
+              "default_value": 16,
+              "value": 16
+            }
+          ],
+          "variables": [],
+          "workflow_index": 15
+        },
+        {
+          "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
+          "display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour17",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "CoolingSetpointsHourlyAdjustedByDegrees",
+          "measure_definition_directory": "./measures/cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_directory_local": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour17",
+          "measure_definition_name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "measure_definition_version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "description": "Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
+          "taxonomy": "HVAC.HVAC Controls",
+          "arguments": [
+            {
+              "display_name": "Cooling Setpoint",
+              "display_name_short": "cooling_setpoint",
+              "name": "cooling_setpoint",
+              "value_type": "double",
+              "default_value": 24,
+              "value": 24
+            },
+            {
+              "display_name": "Hour of the Day",
+              "display_name_short": "hour_of_the_day",
+              "name": "hour_of_the_day",
+              "value_type": "double",
+              "default_value": 17,
+              "value": 17
+            }
+          ],
+          "variables": [],
+          "workflow_index": 16
+        },
+        {
+          "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
+          "display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour18",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "CoolingSetpointsHourlyAdjustedByDegrees",
+          "measure_definition_directory": "./measures/cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_directory_local": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour18",
+          "measure_definition_name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "measure_definition_version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "description": "Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
+          "taxonomy": "HVAC.HVAC Controls",
+          "arguments": [
+            {
+              "display_name": "Cooling Setpoint",
+              "display_name_short": "cooling_setpoint",
+              "name": "cooling_setpoint",
+              "value_type": "double",
+              "default_value": 24,
+              "value": 24
+            },
+            {
+              "display_name": "Hour of the Day",
+              "display_name_short": "hour_of_the_day",
+              "name": "hour_of_the_day",
+              "value_type": "double",
+              "default_value": 18,
+              "value": 18
+            }
+          ],
+          "variables": [],
+          "workflow_index": 17
+        },
+        {
+          "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
+          "display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour19",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "CoolingSetpointsHourlyAdjustedByDegrees",
+          "measure_definition_directory": "./measures/cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_directory_local": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour19",
+          "measure_definition_name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "measure_definition_version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "description": "Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
+          "taxonomy": "HVAC.HVAC Controls",
+          "arguments": [
+            {
+              "display_name": "Cooling Setpoint",
+              "display_name_short": "cooling_setpoint",
+              "name": "cooling_setpoint",
+              "value_type": "double",
+              "default_value": 24,
+              "value": 24
+            },
+            {
+              "display_name": "Hour of the Day",
+              "display_name_short": "hour_of_the_day",
+              "name": "hour_of_the_day",
+              "value_type": "double",
+              "default_value": 19,
+              "value": 19
+            }
+          ],
+          "variables": [],
+          "workflow_index": 18
+        },
+        {
+          "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
+          "display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour20",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "CoolingSetpointsHourlyAdjustedByDegrees",
+          "measure_definition_directory": "./measures/cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_directory_local": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour20",
+          "measure_definition_name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "measure_definition_version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "description": "Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
+          "taxonomy": "HVAC.HVAC Controls",
+          "arguments": [
+            {
+              "display_name": "Cooling Setpoint",
+              "display_name_short": "cooling_setpoint",
+              "name": "cooling_setpoint",
+              "value_type": "double",
+              "default_value": 24,
+              "value": 24
+            },
+            {
+              "display_name": "Hour of the Day",
+              "display_name_short": "hour_of_the_day",
+              "name": "hour_of_the_day",
+              "value_type": "double",
+              "default_value": 20,
+              "value": 20
+            }
+          ],
+          "variables": [],
+          "workflow_index": 19
+        },
+        {
+          "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
+          "display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour21",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "CoolingSetpointsHourlyAdjustedByDegrees",
+          "measure_definition_directory": "./measures/cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_directory_local": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour21",
+          "measure_definition_name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "measure_definition_version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "description": "Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
+          "taxonomy": "HVAC.HVAC Controls",
+          "arguments": [
+            {
+              "display_name": "Cooling Setpoint",
+              "display_name_short": "cooling_setpoint",
+              "name": "cooling_setpoint",
+              "value_type": "double",
+              "default_value": 24,
+              "value": 24
+            },
+            {
+              "display_name": "Hour of the Day",
+              "display_name_short": "hour_of_the_day",
+              "name": "hour_of_the_day",
+              "value_type": "double",
+              "default_value": 21,
+              "value": 21
+            }
+          ],
+          "variables": [],
+          "workflow_index": 20
+        },
+        {
+          "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
+          "display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour22",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "CoolingSetpointsHourlyAdjustedByDegrees",
+          "measure_definition_directory": "./measures/cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_directory_local": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour22",
+          "measure_definition_name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "measure_definition_version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "description": "Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
+          "taxonomy": "HVAC.HVAC Controls",
+          "arguments": [
+            {
+              "display_name": "Cooling Setpoint",
+              "display_name_short": "cooling_setpoint",
+              "name": "cooling_setpoint",
+              "value_type": "double",
+              "default_value": 24,
+              "value": 24
+            },
+            {
+              "display_name": "Hour of the Day",
+              "display_name_short": "hour_of_the_day",
+              "name": "hour_of_the_day",
+              "value_type": "double",
+              "default_value": 22,
+              "value": 22
+            }
+          ],
+          "variables": [],
+          "workflow_index": 21
+        },
+        {
+          "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
+          "display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour23",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "CoolingSetpointsHourlyAdjustedByDegrees",
+          "measure_definition_directory": "./measures/cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_directory_local": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour23",
+          "measure_definition_name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "measure_definition_version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "description": "Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
+          "taxonomy": "HVAC.HVAC Controls",
+          "arguments": [
+            {
+              "display_name": "Cooling Setpoint",
+              "display_name_short": "cooling_setpoint",
+              "name": "cooling_setpoint",
+              "value_type": "double",
+              "default_value": 24,
+              "value": 24
+            },
+            {
+              "display_name": "Hour of the Day",
+              "display_name_short": "hour_of_the_day",
+              "name": "hour_of_the_day",
+              "value_type": "double",
+              "default_value": 23,
+              "value": 23
+            }
+          ],
+          "variables": [],
+          "workflow_index": 22
+        },
+        {
+          "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
+          "display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour24",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "CoolingSetpointsHourlyAdjustedByDegrees",
+          "measure_definition_directory": "./measures/cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_directory_local": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+          "measure_definition_display_name": "CoolingSetpointsHourlyAdjustedByDegrees-Hour24",
+          "measure_definition_name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "measure_definition_version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "uuid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
+          "version_uuid": "291f0c70-762b-42fc-a832-8c0340c13227",
+          "description": "Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
+          "taxonomy": "HVAC.HVAC Controls",
+          "arguments": [
+            {
+              "display_name": "Cooling Setpoint",
+              "display_name_short": "cooling_setpoint",
+              "name": "cooling_setpoint",
+              "value_type": "double",
+              "default_value": 24,
+              "value": 24
+            },
+            {
+              "display_name": "Hour of the Day",
+              "display_name_short": "hour_of_the_day",
+              "name": "hour_of_the_day",
+              "value_type": "double",
+              "default_value": 24,
+              "value": 24
+            }
+          ],
+          "variables": [],
+          "workflow_index": 23
+        },
+        {
+          "name": "openstudio_results",
+          "display_name": "OpenStudio Results",
+          "measure_type": "ReportingMeasure",
+          "measure_definition_class_name": "OpenStudioResults",
+          "measure_definition_directory": "./measures/1d1137b1-f65f-4af8-86cd-8137e43fd36f",
+          "measure_definition_directory_local": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\1d1137b1-f65f-4af8-86cd-8137e43fd36f",
+          "measure_definition_display_name": "OpenStudio Results",
+          "measure_definition_name": "openstudio_results",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "a25386cd-60e4-46bc-8b11-c755f379d916",
+          "measure_definition_version_uuid": "1d1137b1-f65f-4af8-86cd-8137e43fd36f",
+          "uuid": "a25386cd-60e4-46bc-8b11-c755f379d916",
+          "version_uuid": "1d1137b1-f65f-4af8-86cd-8137e43fd36f",
+          "description": "This measure creates high level tables and charts pulling both from model inputs and EnergyPlus results. It has building level information as well as detail on space types, thermal zones, HVAC systems, envelope characteristics, and economics. Click the heading above a chart to view a table of the chart data.",
+          "taxonomy": "Reporting.QAQC",
+          "arguments": [
+            {
+              "display_name": "Which Unit System do you want to use?",
+              "display_name_short": "units",
+              "name": "units",
+              "value_type": "string",
+              "default_value": "IP",
+              "value": "IP"
+            },
+            {
+              "display_name": "Model Summary",
+              "display_name_short": "building_summary_section",
+              "name": "building_summary_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Annual Overview",
+              "display_name_short": "annual_overview_section",
+              "name": "annual_overview_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Monthly Overview",
+              "display_name_short": "monthly_overview_section",
+              "name": "monthly_overview_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Utility Bills/Rates",
+              "display_name_short": "utility_bills_rates_section",
+              "name": "utility_bills_rates_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Envelope Summary",
+              "display_name_short": "envelope_section_section",
+              "name": "envelope_section_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Space Type Breakdown",
+              "display_name_short": "space_type_breakdown_section",
+              "name": "space_type_breakdown_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Space Type Summary",
+              "display_name_short": "space_type_details_section",
+              "name": "space_type_details_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Interior Lighting Summary",
+              "display_name_short": "interior_lighting_section",
+              "name": "interior_lighting_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Plug Loads Summary",
+              "display_name_short": "plug_loads_section",
+              "name": "plug_loads_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Exterior Lighting",
+              "display_name_short": "exterior_light_section",
+              "name": "exterior_light_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Water Use Equipment",
+              "display_name_short": "water_use_section",
+              "name": "water_use_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "HVAC Load Profiles",
+              "display_name_short": "hvac_load_profile",
+              "name": "hvac_load_profile",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Zone Conditions",
+              "display_name_short": "zone_condition_section",
+              "name": "zone_condition_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Zone Overview",
+              "display_name_short": "zone_summary_section",
+              "name": "zone_summary_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Zone Equipment Detail",
+              "display_name_short": "zone_equipment_detail_section",
+              "name": "zone_equipment_detail_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Air Loops Detail",
+              "display_name_short": "air_loops_detail_section",
+              "name": "air_loops_detail_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Plant Loops Detail",
+              "display_name_short": "plant_loops_detail_section",
+              "name": "plant_loops_detail_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Outdoor Air",
+              "display_name_short": "outdoor_air_section",
+              "name": "outdoor_air_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Cash Flow",
+              "display_name_short": "cost_summary_section",
+              "name": "cost_summary_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Site and Source Summary",
+              "display_name_short": "source_energy_section",
+              "name": "source_energy_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Schedule Overview",
+              "display_name_short": "schedules_overview_section",
+              "name": "schedules_overview_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Report monthly fuel and enduse breakdown to registerValue",
+              "display_name_short": "reg_monthly_details",
+              "name": "reg_monthly_details",
+              "value_type": "boolean",
+              "default_value": false,
+              "value": false
+            }
+          ],
+          "variables": [],
+          "workflow_index": 24
+        }
+      ],
+      "algorithm": {
+        "seed": null,
+        "failed_f_value": 1000000000000000000,
+        "debug_messages": 0,
+        "objective_functions": []
+      },
+      "analysis_type": "single_run"
+    },
+    "seed": {
+      "file_type": "OSM",
+      "path": "./seeds/in.osm"
+    },
+    "weather_file": {
+      "file_type": "EPW",
+      "path": "./weather/USA_CO_Boulder-Broomfield-Jefferson.County.AP.724699_TMY3.epw"
+    },
+    "file_format_version": 1,
+    "cli_debug": "",
+    "cli_verbose": "",
+    "run_workflow_timeout": 28800,
+    "upload_results_timeout": 28800,
+    "initialize_worker_timeout": 28800,
+    "server_scripts": {}
+  }
+}

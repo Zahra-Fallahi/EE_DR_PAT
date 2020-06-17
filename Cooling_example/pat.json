@@ -1,23 +1,20 @@
 {
-  "projectName": "Cooling Setpoint Measure Test",
-  "projectDir": "C:\\Users\\mleach\\Desktop\\Topic 2-8\\Modeling\\Cooling Setpoint Measure Test",
+  "projectName": "Cooling_example",
+  "projectDir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example",
+  "analysisName": "Cooling_example",
   "seed": "in.osm",
   "weatherFile": "USA_CO_Boulder-Broomfield-Jefferson.County.AP.724699_TMY3.epw",
-  "analysis_type": "Manual",
+  "analysis_type": "Algorithmic",
+  "cliDebug": "",
+  "cliVerbose": "",
+  "timeoutWorkflow": 28800,
+  "timeoutUploadResults": 28800,
+  "timeoutInitWorker": 28800,
   "remoteSettings": {
     "open": true,
-    "remoteType": "Amazon Cloud",
-    "remoteServerURL": null,
-    "aws": {
-      "connected": false,
-      "cluster_name": "",
-      "server_instance_type": "",
-      "worker_instance_type": "",
-      "user_id": "",
-      "worker_node_number": 0,
-      "aws_tags": [],
-      "openstudio_server_version": ""
-    },
+    "remoteType": "Existing Remote Server",
+    "remoteServerURL": "http://localhost:8080/",
+    "aws": {},
     "credentials": {
       "yamlFilename": null,
       "accessKey": null,
@@ -25,34 +22,37 @@
     }
   },
   "samplingMethod": {
-    "id": "baseline_perturbation",
-    "name": "analysis.type.baselinePerturbation",
+    "id": "single_run",
+    "name": "analysis.type.singleRun",
     "link": null
   },
   "algorithmSettings": [
-    {
-      "name": "in_measure_combinations",
-      "displayName": "In Measure Combinations",
-      "description": "Options: 'true' or 'false'",
-      "defaultValue": "true",
-      "type": "string",
-      "value": "true"
-    },
-    {
-      "name": "include_baseline_in_combinations",
-      "displayName": "Include Baseline in Combinations?",
-      "description": "Options: 'true' or 'false'",
-      "defaultValue": "true",
-      "type": "string",
-      "value": "true"
-    },
     {
       "name": "seed",
       "displayName": "Seed",
       "description": "Integer seed for random number generator",
       "defaultValue": null,
       "type": "number",
-      "value": null
+      "value": null,
+      "$$hashKey": "object:17168"
+    },
+    {
+      "name": "failed_f_value",
+      "displayName": "Failed F Value",
+      "description": "Return Value for F(x) if F fails",
+      "defaultValue": 1000000000000000000,
+      "type": "number",
+      "value": 1000000000000000000,
+      "$$hashKey": "object:20939"
+    },
+    {
+      "name": "debug_messages",
+      "displayName": "Debug Messages",
+      "description": "Options: 1 or 0 (True or False)",
+      "defaultValue": 0,
+      "type": "number",
+      "value": 0,
+      "$$hashKey": "object:20940"
     }
   ],
   "rubyMD5": "",
@@ -62,9 +62,9 @@
   "openstudioMD5": "",
   "measures": [
     {
-      "measure_dir": "C:\\Users\\mleach\\Desktop\\Topic 2-8\\Modeling\\Cooling Setpoint Measure Test\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+      "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "name": "cooling_setpoints_hourly_adjusted_by_degrees",
-      "directory": "C:/Users/mleach/OpenStudio/Measures/cooling_setpoints_hourly_adjusted_by_degrees",
+      "directory": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "uid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
       "uuid": "{30ea2885-8a6f-40ba-b02c-b1ae70569479}",
       "version_id": "291f0c70-762b-42fc-a832-8c0340c13227",
@@ -104,21 +104,63 @@
           "specialRowId": "optionDelete",
           "$$hashKey": "uiGrid-01OO",
           "variable": true,
-          "option_1": "option_1"
+          "option_1": "option_1",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": null,
+            "minimum": null,
+            "mean": null,
+            "deltaX": null,
+            "stdDev": null,
+            "default_value": null,
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionName",
           "type": "String",
           "$$hashKey": "uiGrid-01OQ",
           "variable": true,
-          "option_1": "Option 1 Name"
+          "option_1": "Option 1 Name",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionDescription",
           "type": "String",
           "$$hashKey": "uiGrid-01OS",
           "variable": true,
-          "option_1": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
+          "option_1": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "name": "cooling_setpoint",
@@ -133,7 +175,22 @@
           "units": "",
           "minimum": 23.8,
           "maximum": 23.8,
-          "mode": 23.8
+          "mode": 23.8,
+          "display_name_short": "cooling_setpoint",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Continuous",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 26,
+            "minimum": 21.5,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 2,
+            "default_value": 24,
+            "showWarningIcon": true
+          }
         },
         {
           "name": "hour_of_the_day",
@@ -148,7 +205,22 @@
           "units": "",
           "minimum": 1,
           "maximum": 1,
-          "mode": 1
+          "mode": 1,
+          "display_name_short": "hour_of_the_day",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 0,
+            "minimum": 0,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 0,
+            "default_value": 1,
+            "showWarningIcon": false
+          }
         }
       ],
       "edit": "",
@@ -180,16 +252,18 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.5890571091053529,
+      "instanceId": 0.7994771185719289,
       "numberOfOptions": 1,
       "$$hashKey": "object:6880",
       "unlockStatus": true,
-      "outputMeasure": false
+      "outputMeasure": false,
+      "skip": false,
+      "showWarningText": true
     },
     {
-      "measure_dir": "C:\\Users\\mleach\\Desktop\\Topic 2-8\\Modeling\\Cooling Setpoint Measure Test\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+      "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "name": "cooling_setpoints_hourly_adjusted_by_degrees_2",
-      "directory": "C:/Users/mleach/OpenStudio/Measures/cooling_setpoints_hourly_adjusted_by_degrees",
+      "directory": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "uid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
       "uuid": "{30ea2885-8a6f-40ba-b02c-b1ae70569479}",
       "version_id": "291f0c70-762b-42fc-a832-8c0340c13227",
@@ -229,21 +303,63 @@
           "specialRowId": "optionDelete",
           "variable": true,
           "option_1": "option_1",
-          "$$hashKey": "uiGrid-01RM"
+          "$$hashKey": "uiGrid-01RM",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": null,
+            "minimum": null,
+            "mean": null,
+            "deltaX": null,
+            "stdDev": null,
+            "default_value": null,
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionName",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Name",
-          "$$hashKey": "uiGrid-01RO"
+          "$$hashKey": "uiGrid-01RO",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionDescription",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "$$hashKey": "uiGrid-01RQ"
+          "$$hashKey": "uiGrid-01RQ",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "name": "cooling_setpoint",
@@ -258,7 +374,22 @@
           "units": "",
           "minimum": 23.6,
           "maximum": 23.6,
-          "mode": 23.6
+          "mode": 23.6,
+          "display_name_short": "cooling_setpoint",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Continuous",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 26,
+            "minimum": 21.5,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 2,
+            "default_value": 24,
+            "showWarningIcon": true
+          }
         },
         {
           "name": "hour_of_the_day",
@@ -273,7 +404,22 @@
           "units": "",
           "minimum": 2,
           "maximum": 2,
-          "mode": 2
+          "mode": 2,
+          "display_name_short": "hour_of_the_day",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 0,
+            "minimum": 0,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 0,
+            "default_value": 2,
+            "showWarningIcon": false
+          }
         }
       ],
       "edit": "",
@@ -305,16 +451,18 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.43806468205634785,
+      "instanceId": 0.8468961971288653,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:7170",
-      "outputMeasure": false
+      "outputMeasure": false,
+      "skip": false,
+      "showWarningText": true
     },
     {
-      "measure_dir": "C:\\Users\\mleach\\Desktop\\Topic 2-8\\Modeling\\Cooling Setpoint Measure Test\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+      "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2",
-      "directory": "C:/Users/mleach/OpenStudio/Measures/cooling_setpoints_hourly_adjusted_by_degrees",
+      "directory": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "uid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
       "uuid": "{30ea2885-8a6f-40ba-b02c-b1ae70569479}",
       "version_id": "291f0c70-762b-42fc-a832-8c0340c13227",
@@ -354,21 +502,63 @@
           "specialRowId": "optionDelete",
           "variable": true,
           "option_1": "option_1",
-          "$$hashKey": "uiGrid-01V1"
+          "$$hashKey": "uiGrid-01V1",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": null,
+            "minimum": null,
+            "mean": null,
+            "deltaX": null,
+            "stdDev": null,
+            "default_value": null,
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionName",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Name",
-          "$$hashKey": "uiGrid-01V3"
+          "$$hashKey": "uiGrid-01V3",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionDescription",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "$$hashKey": "uiGrid-01V5"
+          "$$hashKey": "uiGrid-01V5",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "name": "cooling_setpoint",
@@ -383,7 +573,22 @@
           "units": "",
           "minimum": 23.4,
           "maximum": 23.4,
-          "mode": 23.4
+          "mode": 23.4,
+          "display_name_short": "cooling_setpoint",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Continuous",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 26,
+            "minimum": 21.5,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 2,
+            "default_value": 24,
+            "showWarningIcon": true
+          }
         },
         {
           "name": "hour_of_the_day",
@@ -398,7 +603,22 @@
           "units": "",
           "minimum": 3,
           "maximum": 3,
-          "mode": 3
+          "mode": 3,
+          "display_name_short": "hour_of_the_day",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 0,
+            "minimum": 0,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 0,
+            "default_value": 3,
+            "showWarningIcon": false
+          }
         }
       ],
       "edit": "",
@@ -406,7 +626,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/11/2020",
       "author": "",
@@ -430,16 +650,18 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.09884879051074091,
+      "instanceId": 0.8784767524025012,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:7492",
-      "outputMeasure": false
+      "outputMeasure": false,
+      "skip": false,
+      "showWarningText": true
     },
     {
-      "measure_dir": "C:\\Users\\mleach\\Desktop\\Topic 2-8\\Modeling\\Cooling Setpoint Measure Test\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+      "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2",
-      "directory": "C:/Users/mleach/OpenStudio/Measures/cooling_setpoints_hourly_adjusted_by_degrees",
+      "directory": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "uid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
       "uuid": "{30ea2885-8a6f-40ba-b02c-b1ae70569479}",
       "version_id": "291f0c70-762b-42fc-a832-8c0340c13227",
@@ -479,21 +701,63 @@
           "specialRowId": "optionDelete",
           "variable": true,
           "option_1": "option_1",
-          "$$hashKey": "uiGrid-01YY"
+          "$$hashKey": "uiGrid-01YY",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": null,
+            "minimum": null,
+            "mean": null,
+            "deltaX": null,
+            "stdDev": null,
+            "default_value": null,
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionName",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Name",
-          "$$hashKey": "uiGrid-01Z0"
+          "$$hashKey": "uiGrid-01Z0",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionDescription",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "$$hashKey": "uiGrid-01Z2"
+          "$$hashKey": "uiGrid-01Z2",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "name": "cooling_setpoint",
@@ -508,7 +772,22 @@
           "units": "",
           "minimum": 23.2,
           "maximum": 23.2,
-          "mode": 23.2
+          "mode": 23.2,
+          "display_name_short": "cooling_setpoint",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Continuous",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 26,
+            "minimum": 21.5,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 2,
+            "default_value": 24,
+            "showWarningIcon": true
+          }
         },
         {
           "name": "hour_of_the_day",
@@ -523,7 +802,22 @@
           "units": "",
           "minimum": 4,
           "maximum": 4,
-          "mode": 4
+          "mode": 4,
+          "display_name_short": "hour_of_the_day",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 0,
+            "minimum": 0,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 0,
+            "default_value": 4,
+            "showWarningIcon": false
+          }
         }
       ],
       "edit": "",
@@ -531,7 +825,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/11/2020",
       "author": "",
@@ -555,16 +849,18 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.6514793594020312,
+      "instanceId": 0.788111637884392,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:7864",
-      "outputMeasure": false
+      "outputMeasure": false,
+      "skip": false,
+      "showWarningText": true
     },
     {
-      "measure_dir": "C:\\Users\\mleach\\Desktop\\Topic 2-8\\Modeling\\Cooling Setpoint Measure Test\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+      "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2",
-      "directory": "C:/Users/mleach/OpenStudio/Measures/cooling_setpoints_hourly_adjusted_by_degrees",
+      "directory": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "uid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
       "uuid": "{30ea2885-8a6f-40ba-b02c-b1ae70569479}",
       "version_id": "291f0c70-762b-42fc-a832-8c0340c13227",
@@ -604,21 +900,63 @@
           "specialRowId": "optionDelete",
           "variable": true,
           "option_1": "option_1",
-          "$$hashKey": "uiGrid-023D"
+          "$$hashKey": "uiGrid-023D",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": null,
+            "minimum": null,
+            "mean": null,
+            "deltaX": null,
+            "stdDev": null,
+            "default_value": null,
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionName",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Name",
-          "$$hashKey": "uiGrid-023F"
+          "$$hashKey": "uiGrid-023F",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionDescription",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "$$hashKey": "uiGrid-023H"
+          "$$hashKey": "uiGrid-023H",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "name": "cooling_setpoint",
@@ -633,7 +971,22 @@
           "units": "",
           "minimum": 23,
           "maximum": 23,
-          "mode": 23
+          "mode": 23,
+          "display_name_short": "cooling_setpoint",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Continuous",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 26,
+            "minimum": 21.5,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 2,
+            "default_value": 24,
+            "showWarningIcon": true
+          }
         },
         {
           "name": "hour_of_the_day",
@@ -648,7 +1001,22 @@
           "units": "",
           "minimum": 5,
           "maximum": 5,
-          "mode": 5
+          "mode": 5,
+          "display_name_short": "hour_of_the_day",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 0,
+            "minimum": 0,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 0,
+            "default_value": 5,
+            "showWarningIcon": false
+          }
         }
       ],
       "edit": "",
@@ -656,7 +1024,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/11/2020",
       "author": "",
@@ -680,16 +1048,18 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.6329366129492433,
+      "instanceId": 0.08526649901049699,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:8287",
-      "outputMeasure": false
+      "outputMeasure": false,
+      "skip": false,
+      "showWarningText": true
     },
     {
-      "measure_dir": "C:\\Users\\mleach\\Desktop\\Topic 2-8\\Modeling\\Cooling Setpoint Measure Test\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+      "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2",
-      "directory": "C:/Users/mleach/OpenStudio/Measures/cooling_setpoints_hourly_adjusted_by_degrees",
+      "directory": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "uid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
       "uuid": "{30ea2885-8a6f-40ba-b02c-b1ae70569479}",
       "version_id": "291f0c70-762b-42fc-a832-8c0340c13227",
@@ -729,21 +1099,63 @@
           "specialRowId": "optionDelete",
           "variable": true,
           "option_1": "option_1",
-          "$$hashKey": "uiGrid-028A"
+          "$$hashKey": "uiGrid-028A",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": null,
+            "minimum": null,
+            "mean": null,
+            "deltaX": null,
+            "stdDev": null,
+            "default_value": null,
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionName",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Name",
-          "$$hashKey": "uiGrid-028C"
+          "$$hashKey": "uiGrid-028C",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionDescription",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "$$hashKey": "uiGrid-028E"
+          "$$hashKey": "uiGrid-028E",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "name": "cooling_setpoint",
@@ -758,7 +1170,22 @@
           "units": "",
           "minimum": 22.8,
           "maximum": 22.8,
-          "mode": 22.8
+          "mode": 22.8,
+          "display_name_short": "cooling_setpoint",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Continuous",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 26,
+            "minimum": 21.5,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 2,
+            "default_value": 24,
+            "showWarningIcon": true
+          }
         },
         {
           "name": "hour_of_the_day",
@@ -773,7 +1200,22 @@
           "units": "",
           "minimum": 6,
           "maximum": 6,
-          "mode": 6
+          "mode": 6,
+          "display_name_short": "hour_of_the_day",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 0,
+            "minimum": 0,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 0,
+            "default_value": 6,
+            "showWarningIcon": false
+          }
         }
       ],
       "edit": "",
@@ -781,7 +1223,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/11/2020",
       "author": "",
@@ -805,16 +1247,18 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.6529207936445676,
+      "instanceId": 0.976922455184841,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:8761",
-      "outputMeasure": false
+      "outputMeasure": false,
+      "skip": false,
+      "showWarningText": true
     },
     {
-      "measure_dir": "C:\\Users\\mleach\\Desktop\\Topic 2-8\\Modeling\\Cooling Setpoint Measure Test\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+      "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2",
-      "directory": "C:/Users/mleach/OpenStudio/Measures/cooling_setpoints_hourly_adjusted_by_degrees",
+      "directory": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "uid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
       "uuid": "{30ea2885-8a6f-40ba-b02c-b1ae70569479}",
       "version_id": "291f0c70-762b-42fc-a832-8c0340c13227",
@@ -854,21 +1298,63 @@
           "specialRowId": "optionDelete",
           "variable": true,
           "option_1": "option_1",
-          "$$hashKey": "uiGrid-02DP"
+          "$$hashKey": "uiGrid-02DP",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": null,
+            "minimum": null,
+            "mean": null,
+            "deltaX": null,
+            "stdDev": null,
+            "default_value": null,
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionName",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Name",
-          "$$hashKey": "uiGrid-02DR"
+          "$$hashKey": "uiGrid-02DR",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionDescription",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "$$hashKey": "uiGrid-02DT"
+          "$$hashKey": "uiGrid-02DT",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "name": "cooling_setpoint",
@@ -883,7 +1369,22 @@
           "units": "",
           "minimum": 22.6,
           "maximum": 22.6,
-          "mode": 22.6
+          "mode": 22.6,
+          "display_name_short": "cooling_setpoint",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Continuous",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 26,
+            "minimum": 21.5,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 2,
+            "default_value": 24,
+            "showWarningIcon": true
+          }
         },
         {
           "name": "hour_of_the_day",
@@ -898,7 +1399,22 @@
           "units": "",
           "minimum": 7,
           "maximum": 7,
-          "mode": 7
+          "mode": 7,
+          "display_name_short": "hour_of_the_day",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 0,
+            "minimum": 0,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 0,
+            "default_value": 7,
+            "showWarningIcon": false
+          }
         }
       ],
       "edit": "",
@@ -906,7 +1422,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/11/2020",
       "author": "",
@@ -930,16 +1446,18 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.9636543186523867,
+      "instanceId": 0.7608428159864884,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:9286",
-      "outputMeasure": false
+      "outputMeasure": false,
+      "skip": false,
+      "showWarningText": true
     },
     {
-      "measure_dir": "C:\\Users\\mleach\\Desktop\\Topic 2-8\\Modeling\\Cooling Setpoint Measure Test\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+      "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2",
-      "directory": "C:/Users/mleach/OpenStudio/Measures/cooling_setpoints_hourly_adjusted_by_degrees",
+      "directory": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "uid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
       "uuid": "{30ea2885-8a6f-40ba-b02c-b1ae70569479}",
       "version_id": "291f0c70-762b-42fc-a832-8c0340c13227",
@@ -979,21 +1497,63 @@
           "specialRowId": "optionDelete",
           "variable": true,
           "option_1": "option_1",
-          "$$hashKey": "uiGrid-02JM"
+          "$$hashKey": "uiGrid-02JM",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": null,
+            "minimum": null,
+            "mean": null,
+            "deltaX": null,
+            "stdDev": null,
+            "default_value": null,
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionName",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Name",
-          "$$hashKey": "uiGrid-02JO"
+          "$$hashKey": "uiGrid-02JO",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionDescription",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "$$hashKey": "uiGrid-02JQ"
+          "$$hashKey": "uiGrid-02JQ",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "name": "cooling_setpoint",
@@ -1008,7 +1568,22 @@
           "units": "",
           "minimum": 22.4,
           "maximum": 22.4,
-          "mode": 22.4
+          "mode": 22.4,
+          "display_name_short": "cooling_setpoint",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Continuous",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 26,
+            "minimum": 21.5,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 2,
+            "default_value": 24,
+            "showWarningIcon": true
+          }
         },
         {
           "name": "hour_of_the_day",
@@ -1023,7 +1598,22 @@
           "units": "",
           "minimum": 8,
           "maximum": 8,
-          "mode": 8
+          "mode": 8,
+          "display_name_short": "hour_of_the_day",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 0,
+            "minimum": 0,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 0,
+            "default_value": 8,
+            "showWarningIcon": false
+          }
         }
       ],
       "edit": "",
@@ -1031,7 +1621,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/11/2020",
       "author": "",
@@ -1055,16 +1645,18 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.8455892255731723,
+      "instanceId": 0.45544586541239185,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:9862",
-      "outputMeasure": false
+      "outputMeasure": false,
+      "skip": false,
+      "showWarningText": true
     },
     {
-      "measure_dir": "C:\\Users\\mleach\\Desktop\\Topic 2-8\\Modeling\\Cooling Setpoint Measure Test\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+      "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2",
-      "directory": "C:/Users/mleach/OpenStudio/Measures/cooling_setpoints_hourly_adjusted_by_degrees",
+      "directory": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "uid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
       "uuid": "{30ea2885-8a6f-40ba-b02c-b1ae70569479}",
       "version_id": "291f0c70-762b-42fc-a832-8c0340c13227",
@@ -1104,21 +1696,63 @@
           "specialRowId": "optionDelete",
           "variable": true,
           "option_1": "option_1",
-          "$$hashKey": "uiGrid-02Q1"
+          "$$hashKey": "uiGrid-02Q1",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": null,
+            "minimum": null,
+            "mean": null,
+            "deltaX": null,
+            "stdDev": null,
+            "default_value": null,
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionName",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Name",
-          "$$hashKey": "uiGrid-02Q3"
+          "$$hashKey": "uiGrid-02Q3",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionDescription",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "$$hashKey": "uiGrid-02Q5"
+          "$$hashKey": "uiGrid-02Q5",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "name": "cooling_setpoint",
@@ -1133,7 +1767,22 @@
           "units": "",
           "minimum": 22.2,
           "maximum": 22.2,
-          "mode": 22.2
+          "mode": 22.2,
+          "display_name_short": "cooling_setpoint",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Continuous",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 26,
+            "minimum": 21.5,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 2,
+            "default_value": 24,
+            "showWarningIcon": true
+          }
         },
         {
           "name": "hour_of_the_day",
@@ -1148,7 +1797,22 @@
           "units": "",
           "minimum": 9,
           "maximum": 9,
-          "mode": 9
+          "mode": 9,
+          "display_name_short": "hour_of_the_day",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 0,
+            "minimum": 0,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 0,
+            "default_value": 9,
+            "showWarningIcon": false
+          }
         }
       ],
       "edit": "",
@@ -1156,7 +1820,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/11/2020",
       "author": "",
@@ -1180,16 +1844,18 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.6818822392705806,
+      "instanceId": 0.14493008910952687,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:10489",
-      "outputMeasure": false
+      "outputMeasure": false,
+      "skip": false,
+      "showWarningText": true
     },
     {
-      "measure_dir": "C:\\Users\\mleach\\Desktop\\Topic 2-8\\Modeling\\Cooling Setpoint Measure Test\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+      "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2",
-      "directory": "C:/Users/mleach/OpenStudio/Measures/cooling_setpoints_hourly_adjusted_by_degrees",
+      "directory": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "uid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
       "uuid": "{30ea2885-8a6f-40ba-b02c-b1ae70569479}",
       "version_id": "291f0c70-762b-42fc-a832-8c0340c13227",
@@ -1229,21 +1895,63 @@
           "specialRowId": "optionDelete",
           "variable": true,
           "option_1": "option_1",
-          "$$hashKey": "uiGrid-02WY"
+          "$$hashKey": "uiGrid-02WY",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": null,
+            "minimum": null,
+            "mean": null,
+            "deltaX": null,
+            "stdDev": null,
+            "default_value": null,
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionName",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Name",
-          "$$hashKey": "uiGrid-02X0"
+          "$$hashKey": "uiGrid-02X0",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionDescription",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "$$hashKey": "uiGrid-02X2"
+          "$$hashKey": "uiGrid-02X2",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "name": "cooling_setpoint",
@@ -1258,7 +1966,22 @@
           "units": "",
           "minimum": 22,
           "maximum": 22,
-          "mode": 22
+          "mode": 22,
+          "display_name_short": "cooling_setpoint",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Continuous",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 26,
+            "minimum": 21.5,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 2,
+            "default_value": 24,
+            "showWarningIcon": true
+          }
         },
         {
           "name": "hour_of_the_day",
@@ -1273,7 +1996,22 @@
           "units": "",
           "minimum": 10,
           "maximum": 10,
-          "mode": 10
+          "mode": 10,
+          "display_name_short": "hour_of_the_day",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 0,
+            "minimum": 0,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 0,
+            "default_value": 10,
+            "showWarningIcon": false
+          }
         }
       ],
       "edit": "",
@@ -1281,7 +2019,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/11/2020",
       "author": "",
@@ -1305,16 +2043,18 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.7684464360687668,
+      "instanceId": 0.8860906147111871,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:11167",
-      "outputMeasure": false
+      "outputMeasure": false,
+      "skip": false,
+      "showWarningText": true
     },
     {
-      "measure_dir": "C:\\Users\\mleach\\Desktop\\Topic 2-8\\Modeling\\Cooling Setpoint Measure Test\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+      "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2",
-      "directory": "C:/Users/mleach/OpenStudio/Measures/cooling_setpoints_hourly_adjusted_by_degrees",
+      "directory": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "uid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
       "uuid": "{30ea2885-8a6f-40ba-b02c-b1ae70569479}",
       "version_id": "291f0c70-762b-42fc-a832-8c0340c13227",
@@ -1354,21 +2094,63 @@
           "specialRowId": "optionDelete",
           "variable": true,
           "option_1": "option_1",
-          "$$hashKey": "uiGrid-034D"
+          "$$hashKey": "uiGrid-034D",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": null,
+            "minimum": null,
+            "mean": null,
+            "deltaX": null,
+            "stdDev": null,
+            "default_value": null,
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionName",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Name",
-          "$$hashKey": "uiGrid-034F"
+          "$$hashKey": "uiGrid-034F",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionDescription",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "$$hashKey": "uiGrid-034H"
+          "$$hashKey": "uiGrid-034H",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "name": "cooling_setpoint",
@@ -1383,7 +2165,22 @@
           "units": "",
           "minimum": 21.8,
           "maximum": 21.8,
-          "mode": 21.8
+          "mode": 21.8,
+          "display_name_short": "cooling_setpoint",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Continuous",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 26,
+            "minimum": 21.5,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 2,
+            "default_value": 24,
+            "showWarningIcon": true
+          }
         },
         {
           "name": "hour_of_the_day",
@@ -1398,7 +2195,22 @@
           "units": "",
           "minimum": 11,
           "maximum": 11,
-          "mode": 11
+          "mode": 11,
+          "display_name_short": "hour_of_the_day",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 0,
+            "minimum": 0,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 0,
+            "default_value": 11,
+            "showWarningIcon": false
+          }
         }
       ],
       "edit": "",
@@ -1406,7 +2218,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/11/2020",
       "author": "",
@@ -1430,16 +2242,18 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.30577391026633394,
+      "instanceId": 0.8703228333843047,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:11896",
-      "outputMeasure": false
+      "outputMeasure": false,
+      "skip": false,
+      "showWarningText": true
     },
     {
-      "measure_dir": "C:\\Users\\mleach\\Desktop\\Topic 2-8\\Modeling\\Cooling Setpoint Measure Test\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+      "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2",
-      "directory": "C:/Users/mleach/OpenStudio/Measures/cooling_setpoints_hourly_adjusted_by_degrees",
+      "directory": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "uid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
       "uuid": "{30ea2885-8a6f-40ba-b02c-b1ae70569479}",
       "version_id": "291f0c70-762b-42fc-a832-8c0340c13227",
@@ -1479,21 +2293,63 @@
           "specialRowId": "optionDelete",
           "variable": true,
           "option_1": "option_1",
-          "$$hashKey": "uiGrid-03CA"
+          "$$hashKey": "uiGrid-03CA",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": null,
+            "minimum": null,
+            "mean": null,
+            "deltaX": null,
+            "stdDev": null,
+            "default_value": null,
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionName",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Name",
-          "$$hashKey": "uiGrid-03CC"
+          "$$hashKey": "uiGrid-03CC",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionDescription",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "$$hashKey": "uiGrid-03CE"
+          "$$hashKey": "uiGrid-03CE",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "name": "cooling_setpoint",
@@ -1508,7 +2364,22 @@
           "units": "",
           "minimum": 21.6,
           "maximum": 21.6,
-          "mode": 21.6
+          "mode": 21.6,
+          "display_name_short": "cooling_setpoint",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Continuous",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 26,
+            "minimum": 21.5,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 2,
+            "default_value": 24,
+            "showWarningIcon": true
+          }
         },
         {
           "name": "hour_of_the_day",
@@ -1523,7 +2394,22 @@
           "units": "",
           "minimum": 12,
           "maximum": 12,
-          "mode": 12
+          "mode": 12,
+          "display_name_short": "hour_of_the_day",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 0,
+            "minimum": 0,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 0,
+            "default_value": 12,
+            "showWarningIcon": false
+          }
         }
       ],
       "edit": "",
@@ -1531,7 +2417,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/11/2020",
       "author": "",
@@ -1555,16 +2441,18 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.24727890487600646,
+      "instanceId": 0.04398690997823085,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:12676",
-      "outputMeasure": false
+      "outputMeasure": false,
+      "skip": false,
+      "showWarningText": true
     },
     {
-      "measure_dir": "C:\\Users\\mleach\\Desktop\\Topic 2-8\\Modeling\\Cooling Setpoint Measure Test\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+      "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2",
-      "directory": "C:/Users/mleach/OpenStudio/Measures/cooling_setpoints_hourly_adjusted_by_degrees",
+      "directory": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "uid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
       "uuid": "{30ea2885-8a6f-40ba-b02c-b1ae70569479}",
       "version_id": "291f0c70-762b-42fc-a832-8c0340c13227",
@@ -1604,21 +2492,63 @@
           "specialRowId": "optionDelete",
           "variable": true,
           "option_1": "option_1",
-          "$$hashKey": "uiGrid-03K8"
+          "$$hashKey": "uiGrid-03K8",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": null,
+            "minimum": null,
+            "mean": null,
+            "deltaX": null,
+            "stdDev": null,
+            "default_value": null,
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionName",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Name",
-          "$$hashKey": "uiGrid-03KA"
+          "$$hashKey": "uiGrid-03KA",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionDescription",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "$$hashKey": "uiGrid-03KC"
+          "$$hashKey": "uiGrid-03KC",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "name": "cooling_setpoint",
@@ -1633,7 +2563,22 @@
           "units": "",
           "minimum": 21.8,
           "maximum": 21.8,
-          "mode": 21.8
+          "mode": 21.8,
+          "display_name_short": "cooling_setpoint",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Continuous",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 26,
+            "minimum": 21.5,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 2,
+            "default_value": 24,
+            "showWarningIcon": true
+          }
         },
         {
           "name": "hour_of_the_day",
@@ -1648,7 +2593,22 @@
           "units": "",
           "minimum": 13,
           "maximum": 13,
-          "mode": 13
+          "mode": 13,
+          "display_name_short": "hour_of_the_day",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 0,
+            "minimum": 0,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 0,
+            "default_value": 13,
+            "showWarningIcon": false
+          }
         }
       ],
       "edit": "",
@@ -1656,7 +2616,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/11/2020",
       "author": "",
@@ -1680,16 +2640,18 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.2650926346929101,
+      "instanceId": 0.26407956232313,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:13441",
-      "outputMeasure": false
+      "outputMeasure": false,
+      "skip": false,
+      "showWarningText": true
     },
     {
-      "measure_dir": "C:\\Users\\mleach\\Desktop\\Topic 2-8\\Modeling\\Cooling Setpoint Measure Test\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+      "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2",
-      "directory": "C:/Users/mleach/OpenStudio/Measures/cooling_setpoints_hourly_adjusted_by_degrees",
+      "directory": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "uid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
       "uuid": "{30ea2885-8a6f-40ba-b02c-b1ae70569479}",
       "version_id": "291f0c70-762b-42fc-a832-8c0340c13227",
@@ -1729,21 +2691,63 @@
           "specialRowId": "optionDelete",
           "variable": true,
           "option_1": "option_1",
-          "$$hashKey": "uiGrid-03RQ"
+          "$$hashKey": "uiGrid-03RQ",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": null,
+            "minimum": null,
+            "mean": null,
+            "deltaX": null,
+            "stdDev": null,
+            "default_value": null,
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionName",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Name",
-          "$$hashKey": "uiGrid-03RS"
+          "$$hashKey": "uiGrid-03RS",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionDescription",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "$$hashKey": "uiGrid-03RU"
+          "$$hashKey": "uiGrid-03RU",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "name": "cooling_setpoint",
@@ -1758,7 +2762,22 @@
           "units": "",
           "minimum": 22,
           "maximum": 22,
-          "mode": 22
+          "mode": 22,
+          "display_name_short": "cooling_setpoint",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Continuous",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 26,
+            "minimum": 21.5,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 2,
+            "default_value": 24,
+            "showWarningIcon": true
+          }
         },
         {
           "name": "hour_of_the_day",
@@ -1773,7 +2792,22 @@
           "units": "",
           "minimum": 14,
           "maximum": 14,
-          "mode": 14
+          "mode": 14,
+          "display_name_short": "hour_of_the_day",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 0,
+            "minimum": 0,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 0,
+            "default_value": 14,
+            "showWarningIcon": false
+          }
         }
       ],
       "edit": "",
@@ -1781,7 +2815,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/11/2020",
       "author": "",
@@ -1805,16 +2839,18 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.19934085575865623,
+      "instanceId": 0.14551957658099357,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:14155",
-      "outputMeasure": false
+      "outputMeasure": false,
+      "skip": false,
+      "showWarningText": true
     },
     {
-      "measure_dir": "C:\\Users\\mleach\\Desktop\\Topic 2-8\\Modeling\\Cooling Setpoint Measure Test\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+      "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
-      "directory": "C:/Users/mleach/OpenStudio/Measures/cooling_setpoints_hourly_adjusted_by_degrees",
+      "directory": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "uid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
       "uuid": "{30ea2885-8a6f-40ba-b02c-b1ae70569479}",
       "version_id": "291f0c70-762b-42fc-a832-8c0340c13227",
@@ -1854,21 +2890,63 @@
           "specialRowId": "optionDelete",
           "variable": true,
           "option_1": "option_1",
-          "$$hashKey": "uiGrid-03XU"
+          "$$hashKey": "uiGrid-03XU",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": null,
+            "minimum": null,
+            "mean": null,
+            "deltaX": null,
+            "stdDev": null,
+            "default_value": null,
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionName",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Name",
-          "$$hashKey": "uiGrid-03XW"
+          "$$hashKey": "uiGrid-03XW",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionDescription",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "$$hashKey": "uiGrid-03XY"
+          "$$hashKey": "uiGrid-03XY",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "name": "cooling_setpoint",
@@ -1883,7 +2961,22 @@
           "units": "",
           "minimum": 22.2,
           "maximum": 22.2,
-          "mode": 22.2
+          "mode": 22.2,
+          "display_name_short": "cooling_setpoint",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Continuous",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 26,
+            "minimum": 21.5,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 2,
+            "default_value": 24,
+            "showWarningIcon": true
+          }
         },
         {
           "name": "hour_of_the_day",
@@ -1898,7 +2991,22 @@
           "units": "",
           "minimum": 15,
           "maximum": 15,
-          "mode": 15
+          "mode": 15,
+          "display_name_short": "hour_of_the_day",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 0,
+            "minimum": 0,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 0,
+            "default_value": 15,
+            "showWarningIcon": false
+          }
         }
       ],
       "edit": "",
@@ -1906,7 +3014,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/11/2020",
       "author": "",
@@ -1930,16 +3038,18 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.9736111272306878,
+      "instanceId": 0.2558137616052816,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:14806",
-      "outputMeasure": false
+      "outputMeasure": false,
+      "skip": false,
+      "showWarningText": true
     },
     {
-      "measure_dir": "C:\\Users\\mleach\\Desktop\\Topic 2-8\\Modeling\\Cooling Setpoint Measure Test\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+      "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
-      "directory": "C:/Users/mleach/OpenStudio/Measures/cooling_setpoints_hourly_adjusted_by_degrees",
+      "directory": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "uid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
       "uuid": "{30ea2885-8a6f-40ba-b02c-b1ae70569479}",
       "version_id": "291f0c70-762b-42fc-a832-8c0340c13227",
@@ -1979,21 +3089,63 @@
           "specialRowId": "optionDelete",
           "variable": true,
           "option_1": "option_1",
-          "$$hashKey": "uiGrid-0423"
+          "$$hashKey": "uiGrid-0423",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": null,
+            "minimum": null,
+            "mean": null,
+            "deltaX": null,
+            "stdDev": null,
+            "default_value": null,
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionName",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Name",
-          "$$hashKey": "uiGrid-0425"
+          "$$hashKey": "uiGrid-0425",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionDescription",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "$$hashKey": "uiGrid-0427"
+          "$$hashKey": "uiGrid-0427",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "name": "cooling_setpoint",
@@ -2008,7 +3160,22 @@
           "units": "",
           "minimum": 22.4,
           "maximum": 22.4,
-          "mode": 22.4
+          "mode": 22.4,
+          "display_name_short": "cooling_setpoint",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Continuous",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 26,
+            "minimum": 21.5,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 2,
+            "default_value": 24,
+            "showWarningIcon": true
+          }
         },
         {
           "name": "hour_of_the_day",
@@ -2023,7 +3190,22 @@
           "units": "",
           "minimum": 16,
           "maximum": 16,
-          "mode": 16
+          "mode": 16,
+          "display_name_short": "hour_of_the_day",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 0,
+            "minimum": 0,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 0,
+            "default_value": 16,
+            "showWarningIcon": false
+          }
         }
       ],
       "edit": "",
@@ -2031,7 +3213,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/11/2020",
       "author": "",
@@ -2055,16 +3237,18 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.2559434896525006,
+      "instanceId": 0.5372735334431873,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:15361",
-      "outputMeasure": false
+      "outputMeasure": false,
+      "skip": false,
+      "showWarningText": true
     },
     {
-      "measure_dir": "C:\\Users\\mleach\\Desktop\\Topic 2-8\\Modeling\\Cooling Setpoint Measure Test\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+      "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
-      "directory": "C:/Users/mleach/OpenStudio/Measures/cooling_setpoints_hourly_adjusted_by_degrees",
+      "directory": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "uid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
       "uuid": "{30ea2885-8a6f-40ba-b02c-b1ae70569479}",
       "version_id": "291f0c70-762b-42fc-a832-8c0340c13227",
@@ -2104,21 +3288,63 @@
           "specialRowId": "optionDelete",
           "variable": true,
           "option_1": "option_1",
-          "$$hashKey": "uiGrid-045F"
+          "$$hashKey": "uiGrid-045F",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": null,
+            "minimum": null,
+            "mean": null,
+            "deltaX": null,
+            "stdDev": null,
+            "default_value": null,
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionName",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Name",
-          "$$hashKey": "uiGrid-045H"
+          "$$hashKey": "uiGrid-045H",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionDescription",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "$$hashKey": "uiGrid-045J"
+          "$$hashKey": "uiGrid-045J",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "name": "cooling_setpoint",
@@ -2133,7 +3359,22 @@
           "units": "",
           "minimum": 22.6,
           "maximum": 22.6,
-          "mode": 22.6
+          "mode": 22.6,
+          "display_name_short": "cooling_setpoint",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Continuous",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 26,
+            "minimum": 21.5,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 2,
+            "default_value": 24,
+            "showWarningIcon": true
+          }
         },
         {
           "name": "hour_of_the_day",
@@ -2148,7 +3389,22 @@
           "units": "",
           "minimum": 17,
           "maximum": 17,
-          "mode": 17
+          "mode": 17,
+          "display_name_short": "hour_of_the_day",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 0,
+            "minimum": 0,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 0,
+            "default_value": 17,
+            "showWarningIcon": false
+          }
         }
       ],
       "edit": "",
@@ -2156,7 +3412,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/11/2020",
       "author": "",
@@ -2180,16 +3436,18 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.07088204862667413,
+      "instanceId": 0.36404464576872875,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:15844",
-      "outputMeasure": false
+      "outputMeasure": false,
+      "skip": false,
+      "showWarningText": true
     },
     {
-      "measure_dir": "C:\\Users\\mleach\\Desktop\\Topic 2-8\\Modeling\\Cooling Setpoint Measure Test\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+      "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
-      "directory": "C:/Users/mleach/OpenStudio/Measures/cooling_setpoints_hourly_adjusted_by_degrees",
+      "directory": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "uid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
       "uuid": "{30ea2885-8a6f-40ba-b02c-b1ae70569479}",
       "version_id": "291f0c70-762b-42fc-a832-8c0340c13227",
@@ -2229,21 +3487,63 @@
           "specialRowId": "optionDelete",
           "variable": true,
           "option_1": "option_1",
-          "$$hashKey": "uiGrid-0499"
+          "$$hashKey": "uiGrid-0499",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": null,
+            "minimum": null,
+            "mean": null,
+            "deltaX": null,
+            "stdDev": null,
+            "default_value": null,
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionName",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Name",
-          "$$hashKey": "uiGrid-049B"
+          "$$hashKey": "uiGrid-049B",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionDescription",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "$$hashKey": "uiGrid-049D"
+          "$$hashKey": "uiGrid-049D",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "name": "cooling_setpoint",
@@ -2258,7 +3558,22 @@
           "units": "",
           "minimum": 22.8,
           "maximum": 22.8,
-          "mode": 22.8
+          "mode": 22.8,
+          "display_name_short": "cooling_setpoint",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Continuous",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 26,
+            "minimum": 21.5,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 2,
+            "default_value": 24,
+            "showWarningIcon": true
+          }
         },
         {
           "name": "hour_of_the_day",
@@ -2273,7 +3588,22 @@
           "units": "",
           "minimum": 18,
           "maximum": 18,
-          "mode": 18
+          "mode": 18,
+          "display_name_short": "hour_of_the_day",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 0,
+            "minimum": 0,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 0,
+            "default_value": 18,
+            "showWarningIcon": false
+          }
         }
       ],
       "edit": "",
@@ -2281,7 +3611,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/11/2020",
       "author": "",
@@ -2305,16 +3635,18 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.47392609266855756,
+      "instanceId": 0.3240059000363005,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:16345",
-      "outputMeasure": false
+      "outputMeasure": false,
+      "skip": false,
+      "showWarningText": true
     },
     {
-      "measure_dir": "C:\\Users\\mleach\\Desktop\\Topic 2-8\\Modeling\\Cooling Setpoint Measure Test\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+      "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
-      "directory": "C:/Users/mleach/OpenStudio/Measures/cooling_setpoints_hourly_adjusted_by_degrees",
+      "directory": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "uid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
       "uuid": "{30ea2885-8a6f-40ba-b02c-b1ae70569479}",
       "version_id": "291f0c70-762b-42fc-a832-8c0340c13227",
@@ -2354,21 +3686,63 @@
           "specialRowId": "optionDelete",
           "variable": true,
           "option_1": "option_1",
-          "$$hashKey": "uiGrid-04CN"
+          "$$hashKey": "uiGrid-04CN",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": null,
+            "minimum": null,
+            "mean": null,
+            "deltaX": null,
+            "stdDev": null,
+            "default_value": null,
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionName",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Name",
-          "$$hashKey": "uiGrid-04CP"
+          "$$hashKey": "uiGrid-04CP",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionDescription",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "$$hashKey": "uiGrid-04CR"
+          "$$hashKey": "uiGrid-04CR",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "name": "cooling_setpoint",
@@ -2383,7 +3757,22 @@
           "units": "",
           "minimum": 23,
           "maximum": 23,
-          "mode": 23
+          "mode": 23,
+          "display_name_short": "cooling_setpoint",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Continuous",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 26,
+            "minimum": 21.5,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 2,
+            "default_value": 24,
+            "showWarningIcon": true
+          }
         },
         {
           "name": "hour_of_the_day",
@@ -2398,7 +3787,22 @@
           "units": "",
           "minimum": 19,
           "maximum": 19,
-          "mode": 19
+          "mode": 19,
+          "display_name_short": "hour_of_the_day",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 0,
+            "minimum": 0,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 0,
+            "default_value": 19,
+            "showWarningIcon": false
+          }
         }
       ],
       "edit": "",
@@ -2406,7 +3810,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/11/2020",
       "author": "",
@@ -2430,16 +3834,18 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.2637174373675968,
+      "instanceId": 0.7130367450069433,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:16777",
-      "outputMeasure": false
+      "outputMeasure": false,
+      "skip": false,
+      "showWarningText": true
     },
     {
-      "measure_dir": "C:\\Users\\mleach\\Desktop\\Topic 2-8\\Modeling\\Cooling Setpoint Measure Test\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+      "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
-      "directory": "C:/Users/mleach/OpenStudio/Measures/cooling_setpoints_hourly_adjusted_by_degrees",
+      "directory": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "uid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
       "uuid": "{30ea2885-8a6f-40ba-b02c-b1ae70569479}",
       "version_id": "291f0c70-762b-42fc-a832-8c0340c13227",
@@ -2479,21 +3885,63 @@
           "specialRowId": "optionDelete",
           "variable": true,
           "option_1": "option_1",
-          "$$hashKey": "uiGrid-04GJ"
+          "$$hashKey": "uiGrid-04GJ",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": null,
+            "minimum": null,
+            "mean": null,
+            "deltaX": null,
+            "stdDev": null,
+            "default_value": null,
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionName",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Name",
-          "$$hashKey": "uiGrid-04GL"
+          "$$hashKey": "uiGrid-04GL",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionDescription",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "$$hashKey": "uiGrid-04GN"
+          "$$hashKey": "uiGrid-04GN",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "name": "cooling_setpoint",
@@ -2508,7 +3956,22 @@
           "units": "",
           "minimum": 23.2,
           "maximum": 23.2,
-          "mode": 23.2
+          "mode": 23.2,
+          "display_name_short": "cooling_setpoint",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Continuous",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 26,
+            "minimum": 21.5,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 2,
+            "default_value": 24,
+            "showWarningIcon": true
+          }
         },
         {
           "name": "hour_of_the_day",
@@ -2523,7 +3986,22 @@
           "units": "",
           "minimum": 20,
           "maximum": 20,
-          "mode": 20
+          "mode": 20,
+          "display_name_short": "hour_of_the_day",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 0,
+            "minimum": 0,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 0,
+            "default_value": 20,
+            "showWarningIcon": false
+          }
         }
       ],
       "edit": "",
@@ -2531,7 +4009,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/11/2020",
       "author": "",
@@ -2555,16 +4033,18 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.5490008292564179,
+      "instanceId": 0.036553476376878447,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:17260",
-      "outputMeasure": false
+      "outputMeasure": false,
+      "skip": false,
+      "showWarningText": true
     },
     {
-      "measure_dir": "C:\\Users\\mleach\\Desktop\\Topic 2-8\\Modeling\\Cooling Setpoint Measure Test\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+      "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
-      "directory": "C:/Users/mleach/OpenStudio/Measures/cooling_setpoints_hourly_adjusted_by_degrees",
+      "directory": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "uid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
       "uuid": "{30ea2885-8a6f-40ba-b02c-b1ae70569479}",
       "version_id": "291f0c70-762b-42fc-a832-8c0340c13227",
@@ -2604,21 +4084,63 @@
           "specialRowId": "optionDelete",
           "variable": true,
           "option_1": "option_1",
-          "$$hashKey": "uiGrid-04SY"
+          "$$hashKey": "uiGrid-04SY",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": null,
+            "minimum": null,
+            "mean": null,
+            "deltaX": null,
+            "stdDev": null,
+            "default_value": null,
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionName",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Name",
-          "$$hashKey": "uiGrid-04T0"
+          "$$hashKey": "uiGrid-04T0",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionDescription",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "$$hashKey": "uiGrid-04T2"
+          "$$hashKey": "uiGrid-04T2",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "name": "cooling_setpoint",
@@ -2633,7 +4155,22 @@
           "units": "",
           "minimum": 23.4,
           "maximum": 23.4,
-          "mode": 23.4
+          "mode": 23.4,
+          "display_name_short": "cooling_setpoint",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Continuous",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 26,
+            "minimum": 21.5,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 2,
+            "default_value": 24,
+            "showWarningIcon": true
+          }
         },
         {
           "name": "hour_of_the_day",
@@ -2648,7 +4185,22 @@
           "units": "",
           "minimum": 21,
           "maximum": 21,
-          "mode": 21
+          "mode": 21,
+          "display_name_short": "hour_of_the_day",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 0,
+            "minimum": 0,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 0,
+            "default_value": 21,
+            "showWarningIcon": false
+          }
         }
       ],
       "edit": "",
@@ -2656,7 +4208,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/11/2020",
       "author": "",
@@ -2680,16 +4232,18 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.0576039747296071,
+      "instanceId": 0.7143458625925603,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:19855",
-      "outputMeasure": false
+      "outputMeasure": false,
+      "skip": false,
+      "showWarningText": true
     },
     {
-      "measure_dir": "C:\\Users\\mleach\\Desktop\\Topic 2-8\\Modeling\\Cooling Setpoint Measure Test\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+      "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
-      "directory": "C:/Users/mleach/OpenStudio/Measures/cooling_setpoints_hourly_adjusted_by_degrees",
+      "directory": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "uid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
       "uuid": "{30ea2885-8a6f-40ba-b02c-b1ae70569479}",
       "version_id": "291f0c70-762b-42fc-a832-8c0340c13227",
@@ -2729,21 +4283,63 @@
           "specialRowId": "optionDelete",
           "variable": true,
           "option_1": "option_1",
-          "$$hashKey": "uiGrid-0523"
+          "$$hashKey": "uiGrid-0523",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": null,
+            "minimum": null,
+            "mean": null,
+            "deltaX": null,
+            "stdDev": null,
+            "default_value": null,
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionName",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Name",
-          "$$hashKey": "uiGrid-0525"
+          "$$hashKey": "uiGrid-0525",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionDescription",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "$$hashKey": "uiGrid-0527"
+          "$$hashKey": "uiGrid-0527",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "name": "cooling_setpoint",
@@ -2758,7 +4354,22 @@
           "units": "",
           "minimum": 23.6,
           "maximum": 23.6,
-          "mode": 23.6
+          "mode": 23.6,
+          "display_name_short": "cooling_setpoint",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Continuous",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 26,
+            "minimum": 21.5,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 2,
+            "default_value": 24,
+            "showWarningIcon": true
+          }
         },
         {
           "name": "hour_of_the_day",
@@ -2773,7 +4384,22 @@
           "units": "",
           "minimum": 22,
           "maximum": 22,
-          "mode": 22
+          "mode": 22,
+          "display_name_short": "hour_of_the_day",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 0,
+            "minimum": 0,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 0,
+            "default_value": 22,
+            "showWarningIcon": false
+          }
         }
       ],
       "edit": "",
@@ -2781,7 +4407,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/11/2020",
       "author": "",
@@ -2805,16 +4431,18 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.5855764236655536,
+      "instanceId": 0.6360537975980087,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:20704",
-      "outputMeasure": false
+      "outputMeasure": false,
+      "skip": false,
+      "showWarningText": true
     },
     {
-      "measure_dir": "C:\\Users\\mleach\\Desktop\\Topic 2-8\\Modeling\\Cooling Setpoint Measure Test\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+      "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
-      "directory": "C:/Users/mleach/OpenStudio/Measures/cooling_setpoints_hourly_adjusted_by_degrees",
+      "directory": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "uid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
       "uuid": "{30ea2885-8a6f-40ba-b02c-b1ae70569479}",
       "version_id": "291f0c70-762b-42fc-a832-8c0340c13227",
@@ -2854,21 +4482,63 @@
           "specialRowId": "optionDelete",
           "variable": true,
           "option_1": "option_1",
-          "$$hashKey": "uiGrid-0562"
+          "$$hashKey": "uiGrid-0562",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": null,
+            "minimum": null,
+            "mean": null,
+            "deltaX": null,
+            "stdDev": null,
+            "default_value": null,
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionName",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Name",
-          "$$hashKey": "uiGrid-0564"
+          "$$hashKey": "uiGrid-0564",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionDescription",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "$$hashKey": "uiGrid-0566"
+          "$$hashKey": "uiGrid-0566",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "name": "cooling_setpoint",
@@ -2883,7 +4553,22 @@
           "units": "",
           "minimum": 23.8,
           "maximum": 23.8,
-          "mode": 23.8
+          "mode": 23.8,
+          "display_name_short": "cooling_setpoint",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Continuous",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 26,
+            "minimum": 21.5,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 2,
+            "default_value": 24,
+            "showWarningIcon": true
+          }
         },
         {
           "name": "hour_of_the_day",
@@ -2898,7 +4583,22 @@
           "units": "",
           "minimum": 23,
           "maximum": 23,
-          "mode": 23
+          "mode": 23,
+          "display_name_short": "hour_of_the_day",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 0,
+            "minimum": 0,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 0,
+            "default_value": 23,
+            "showWarningIcon": false
+          }
         }
       ],
       "edit": "",
@@ -2906,7 +4606,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/11/2020",
       "author": "",
@@ -2930,16 +4630,18 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.5621149596867099,
+      "instanceId": 0.9241718050465457,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:21232",
-      "outputMeasure": false
+      "outputMeasure": false,
+      "skip": false,
+      "showWarningText": true
     },
     {
-      "measure_dir": "C:\\Users\\mleach\\Desktop\\Topic 2-8\\Modeling\\Cooling Setpoint Measure Test\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
+      "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "name": "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2",
-      "directory": "C:/Users/mleach/OpenStudio/Measures/cooling_setpoints_hourly_adjusted_by_degrees",
+      "directory": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
       "uid": "30ea2885-8a6f-40ba-b02c-b1ae70569479",
       "uuid": "{30ea2885-8a6f-40ba-b02c-b1ae70569479}",
       "version_id": "291f0c70-762b-42fc-a832-8c0340c13227",
@@ -2979,21 +4681,63 @@
           "specialRowId": "optionDelete",
           "variable": true,
           "option_1": "option_1",
-          "$$hashKey": "uiGrid-059L"
+          "$$hashKey": "uiGrid-059L",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": null,
+            "minimum": null,
+            "mean": null,
+            "deltaX": null,
+            "stdDev": null,
+            "default_value": null,
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionName",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Name",
-          "$$hashKey": "uiGrid-059N"
+          "$$hashKey": "uiGrid-059N",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "specialRowId": "optionDescription",
           "type": "String",
           "variable": true,
           "option_1": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "$$hashKey": "uiGrid-059P"
+          "$$hashKey": "uiGrid-059P",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
         },
         {
           "name": "cooling_setpoint",
@@ -3008,7 +4752,22 @@
           "units": "",
           "minimum": 24,
           "maximum": 24,
-          "mode": 24
+          "mode": 24,
+          "display_name_short": "cooling_setpoint",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Continuous",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 26,
+            "minimum": 21.5,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 2,
+            "default_value": 24,
+            "showWarningIcon": true
+          }
         },
         {
           "name": "hour_of_the_day",
@@ -3023,7 +4782,22 @@
           "units": "",
           "minimum": 24,
           "maximum": 24,
-          "mode": 24
+          "mode": 24,
+          "display_name_short": "hour_of_the_day",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 0,
+            "minimum": 0,
+            "mean": 0,
+            "deltaX": 0,
+            "stdDev": 0,
+            "default_value": 24,
+            "showWarningIcon": false
+          }
         }
       ],
       "edit": "",
@@ -3031,7 +4805,7 @@
       "bcl_update": false,
       "location": "my",
       "add": "",
-      "open": true,
+      "open": false,
       "addedToProject": true,
       "date": "6/11/2020",
       "author": "",
@@ -3055,11 +4829,852 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.6879412287596931,
+      "instanceId": 0.7765069594542278,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:21688",
-      "outputMeasure": false
+      "outputMeasure": false,
+      "skip": false,
+      "showWarningText": true
+    },
+    {
+      "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\1d1137b1-f65f-4af8-86cd-8137e43fd36f",
+      "name": "openstudio_results",
+      "directory": "C:/Users/zahra/BCL/a25386cd-60e4-46bc-8b11-c755f379d916/1d1137b1-f65f-4af8-86cd-8137e43fd36f",
+      "uid": "a25386cd-60e4-46bc-8b11-c755f379d916",
+      "uuid": "{a25386cd-60e4-46bc-8b11-c755f379d916}",
+      "version_id": "1d1137b1-f65f-4af8-86cd-8137e43fd36f",
+      "version_uuid": "{1d1137b1-f65f-4af8-86cd-8137e43fd36f}",
+      "version_modified": "20191219T010136Z",
+      "xml_checksum": "557BF06F",
+      "display_name": "OpenStudio Results",
+      "class_name": "OpenStudioResults",
+      "description": "This measure creates high level tables and charts pulling both from model inputs and EnergyPlus results. It has building level information as well as detail on space types, thermal zones, HVAC systems, envelope characteristics, and economics. Click the heading above a chart to view a table of the chart data.",
+      "modeler_description": "For the most part consumption data comes from the tabular EnergyPlus results, however there are a few requests added for time series results. Space type and loop details come from the OpenStudio model. The code for this is modular, making it easy to use as a template for your own custom reports. The structure of the report uses bootstrap, and the graphs use dimple js.",
+      "tags": "Reporting.QAQC",
+      "outputs": [
+        {
+          "name": "electricity_ip",
+          "display_name": "electricity_ip",
+          "short_name": "electricity_ip",
+          "description": "",
+          "type": "Double",
+          "units": "",
+          "model_dependent": false
+        },
+        {
+          "name": "natural_gas_ip",
+          "display_name": "natural_gas_ip",
+          "short_name": "natural_gas_ip",
+          "description": "",
+          "type": "Double",
+          "units": "",
+          "model_dependent": false
+        },
+        {
+          "name": "additional_fuel_ip",
+          "display_name": "additional_fuel_ip",
+          "short_name": "additional_fuel_ip",
+          "description": "",
+          "type": "Double",
+          "units": "",
+          "model_dependent": false
+        },
+        {
+          "name": "district_heating_ip",
+          "display_name": "district_heating_ip",
+          "short_name": "district_heating_ip",
+          "description": "",
+          "type": "Double",
+          "units": "",
+          "model_dependent": false
+        },
+        {
+          "name": "district_cooling_ip",
+          "display_name": "district_cooling_ip",
+          "short_name": "district_cooling_ip",
+          "description": "",
+          "type": "Double",
+          "units": "",
+          "model_dependent": false
+        },
+        {
+          "name": "total_site_eui",
+          "display_name": "total_site_eui",
+          "short_name": "total_site_eui",
+          "description": "",
+          "type": "Double",
+          "units": "",
+          "model_dependent": false
+        },
+        {
+          "name": "eui",
+          "display_name": "eui",
+          "short_name": "eui",
+          "description": "",
+          "type": "Double",
+          "units": "",
+          "model_dependent": false
+        },
+        {
+          "name": "net_site_energy",
+          "display_name": "net_site_energy",
+          "short_name": "net_site_energy",
+          "description": "",
+          "type": "Double",
+          "units": "",
+          "model_dependent": false
+        },
+        {
+          "name": "annual_peak_electric_demand",
+          "display_name": "annual_peak_electric_demand",
+          "short_name": "annual_peak_electric_demand",
+          "description": "",
+          "type": "Double",
+          "units": "",
+          "model_dependent": false
+        },
+        {
+          "name": "unmet_hours_during_occupied_cooling",
+          "display_name": "unmet_hours_during_occupied_cooling",
+          "short_name": "unmet_hours_during_occupied_cooling",
+          "description": "",
+          "type": "Double",
+          "units": "",
+          "model_dependent": false
+        },
+        {
+          "name": "unmet_hours_during_occupied_heating",
+          "display_name": "unmet_hours_during_occupied_heating",
+          "short_name": "unmet_hours_during_occupied_heating",
+          "description": "",
+          "type": "Double",
+          "units": "",
+          "model_dependent": false
+        },
+        {
+          "name": "first_year_capital_cost",
+          "display_name": "first_year_capital_cost",
+          "short_name": "first_year_capital_cost",
+          "description": "",
+          "type": "Double",
+          "units": "",
+          "model_dependent": false
+        },
+        {
+          "name": "annual_utility_cost",
+          "display_name": "annual_utility_cost",
+          "short_name": "annual_utility_cost",
+          "description": "",
+          "type": "Double",
+          "units": "",
+          "model_dependent": false
+        },
+        {
+          "name": "total_lifecycle_cost",
+          "display_name": "total_lifecycle_cost",
+          "short_name": "total_lifecycle_cost",
+          "description": "",
+          "type": "Double",
+          "units": "",
+          "model_dependent": false
+        }
+      ],
+      "attributes": [
+        {
+          "name": "Uses SketchUp API",
+          "display_name": "Uses SketchUp API",
+          "value": false
+        },
+        {
+          "name": "Measure Type",
+          "display_name": "Measure Type",
+          "value": "ReportingMeasure"
+        },
+        {
+          "name": "Intended Software Tool",
+          "display_name": "Intended Software Tool",
+          "value": "OpenStudio Application"
+        },
+        {
+          "name": "Intended Software Tool",
+          "display_name": "Intended Software Tool",
+          "value": "Parametric Analysis Tool"
+        },
+        {
+          "name": "Intended Software Tool",
+          "display_name": "Intended Software Tool",
+          "value": "Analysis Spreadsheet"
+        },
+        {
+          "name": "Intended Use Case",
+          "display_name": "Intended Use Case",
+          "value": "Automatic Report Generation"
+        }
+      ],
+      "arguments": [
+        {
+          "specialRowId": "optionDelete",
+          "$$hashKey": "uiGrid-01Y4",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": null,
+            "minimum": null,
+            "mean": null,
+            "deltaX": null,
+            "stdDev": null,
+            "default_value": null,
+            "showWarningIcon": false
+          }
+        },
+        {
+          "specialRowId": "optionName",
+          "type": "String",
+          "$$hashKey": "uiGrid-01Y6",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
+        },
+        {
+          "specialRowId": "optionDescription",
+          "type": "String",
+          "$$hashKey": "uiGrid-01Y8",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "",
+            "showWarningIcon": false
+          }
+        },
+        {
+          "name": "units",
+          "display_name": "Which Unit System do you want to use?",
+          "description": "",
+          "type": "Choice",
+          "required": true,
+          "model_dependent": false,
+          "default_value": "IP",
+          "choice_values": [
+            "IP",
+            "SI"
+          ],
+          "choice_display_names": [
+            "IP",
+            "SI"
+          ],
+          "$$hashKey": "uiGrid-01YA",
+          "display_name_short": "units",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [
+              "IP",
+              "SI"
+            ],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "IP",
+            "minimum": "IP",
+            "mean": "IP",
+            "deltaX": "IP",
+            "stdDev": "IP",
+            "default_value": "IP",
+            "showWarningIcon": false
+          }
+        },
+        {
+          "name": "building_summary_section",
+          "display_name": "Model Summary",
+          "description": "",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "$$hashKey": "uiGrid-01YC",
+          "display_name_short": "building_summary_section",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true,
+            "showWarningIcon": false
+          }
+        },
+        {
+          "name": "annual_overview_section",
+          "display_name": "Annual Overview",
+          "description": "",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "$$hashKey": "uiGrid-01YE",
+          "display_name_short": "annual_overview_section",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true,
+            "showWarningIcon": false
+          }
+        },
+        {
+          "name": "monthly_overview_section",
+          "display_name": "Monthly Overview",
+          "description": "",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "$$hashKey": "uiGrid-01YG",
+          "display_name_short": "monthly_overview_section",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true,
+            "showWarningIcon": false
+          }
+        },
+        {
+          "name": "utility_bills_rates_section",
+          "display_name": "Utility Bills/Rates",
+          "description": "",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "$$hashKey": "uiGrid-01YI",
+          "display_name_short": "utility_bills_rates_section",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true,
+            "showWarningIcon": false
+          }
+        },
+        {
+          "name": "envelope_section_section",
+          "display_name": "Envelope Summary",
+          "description": "",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "$$hashKey": "uiGrid-01YK",
+          "display_name_short": "envelope_section_section",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true,
+            "showWarningIcon": false
+          }
+        },
+        {
+          "name": "space_type_breakdown_section",
+          "display_name": "Space Type Breakdown",
+          "description": "",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "$$hashKey": "uiGrid-01YM",
+          "display_name_short": "space_type_breakdown_section",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true,
+            "showWarningIcon": false
+          }
+        },
+        {
+          "name": "space_type_details_section",
+          "display_name": "Space Type Summary",
+          "description": "",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "$$hashKey": "uiGrid-01YO",
+          "display_name_short": "space_type_details_section",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true,
+            "showWarningIcon": false
+          }
+        },
+        {
+          "name": "interior_lighting_section",
+          "display_name": "Interior Lighting Summary",
+          "description": "",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "$$hashKey": "uiGrid-01YQ",
+          "display_name_short": "interior_lighting_section",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true,
+            "showWarningIcon": false
+          }
+        },
+        {
+          "name": "plug_loads_section",
+          "display_name": "Plug Loads Summary",
+          "description": "",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "$$hashKey": "uiGrid-01YS",
+          "display_name_short": "plug_loads_section",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true,
+            "showWarningIcon": false
+          }
+        },
+        {
+          "name": "exterior_light_section",
+          "display_name": "Exterior Lighting",
+          "description": "",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "$$hashKey": "uiGrid-01YU",
+          "display_name_short": "exterior_light_section",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true,
+            "showWarningIcon": false
+          }
+        },
+        {
+          "name": "water_use_section",
+          "display_name": "Water Use Equipment",
+          "description": "",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "$$hashKey": "uiGrid-01YW",
+          "display_name_short": "water_use_section",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true,
+            "showWarningIcon": false
+          }
+        },
+        {
+          "name": "hvac_load_profile",
+          "display_name": "HVAC Load Profiles",
+          "description": "",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "$$hashKey": "uiGrid-01YY",
+          "display_name_short": "hvac_load_profile",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true,
+            "showWarningIcon": false
+          }
+        },
+        {
+          "name": "zone_condition_section",
+          "display_name": "Zone Conditions",
+          "description": "",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "$$hashKey": "uiGrid-01Z0",
+          "display_name_short": "zone_condition_section",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true,
+            "showWarningIcon": false
+          }
+        },
+        {
+          "name": "zone_summary_section",
+          "display_name": "Zone Overview",
+          "description": "",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "$$hashKey": "uiGrid-01Z2",
+          "display_name_short": "zone_summary_section",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true,
+            "showWarningIcon": false
+          }
+        },
+        {
+          "name": "zone_equipment_detail_section",
+          "display_name": "Zone Equipment Detail",
+          "description": "",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "$$hashKey": "uiGrid-01Z4",
+          "display_name_short": "zone_equipment_detail_section",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true,
+            "showWarningIcon": false
+          }
+        },
+        {
+          "name": "air_loops_detail_section",
+          "display_name": "Air Loops Detail",
+          "description": "",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "$$hashKey": "uiGrid-01Z6",
+          "display_name_short": "air_loops_detail_section",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true,
+            "showWarningIcon": false
+          }
+        },
+        {
+          "name": "plant_loops_detail_section",
+          "display_name": "Plant Loops Detail",
+          "description": "",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "$$hashKey": "uiGrid-01Z8",
+          "display_name_short": "plant_loops_detail_section",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true,
+            "showWarningIcon": false
+          }
+        },
+        {
+          "name": "outdoor_air_section",
+          "display_name": "Outdoor Air",
+          "description": "",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "$$hashKey": "uiGrid-01ZA",
+          "display_name_short": "outdoor_air_section",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true,
+            "showWarningIcon": false
+          }
+        },
+        {
+          "name": "cost_summary_section",
+          "display_name": "Cash Flow",
+          "description": "",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "$$hashKey": "uiGrid-01ZC",
+          "display_name_short": "cost_summary_section",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true,
+            "showWarningIcon": false
+          }
+        },
+        {
+          "name": "source_energy_section",
+          "display_name": "Site and Source Summary",
+          "description": "",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "$$hashKey": "uiGrid-01ZE",
+          "display_name_short": "source_energy_section",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true,
+            "showWarningIcon": false
+          }
+        },
+        {
+          "name": "schedules_overview_section",
+          "display_name": "Schedule Overview",
+          "description": "",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "$$hashKey": "uiGrid-01ZG",
+          "variable": true,
+          "display_name_short": "schedules_overview_section",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true,
+            "showWarningIcon": false
+          }
+        },
+        {
+          "name": "reg_monthly_details",
+          "display_name": "Report monthly fuel and enduse breakdown to registerValue",
+          "description": "This argument does not effect HTML file, instead it makes data from individal cells of monthly tables avaiable for machine readable values in the resulting OpenStudio Workflow file.",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": false,
+          "$$hashKey": "uiGrid-01ZI",
+          "display_name_short": "reg_monthly_details",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": false,
+            "minimum": false,
+            "mean": false,
+            "deltaX": false,
+            "stdDev": false,
+            "default_value": false,
+            "showWarningIcon": false
+          }
+        }
+      ],
+      "edit": "",
+      "status": "",
+      "bcl_update": false,
+      "location": "local",
+      "add": "",
+      "open": true,
+      "addedToProject": true,
+      "date": "12/18/2019",
+      "author": "",
+      "type": "ReportingMeasure",
+      "seed": "in.osm",
+      "workflow_index": 24,
+      "options": [],
+      "instanceId": 0.6272040201998541,
+      "numberOfOptions": 0,
+      "$$hashKey": "object:7037",
+      "skip": false,
+      "showWarningText": false
     }
   ],
   "filesToInclude": [],
@@ -3110,333 +5725,10 @@
       "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "Option 1 Name",
       "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "Option 1 Name",
       "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "Option 1 Name",
-      "$$hashKey": "uiGrid-0734"
+      "$$hashKey": "uiGrid-0734",
+      "openstudio_results": "None"
     }
   ],
-  "analysisID": "5c3cb824-5b49-4e53-8e1e-dcf03bd6de06\r",
-  "datapoints": [
-    {
-      "name": "Alternative 1",
-      "id": "0c48c307-48a2-4b30-8723-c72aaff4508d",
-      "run": false,
-      "modified": false,
-      "selected": false,
-      "completed_at": "20200611T224837Z",
-      "completed_status": "Fail",
-      "created_at": "2020-06-11 16:48:34 -0600",
-      "description": "Autogenerated 0",
-      "file_format_version": "0.0.1",
-      "file_paths": [
-        "../weather",
-        "../seeds",
-        "../seed"
-      ],
-      "hash": "16599D3F",
-      "measure_paths": [
-        "../measures"
-      ],
-      "osa_id": "5c3cb824-5b49-4e53-8e1e-dcf03bd6de06",
-      "osd_id": "0c48c307-48a2-4b30-8723-c72aaff4508d",
-      "run_directory": "./run",
-      "seed_file": "in.osm",
-      "steps": [
-        {
-          "arguments": {
-            "cooling_setpoint": 23.8,
-            "hour_of_the_day": 1
-          },
-          "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "measure_dir_name": "cooling_setpoints_hourly_adjusted_by_degrees",
-          "name": "Option 1 Name",
-          "$$hashKey": "object:33927",
-          "open": true
-        },
-        {
-          "arguments": {
-            "cooling_setpoint": 23.6,
-            "hour_of_the_day": 2
-          },
-          "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "measure_dir_name": "cooling_setpoints_hourly_adjusted_by_degrees",
-          "name": "Option 1 Name",
-          "$$hashKey": "object:33928",
-          "open": true
-        },
-        {
-          "arguments": {
-            "cooling_setpoint": 23.4,
-            "hour_of_the_day": 3
-          },
-          "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "measure_dir_name": "cooling_setpoints_hourly_adjusted_by_degrees",
-          "name": "Option 1 Name",
-          "$$hashKey": "object:33929"
-        },
-        {
-          "arguments": {
-            "cooling_setpoint": 23.2,
-            "hour_of_the_day": 4
-          },
-          "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "measure_dir_name": "cooling_setpoints_hourly_adjusted_by_degrees",
-          "name": "Option 1 Name",
-          "$$hashKey": "object:33930"
-        },
-        {
-          "arguments": {
-            "cooling_setpoint": 23,
-            "hour_of_the_day": 5
-          },
-          "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "measure_dir_name": "cooling_setpoints_hourly_adjusted_by_degrees",
-          "name": "Option 1 Name",
-          "$$hashKey": "object:33931"
-        },
-        {
-          "arguments": {
-            "cooling_setpoint": 22.8,
-            "hour_of_the_day": 6
-          },
-          "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "measure_dir_name": "cooling_setpoints_hourly_adjusted_by_degrees",
-          "name": "Option 1 Name",
-          "$$hashKey": "object:33932"
-        },
-        {
-          "arguments": {
-            "cooling_setpoint": 22.6,
-            "hour_of_the_day": 7
-          },
-          "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "measure_dir_name": "cooling_setpoints_hourly_adjusted_by_degrees",
-          "name": "Option 1 Name",
-          "$$hashKey": "object:33933"
-        },
-        {
-          "arguments": {
-            "cooling_setpoint": 22.4,
-            "hour_of_the_day": 8
-          },
-          "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "measure_dir_name": "cooling_setpoints_hourly_adjusted_by_degrees",
-          "name": "Option 1 Name",
-          "$$hashKey": "object:33934"
-        },
-        {
-          "arguments": {
-            "cooling_setpoint": 22.2,
-            "hour_of_the_day": 9
-          },
-          "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "measure_dir_name": "cooling_setpoints_hourly_adjusted_by_degrees",
-          "name": "Option 1 Name",
-          "$$hashKey": "object:33935"
-        },
-        {
-          "arguments": {
-            "cooling_setpoint": 22,
-            "hour_of_the_day": 10
-          },
-          "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "measure_dir_name": "cooling_setpoints_hourly_adjusted_by_degrees",
-          "name": "Option 1 Name",
-          "$$hashKey": "object:33936"
-        },
-        {
-          "arguments": {
-            "cooling_setpoint": 21.8,
-            "hour_of_the_day": 11
-          },
-          "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "measure_dir_name": "cooling_setpoints_hourly_adjusted_by_degrees",
-          "name": "Option 1 Name",
-          "$$hashKey": "object:33937"
-        },
-        {
-          "arguments": {
-            "cooling_setpoint": 21.6,
-            "hour_of_the_day": 12
-          },
-          "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "measure_dir_name": "cooling_setpoints_hourly_adjusted_by_degrees",
-          "name": "Option 1 Name",
-          "$$hashKey": "object:33938"
-        },
-        {
-          "arguments": {
-            "cooling_setpoint": 21.8,
-            "hour_of_the_day": 13
-          },
-          "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "measure_dir_name": "cooling_setpoints_hourly_adjusted_by_degrees",
-          "name": "Option 1 Name",
-          "$$hashKey": "object:33939"
-        },
-        {
-          "arguments": {
-            "cooling_setpoint": 22,
-            "hour_of_the_day": 14
-          },
-          "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "measure_dir_name": "cooling_setpoints_hourly_adjusted_by_degrees",
-          "name": "Option 1 Name",
-          "$$hashKey": "object:33940"
-        },
-        {
-          "arguments": {
-            "cooling_setpoint": 22.2,
-            "hour_of_the_day": 15
-          },
-          "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "measure_dir_name": "cooling_setpoints_hourly_adjusted_by_degrees",
-          "name": "Option 1 Name",
-          "$$hashKey": "object:33941"
-        },
-        {
-          "arguments": {
-            "cooling_setpoint": 22.4,
-            "hour_of_the_day": 16
-          },
-          "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "measure_dir_name": "cooling_setpoints_hourly_adjusted_by_degrees",
-          "name": "Option 1 Name",
-          "$$hashKey": "object:33942"
-        },
-        {
-          "arguments": {
-            "cooling_setpoint": 22.6,
-            "hour_of_the_day": 17
-          },
-          "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "measure_dir_name": "cooling_setpoints_hourly_adjusted_by_degrees",
-          "name": "Option 1 Name",
-          "$$hashKey": "object:33943"
-        },
-        {
-          "arguments": {
-            "cooling_setpoint": 22.8,
-            "hour_of_the_day": 18
-          },
-          "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "measure_dir_name": "cooling_setpoints_hourly_adjusted_by_degrees",
-          "name": "Option 1 Name",
-          "$$hashKey": "object:33944"
-        },
-        {
-          "arguments": {
-            "cooling_setpoint": 23,
-            "hour_of_the_day": 19
-          },
-          "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "measure_dir_name": "cooling_setpoints_hourly_adjusted_by_degrees",
-          "name": "Option 1 Name",
-          "$$hashKey": "object:33945"
-        },
-        {
-          "arguments": {
-            "cooling_setpoint": 23.2,
-            "hour_of_the_day": 20
-          },
-          "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "measure_dir_name": "cooling_setpoints_hourly_adjusted_by_degrees",
-          "name": "Option 1 Name",
-          "$$hashKey": "object:33946"
-        },
-        {
-          "arguments": {
-            "cooling_setpoint": 23.4,
-            "hour_of_the_day": 21
-          },
-          "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "measure_dir_name": "cooling_setpoints_hourly_adjusted_by_degrees",
-          "name": "Option 1 Name",
-          "$$hashKey": "object:33947"
-        },
-        {
-          "arguments": {
-            "cooling_setpoint": 23.6,
-            "hour_of_the_day": 22
-          },
-          "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "measure_dir_name": "cooling_setpoints_hourly_adjusted_by_degrees",
-          "name": "Option 1 Name",
-          "$$hashKey": "object:33948"
-        },
-        {
-          "arguments": {
-            "cooling_setpoint": 23.8,
-            "hour_of_the_day": 23
-          },
-          "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "measure_dir_name": "cooling_setpoints_hourly_adjusted_by_degrees",
-          "name": "Option 1 Name",
-          "$$hashKey": "object:33949"
-        },
-        {
-          "arguments": {
-            "cooling_setpoint": 24,
-            "hour_of_the_day": 24
-          },
-          "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n",
-          "measure_dir_name": "cooling_setpoints_hourly_adjusted_by_degrees",
-          "name": "Option 1 Name",
-          "$$hashKey": "object:33950"
-        }
-      ],
-      "updated_at": "20200611T224837Z",
-      "weather_file": "USA_CO_Boulder-Broomfield-Jefferson.County.AP.724699_TMY3.epw",
-      "status": "completed",
-      "result_files": [
-        {
-          "_id": {
-            "$oid": "5ee2b4c5ff703f1f1c89bf22"
-          },
-          "attachment_content_type": "text/plain",
-          "attachment_file_name": "out.osw",
-          "attachment_file_size": 12298,
-          "attachment_fingerprint": "34e58956a8e053518563975e11dde8c5",
-          "attachment_updated_at": "2020-06-11T22:48:37.759+00:00",
-          "created_at": "2020-06-11T22:48:37.762Z",
-          "display_name": "Final OSW File",
-          "type": "Report",
-          "updated_at": "2020-06-11T22:48:37.762Z",
-          "downloaded": true
-        },
-        {
-          "_id": {
-            "$oid": "5ee2b4c5ff703f1f1c89bf23"
-          },
-          "attachment_content_type": "application/zip",
-          "attachment_file_name": "data_point.zip",
-          "attachment_file_size": 254,
-          "attachment_fingerprint": "bbd22b13358b0507e28a73ad01897b47",
-          "attachment_updated_at": "2020-06-11T22:48:37.911+00:00",
-          "created_at": "2020-06-11T22:48:37.915Z",
-          "display_name": "Zip File",
-          "type": "Data Point",
-          "updated_at": "2020-06-11T22:48:37.915Z",
-          "downloaded": true
-        },
-        {
-          "_id": {
-            "$oid": "5ee2b4c6ff703f1f1c89bf24"
-          },
-          "attachment_content_type": "text/plain",
-          "attachment_file_name": "0c48c307-48a2-4b30-8723-c72aaff4508d.log",
-          "attachment_file_size": 23723,
-          "attachment_fingerprint": "2046eeabd85a13a0df4b0bf390530065",
-          "attachment_updated_at": "2020-06-11T22:48:38.017+00:00",
-          "created_at": "2020-06-11T22:48:38.020Z",
-          "display_name": "Datapoint Simulation Log",
-          "type": "Report",
-          "updated_at": "2020-06-11T22:48:38.020Z",
-          "$$hashKey": "object:34078",
-          "downloaded": true
-        }
-      ],
-      "downloaded_reports": true,
-      "downloaded_results": true,
-      "open": true
-    }
-  ]
+  "analysisID": "e013655d-3a39-4938-9f45-1982016af529\r",
+  "datapoints": []
 }
