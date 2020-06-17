@@ -33,7 +33,7 @@
       "description": "Integer seed for random number generator",
       "defaultValue": null,
       "type": "number",
-      "value": null,
+      "value": 1,
       "$$hashKey": "object:17168"
     },
     {
@@ -51,7 +51,7 @@
       "description": "Options: 1 or 0 (True or False)",
       "defaultValue": 0,
       "type": "number",
-      "value": 0,
+      "value": 1,
       "$$hashKey": "object:20940"
     }
   ],
@@ -252,7 +252,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.7994771185719289,
+      "instanceId": 0.6635418207245891,
       "numberOfOptions": 1,
       "$$hashKey": "object:6880",
       "unlockStatus": true,
@@ -451,7 +451,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.8468961971288653,
+      "instanceId": 0.7670018676835457,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:7170",
@@ -650,7 +650,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.8784767524025012,
+      "instanceId": 0.6895245147582119,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:7492",
@@ -849,7 +849,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.788111637884392,
+      "instanceId": 0.3243773617411143,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:7864",
@@ -1048,7 +1048,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.08526649901049699,
+      "instanceId": 0.18891399048375623,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:8287",
@@ -1247,7 +1247,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.976922455184841,
+      "instanceId": 0.7213833177790694,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:8761",
@@ -1446,7 +1446,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.7608428159864884,
+      "instanceId": 0.07852513306433928,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:9286",
@@ -1645,7 +1645,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.45544586541239185,
+      "instanceId": 0.6181500847166792,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:9862",
@@ -1844,7 +1844,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.14493008910952687,
+      "instanceId": 0.5387985706962084,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:10489",
@@ -2043,7 +2043,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.8860906147111871,
+      "instanceId": 0.354343883162902,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:11167",
@@ -2242,7 +2242,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.8703228333843047,
+      "instanceId": 0.24268025379995528,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:11896",
@@ -2441,7 +2441,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.04398690997823085,
+      "instanceId": 0.5707653513908226,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:12676",
@@ -2640,7 +2640,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.26407956232313,
+      "instanceId": 0.27575575544926156,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:13441",
@@ -2839,7 +2839,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.14551957658099357,
+      "instanceId": 0.47956058487373454,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:14155",
@@ -3038,7 +3038,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.2558137616052816,
+      "instanceId": 0.9940119776070502,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:14806",
@@ -3237,7 +3237,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.5372735334431873,
+      "instanceId": 0.7631200272255432,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:15361",
@@ -3436,7 +3436,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.36404464576872875,
+      "instanceId": 0.9571775440412151,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:15844",
@@ -3635,7 +3635,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.3240059000363005,
+      "instanceId": 0.7405658291918407,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:16345",
@@ -3834,7 +3834,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.7130367450069433,
+      "instanceId": 0.2775736334238472,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:16777",
@@ -4033,7 +4033,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.036553476376878447,
+      "instanceId": 0.3132757026575177,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:17260",
@@ -4232,7 +4232,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.7143458625925603,
+      "instanceId": 0.8166967877945654,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:19855",
@@ -4431,7 +4431,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.6360537975980087,
+      "instanceId": 0.8478094662774787,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:20704",
@@ -4630,7 +4630,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.9241718050465457,
+      "instanceId": 0.17957241971307414,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:21232",
@@ -4829,7 +4829,7 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.7765069594542278,
+      "instanceId": 0.046467619431804774,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:21688",
@@ -4840,7 +4840,7 @@
     {
       "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\1d1137b1-f65f-4af8-86cd-8137e43fd36f",
       "name": "openstudio_results",
-      "directory": "C:/Users/zahra/BCL/a25386cd-60e4-46bc-8b11-c755f379d916/1d1137b1-f65f-4af8-86cd-8137e43fd36f",
+      "directory": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\1d1137b1-f65f-4af8-86cd-8137e43fd36f",
       "uid": "a25386cd-60e4-46bc-8b11-c755f379d916",
       "uuid": "{a25386cd-60e4-46bc-8b11-c755f379d916}",
       "version_id": "1d1137b1-f65f-4af8-86cd-8137e43fd36f",
@@ -4860,7 +4860,8 @@
           "description": "",
           "type": "Double",
           "units": "",
-          "model_dependent": false
+          "model_dependent": false,
+          "$$hashKey": "object:20513"
         },
         {
           "name": "natural_gas_ip",
@@ -4869,7 +4870,8 @@
           "description": "",
           "type": "Double",
           "units": "",
-          "model_dependent": false
+          "model_dependent": false,
+          "$$hashKey": "object:20514"
         },
         {
           "name": "additional_fuel_ip",
@@ -4878,7 +4880,8 @@
           "description": "",
           "type": "Double",
           "units": "",
-          "model_dependent": false
+          "model_dependent": false,
+          "$$hashKey": "object:20515"
         },
         {
           "name": "district_heating_ip",
@@ -4887,7 +4890,8 @@
           "description": "",
           "type": "Double",
           "units": "",
-          "model_dependent": false
+          "model_dependent": false,
+          "$$hashKey": "object:20516"
         },
         {
           "name": "district_cooling_ip",
@@ -4896,7 +4900,8 @@
           "description": "",
           "type": "Double",
           "units": "",
-          "model_dependent": false
+          "model_dependent": false,
+          "$$hashKey": "object:20517"
         },
         {
           "name": "total_site_eui",
@@ -4905,7 +4910,8 @@
           "description": "",
           "type": "Double",
           "units": "",
-          "model_dependent": false
+          "model_dependent": false,
+          "$$hashKey": "object:20518"
         },
         {
           "name": "eui",
@@ -4914,7 +4920,8 @@
           "description": "",
           "type": "Double",
           "units": "",
-          "model_dependent": false
+          "model_dependent": false,
+          "$$hashKey": "object:20519"
         },
         {
           "name": "net_site_energy",
@@ -4923,7 +4930,8 @@
           "description": "",
           "type": "Double",
           "units": "",
-          "model_dependent": false
+          "model_dependent": false,
+          "$$hashKey": "object:20520"
         },
         {
           "name": "annual_peak_electric_demand",
@@ -4932,7 +4940,8 @@
           "description": "",
           "type": "Double",
           "units": "",
-          "model_dependent": false
+          "model_dependent": false,
+          "$$hashKey": "object:20521"
         },
         {
           "name": "unmet_hours_during_occupied_cooling",
@@ -4941,7 +4950,8 @@
           "description": "",
           "type": "Double",
           "units": "",
-          "model_dependent": false
+          "model_dependent": false,
+          "$$hashKey": "object:20522"
         },
         {
           "name": "unmet_hours_during_occupied_heating",
@@ -4950,7 +4960,8 @@
           "description": "",
           "type": "Double",
           "units": "",
-          "model_dependent": false
+          "model_dependent": false,
+          "$$hashKey": "object:20523"
         },
         {
           "name": "first_year_capital_cost",
@@ -4959,7 +4970,8 @@
           "description": "",
           "type": "Double",
           "units": "",
-          "model_dependent": false
+          "model_dependent": false,
+          "$$hashKey": "object:20524"
         },
         {
           "name": "annual_utility_cost",
@@ -4968,7 +4980,8 @@
           "description": "",
           "type": "Double",
           "units": "",
-          "model_dependent": false
+          "model_dependent": false,
+          "$$hashKey": "object:20525"
         },
         {
           "name": "total_lifecycle_cost",
@@ -4977,7 +4990,8 @@
           "description": "",
           "type": "Double",
           "units": "",
-          "model_dependent": false
+          "model_dependent": false,
+          "$$hashKey": "object:20526"
         }
       ],
       "attributes": [
@@ -5670,14 +5684,705 @@
       "seed": "in.osm",
       "workflow_index": 24,
       "options": [],
-      "instanceId": 0.6272040201998541,
+      "instanceId": 0.3515199912860776,
       "numberOfOptions": 0,
       "$$hashKey": "object:7037",
       "skip": false,
-      "showWarningText": false
+      "showWarningText": false,
+      "outputMeasure": true,
+      "userDefinedOutputs": [],
+      "analysisOutputs": []
+    },
+    {
+      "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\TimeseriesObjectiveFunction",
+      "name": "timeseries_objective_function",
+      "directory": "C:/Users/zahra/OpenStudio_git/measure_directory_my/TimeseriesObjectiveFunction",
+      "uid": "6804217d-4737-45f3-82df-b81393c29ce3",
+      "uuid": "{6804217d-4737-45f3-82df-b81393c29ce3}",
+      "version_id": "d41b5fec-0640-4337-965c-e1515b34d80e",
+      "version_uuid": "{d41b5fec-0640-4337-965c-e1515b34d80e}",
+      "version_modified": "20180322T191228Z",
+      "xml_checksum": "FFE04372",
+      "display_name": "TimeSeries Objective Function",
+      "class_name": "TimeseriesObjectiveFunction",
+      "description": "Creates Objective Function from Timeseries Data",
+      "modeler_description": "Creates Objective Function from Timeseries Data.  The measure applies a Norm at each timestep between the difference of CSV metered data and SQL model data. A timeseries plot can also be created.  Possible outputs are 'cvrmse', 'nmbe', 'simdata' = sum of the simulated data, 'csvdata' = sum of metered data, 'diff' = P Norm between the metered and simulated data if Norm is 1 or 2, else its just the Difference.",
+      "tags": "Reporting.QAQC",
+      "outputs": [
+        {
+          "name": "diff",
+          "display_name": "diff",
+          "short_name": "diff",
+          "description": "",
+          "type": "Double",
+          "units": "",
+          "model_dependent": false,
+          "$$hashKey": "object:31125"
+        },
+        {
+          "name": "simdata",
+          "display_name": "simdata",
+          "short_name": "simdata",
+          "description": "",
+          "type": "Double",
+          "units": "",
+          "model_dependent": false,
+          "$$hashKey": "object:31126"
+        },
+        {
+          "name": "csvdata",
+          "display_name": "csvdata",
+          "short_name": "csvdata",
+          "description": "",
+          "type": "Double",
+          "units": "",
+          "model_dependent": false,
+          "$$hashKey": "object:31127"
+        },
+        {
+          "name": "cvrmse",
+          "display_name": "cvrmse",
+          "short_name": "cvrmse",
+          "description": "",
+          "type": "Double",
+          "units": "",
+          "model_dependent": false,
+          "$$hashKey": "object:31128",
+          "checked": true,
+          "visualize": "true",
+          "objective_function": "true",
+          "measure_name": "timeseries_objective_function",
+          "measure_class_name": "TimeseriesObjectiveFunction",
+          "measure_uid": "6804217d-4737-45f3-82df-b81393c29ce3"
+        },
+        {
+          "name": "nmbe",
+          "display_name": "nmbe",
+          "short_name": "nmbe",
+          "description": "",
+          "type": "Double",
+          "units": "",
+          "model_dependent": false,
+          "$$hashKey": "object:31129"
+        }
+      ],
+      "attributes": [
+        {
+          "name": "Intended Software Tool",
+          "display_name": "Intended Software Tool",
+          "value": "OpenStudio Application"
+        },
+        {
+          "name": "Intended Software Tool",
+          "display_name": "Intended Software Tool",
+          "value": "Parametric Analysis Tool"
+        },
+        {
+          "name": "Measure Type",
+          "display_name": "Measure Type",
+          "value": "ReportingMeasure"
+        }
+      ],
+      "arguments": [
+        {
+          "name": "csv_name",
+          "display_name": "Path to CSV file for the metered data",
+          "description": "Path to CSV file including file name.",
+          "type": "String",
+          "required": true,
+          "model_dependent": false,
+          "default_value": "../../../lib/resources/mtr.csv",
+          "display_name_short": "csv_name",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "../../../lib/resources/mtr.csv",
+            "minimum": "../../../lib/resources/mtr.csv",
+            "mean": "../../../lib/resources/mtr.csv",
+            "deltaX": "../../../lib/resources/mtr.csv",
+            "stdDev": "../../../lib/resources/mtr.csv",
+            "default_value": "../../../lib/resources/in.csv"
+          },
+          "$$hashKey": "object:13396"
+        },
+        {
+          "name": "csv_time_header",
+          "display_name": "CSV Time Header",
+          "description": "CSV Time Header Value. Used to determine the timestamp column in the CSV file",
+          "type": "String",
+          "required": true,
+          "model_dependent": false,
+          "default_value": "Date/Time",
+          "display_name_short": "csv_time_header",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "Date/Time",
+            "minimum": "Date/Time",
+            "mean": "Date/Time",
+            "deltaX": "Date/Time",
+            "stdDev": "Date/Time",
+            "default_value": "Date/Time"
+          },
+          "$$hashKey": "object:13397"
+        },
+        {
+          "name": "csv_var",
+          "display_name": "CSV variable name",
+          "description": "CSV variable name. Used to determine the variable column in the CSV file",
+          "type": "String",
+          "required": true,
+          "model_dependent": false,
+          "default_value": "Whole Building:Facility Total Electric Demand Power [W](TimeStep)",
+          "display_name_short": "csv_var",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "Whole Building:Facility Total Electric Demand Power [W](TimeStep)",
+            "minimum": "Whole Building:Facility Total Electric Demand Power [W](TimeStep)",
+            "mean": "Whole Building:Facility Total Electric Demand Power [W](TimeStep)",
+            "deltaX": "Whole Building:Facility Total Electric Demand Power [W](TimeStep)",
+            "stdDev": "Whole Building:Facility Total Electric Demand Power [W](TimeStep)",
+            "default_value": "Electricity:Facility [J](TimeStep)"
+          },
+          "$$hashKey": "object:13398"
+        },
+        {
+          "name": "convert_data",
+          "display_name": "Convert Units",
+          "description": "Convert Units in Metered Data",
+          "type": "Choice",
+          "required": true,
+          "model_dependent": false,
+          "default_value": "None",
+          "choice_values": [
+            "F to C",
+            "WH to J",
+            "CFM to m3/s",
+            "PSI to Pa",
+            "None"
+          ],
+          "choice_display_names": [
+            "F to C",
+            "WH to J",
+            "CFM to m3/s",
+            "PSI to Pa",
+            "None"
+          ],
+          "display_name_short": "convert_data",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [
+              "F to C",
+              "WH to J",
+              "CFM to m3/s",
+              "PSI to Pa",
+              "None"
+            ],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "None",
+            "minimum": "None",
+            "mean": "None",
+            "deltaX": "None",
+            "stdDev": "None",
+            "default_value": "None"
+          },
+          "$$hashKey": "object:13399"
+        },
+        {
+          "name": "csv_var_dn",
+          "display_name": "CSV variable display name",
+          "description": "CSV variable display name. Not yet Implemented",
+          "type": "String",
+          "required": true,
+          "model_dependent": false,
+          "default_value": "",
+          "display_name_short": "csv_var_dn",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "Electricity:Facility [J](TimeStep)"
+          },
+          "$$hashKey": "object:13400"
+        },
+        {
+          "name": "year",
+          "display_name": "Year in csv data timestamp",
+          "description": "Is the Year in the csv data timestamp => mm:dd:yy or mm:dd (true/false)",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "display_name_short": "year",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": false
+          },
+          "$$hashKey": "object:13401"
+        },
+        {
+          "name": "seconds",
+          "display_name": "Seconds in csv data timestamp",
+          "description": "Is the Seconds in the csv data timestamp => hh:mm:ss or hh:mm (true/false)",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "display_name_short": "seconds",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true
+          },
+          "$$hashKey": "object:13402"
+        },
+        {
+          "name": "key_value",
+          "display_name": "SQL key value",
+          "description": "SQL key value for the SQL query to find the variable in the SQL file",
+          "type": "String",
+          "required": true,
+          "model_dependent": false,
+          "default_value": "",
+          "display_name_short": "key_value",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "Electricity:Facility"
+          },
+          "$$hashKey": "object:13403"
+        },
+        {
+          "name": "timeseries_name",
+          "display_name": "TimeSeries Name",
+          "description": "TimeSeries Name for the SQL query to find the variable in the SQL file",
+          "type": "String",
+          "required": true,
+          "model_dependent": false,
+          "default_value": "Facility Total Electric Demand Power",
+          "display_name_short": "timeseries_name",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "Facility Total Electric Demand Power",
+            "minimum": "Facility Total Electric Demand Power",
+            "mean": "Facility Total Electric Demand Power",
+            "deltaX": "Facility Total Electric Demand Power",
+            "stdDev": "Facility Total Electric Demand Power",
+            "default_value": "Electricity:Facility"
+          },
+          "$$hashKey": "object:13404"
+        },
+        {
+          "name": "reporting_frequency",
+          "display_name": "Reporting Frequency",
+          "description": "Reporting Frequency for SQL Query",
+          "type": "Choice",
+          "required": true,
+          "model_dependent": false,
+          "default_value": "",
+          "choice_values": [
+            "Detailed",
+            "Timestep",
+            "Hourly",
+            "Daily",
+            "Monthly",
+            "RunPeriod"
+          ],
+          "choice_display_names": [
+            "Detailed",
+            "Timestep",
+            "Hourly",
+            "Daily",
+            "Monthly",
+            "RunPeriod"
+          ],
+          "display_name_short": "reporting_frequency",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [
+              "Detailed",
+              "Timestep",
+              "Hourly",
+              "Daily",
+              "Monthly",
+              "RunPeriod"
+            ],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "Timestep"
+          },
+          "$$hashKey": "object:13405"
+        },
+        {
+          "name": "environment_period",
+          "display_name": "Environment Period",
+          "description": "Environment Period for SQL query",
+          "type": "String",
+          "required": true,
+          "model_dependent": false,
+          "default_value": "RUN PERIOD 1",
+          "display_name_short": "environment_period",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "RUN PERIOD 1",
+            "minimum": "RUN PERIOD 1",
+            "mean": "RUN PERIOD 1",
+            "deltaX": "RUN PERIOD 1",
+            "stdDev": "RUN PERIOD 1",
+            "default_value": "RUN PERIOD 1"
+          },
+          "$$hashKey": "object:13406"
+        },
+        {
+          "name": "norm",
+          "display_name": "Norm of the difference of csv and sql",
+          "description": "Norm of the difference of csv and sql. 1 is absolute value. 2 is euclidean distance. 3 is raw difference.",
+          "type": "Double",
+          "required": true,
+          "model_dependent": false,
+          "units": "",
+          "default_value": 1,
+          "min_value": 0,
+          "max_value": 0,
+          "display_name_short": "norm",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 1,
+            "minimum": 1,
+            "mean": 1,
+            "deltaX": 1,
+            "stdDev": 1,
+            "default_value": 1
+          },
+          "$$hashKey": "object:13407"
+        },
+        {
+          "name": "scale",
+          "display_name": "Scale factor to apply to the difference",
+          "description": "Scale factor to apply to the difference (1 is no scale)",
+          "type": "Double",
+          "required": true,
+          "model_dependent": false,
+          "units": "",
+          "default_value": 1,
+          "min_value": 0,
+          "max_value": 0,
+          "display_name_short": "scale",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": 1,
+            "minimum": 1,
+            "mean": 1,
+            "deltaX": 1,
+            "stdDev": 1,
+            "default_value": 1
+          },
+          "$$hashKey": "object:13408"
+        },
+        {
+          "name": "find_avail",
+          "display_name": "Find Available data in the SQL file",
+          "description": "Will RegisterInfo all the 'EnvPeriod', 'ReportingFrequencies', 'VariableNames', 'KeyValues' in the SQL file.  Useful for debugging SQL issues.",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "display_name_short": "find_avail",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true
+          },
+          "$$hashKey": "object:13409"
+        },
+        {
+          "name": "algorithm_download",
+          "display_name": "algorithm_download",
+          "description": "Make JSON data available for algorithm_download (true/false)",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": false,
+          "display_name_short": "algorithm_download",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": false,
+            "minimum": false,
+            "mean": false,
+            "deltaX": false,
+            "stdDev": false,
+            "default_value": false
+          },
+          "$$hashKey": "object:13410"
+        },
+        {
+          "name": "plot_flag",
+          "display_name": "plot_flag timeseries data",
+          "description": "Create plot of timeseries data (true/false)",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "display_name_short": "plot_flag",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true
+          },
+          "$$hashKey": "object:13411"
+        },
+        {
+          "name": "plot_name",
+          "display_name": "Plot name",
+          "description": "Name to include in reporting file name.",
+          "type": "String",
+          "required": true,
+          "model_dependent": false,
+          "default_value": "",
+          "display_name_short": "plot_name",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": "",
+            "minimum": "",
+            "mean": "",
+            "deltaX": "",
+            "stdDev": "",
+            "default_value": "electricity"
+          },
+          "$$hashKey": "object:13412"
+        },
+        {
+          "name": "verbose_messages",
+          "display_name": "verbose_messages",
+          "description": "verbose messages.  Useful for debugging but MAJOR Performance Hit.",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": false,
+          "display_name_short": "verbose_messages",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": false,
+            "minimum": false,
+            "mean": false,
+            "deltaX": false,
+            "stdDev": false,
+            "default_value": true
+          },
+          "$$hashKey": "object:13413"
+        },
+        {
+          "name": "warning_messages",
+          "display_name": "warning_messages",
+          "description": "Warn on missing data.",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": true,
+          "display_name_short": "warning_messages",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": true,
+            "minimum": true,
+            "mean": true,
+            "deltaX": true,
+            "stdDev": true,
+            "default_value": true
+          },
+          "$$hashKey": "object:13414"
+        },
+        {
+          "name": "add_first_zero_for_plots",
+          "display_name": "add_first_zero_for_plots",
+          "description": "Add a point of zero value to the plot at the beginning of the runperiod.",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": false,
+          "display_name_short": "add_first_zero_for_plots",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": false,
+            "minimum": false,
+            "mean": false,
+            "deltaX": false,
+            "stdDev": false,
+            "default_value": false
+          },
+          "$$hashKey": "object:13415"
+        },
+        {
+          "name": "add_last_zero_for_plots",
+          "display_name": "add_last_zero_for_plots",
+          "description": "Add a point of zero value to the plot at the end of the runperiod.",
+          "type": "Boolean",
+          "required": true,
+          "model_dependent": false,
+          "default_value": false,
+          "display_name_short": "add_last_zero_for_plots",
+          "inputs": {
+            "relationship": null,
+            "choiceDisplayNames": [],
+            "variableSetting": "Argument",
+            "distribution": "Uniform",
+            "discreteVariables": [],
+            "maximum": false,
+            "minimum": false,
+            "mean": false,
+            "deltaX": false,
+            "stdDev": false,
+            "default_value": false
+          },
+          "$$hashKey": "object:13416"
+        }
+      ],
+      "edit": "",
+      "status": "",
+      "bcl_update": false,
+      "location": "my",
+      "add": "",
+      "open": true,
+      "addedToProject": true,
+      "date": "3/22/2018",
+      "author": "",
+      "type": "ReportingMeasure",
+      "seed": "in.osm",
+      "workflow_index": 25,
+      "options": [],
+      "instanceId": 0.1614383324378479,
+      "skip": false,
+      "$$hashKey": "object:13353",
+      "outputMeasure": true,
+      "userDefinedOutputs": [],
+      "analysisOutputs": [
+        {
+          "name": "cvrmse",
+          "display_name": "cvrmse",
+          "short_name": "cvrmse",
+          "description": "",
+          "type": "Double",
+          "units": "",
+          "model_dependent": false,
+          "$$hashKey": "object:31128",
+          "checked": true,
+          "visualize": "true",
+          "objective_function": "true",
+          "measure_name": "timeseries_objective_function",
+          "measure_class_name": "TimeseriesObjectiveFunction",
+          "measure_uid": "6804217d-4737-45f3-82df-b81393c29ce3"
+        }
+      ]
     }
   ],
-  "filesToInclude": [],
+  "filesToInclude": [
+    {
+      "dirToInclude": "calibration_data",
+      "unpackDirName": "resources",
+      "$$hashKey": "object:9036"
+    }
+  ],
   "serverScripts": {
     "server_initialization": {
       "file": null,
@@ -5726,9 +6431,10 @@
       "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "Option 1 Name",
       "cooling_setpoints_hourly_adjusted_by_degrees_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2_2": "Option 1 Name",
       "$$hashKey": "uiGrid-0734",
-      "openstudio_results": "None"
+      "openstudio_results": "None",
+      "timeseries_objective_function": "None"
     }
   ],
-  "analysisID": "e013655d-3a39-4938-9f45-1982016af529\r",
+  "analysisID": "1bc134d7-07fc-4e46-a72f-1dfc23622fc9\r",
   "datapoints": []
 }

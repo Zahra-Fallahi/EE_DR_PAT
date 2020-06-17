@@ -2,7 +2,22 @@
   "analysis": {
     "display_name": "Cooling_example",
     "name": "Cooling_example",
-    "output_variables": [],
+    "output_variables": [
+      {
+        "units": "",
+        "objective_function": true,
+        "objective_function_index": 0,
+        "objective_function_group": null,
+        "scaling_factor": null,
+        "display_name": "cvrmse",
+        "display_name_short": "cvrmse",
+        "metadata_id": null,
+        "name": "timeseries_objective_function.cvrmse",
+        "visualize": true,
+        "export": true,
+        "variable_type": "double"
+      }
+    ],
     "problem": {
       "workflow": [
         {
@@ -1097,13 +1112,204 @@
           ],
           "variables": [],
           "workflow_index": 24
+        },
+        {
+          "name": "timeseries_objective_function",
+          "display_name": "TimeSeries Objective Function",
+          "measure_type": "ReportingMeasure",
+          "measure_definition_class_name": "TimeseriesObjectiveFunction",
+          "measure_definition_directory": "./measures/TimeseriesObjectiveFunction",
+          "measure_definition_directory_local": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\TimeseriesObjectiveFunction",
+          "measure_definition_display_name": "TimeSeries Objective Function",
+          "measure_definition_name": "timeseries_objective_function",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "6804217d-4737-45f3-82df-b81393c29ce3",
+          "measure_definition_version_uuid": "d41b5fec-0640-4337-965c-e1515b34d80e",
+          "uuid": "6804217d-4737-45f3-82df-b81393c29ce3",
+          "version_uuid": "d41b5fec-0640-4337-965c-e1515b34d80e",
+          "description": "Creates Objective Function from Timeseries Data",
+          "taxonomy": "Reporting.QAQC",
+          "arguments": [
+            {
+              "display_name": "Path to CSV file for the metered data",
+              "display_name_short": "csv_name",
+              "name": "csv_name",
+              "value_type": "string",
+              "default_value": "../../../lib/resources/mtr.csv",
+              "value": "../../../lib/resources/in.csv"
+            },
+            {
+              "display_name": "CSV Time Header",
+              "display_name_short": "csv_time_header",
+              "name": "csv_time_header",
+              "value_type": "string",
+              "default_value": "Date/Time",
+              "value": "Date/Time"
+            },
+            {
+              "display_name": "CSV variable name",
+              "display_name_short": "csv_var",
+              "name": "csv_var",
+              "value_type": "string",
+              "default_value": "Whole Building:Facility Total Electric Demand Power [W](TimeStep)",
+              "value": "Electricity:Facility [J](TimeStep)"
+            },
+            {
+              "display_name": "Convert Units",
+              "display_name_short": "convert_data",
+              "name": "convert_data",
+              "value_type": "string",
+              "default_value": "None",
+              "value": "None"
+            },
+            {
+              "display_name": "CSV variable display name",
+              "display_name_short": "csv_var_dn",
+              "name": "csv_var_dn",
+              "value_type": "string",
+              "default_value": "Electricity:Facility [J](TimeStep)",
+              "value": "Electricity:Facility [J](TimeStep)"
+            },
+            {
+              "display_name": "Year in csv data timestamp",
+              "display_name_short": "year",
+              "name": "year",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": false
+            },
+            {
+              "display_name": "Seconds in csv data timestamp",
+              "display_name_short": "seconds",
+              "name": "seconds",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "SQL key value",
+              "display_name_short": "key_value",
+              "name": "key_value",
+              "value_type": "string",
+              "default_value": "Electricity:Facility",
+              "value": "Electricity:Facility"
+            },
+            {
+              "display_name": "TimeSeries Name",
+              "display_name_short": "timeseries_name",
+              "name": "timeseries_name",
+              "value_type": "string",
+              "default_value": "Facility Total Electric Demand Power",
+              "value": "Electricity:Facility"
+            },
+            {
+              "display_name": "Reporting Frequency",
+              "display_name_short": "reporting_frequency",
+              "name": "reporting_frequency",
+              "value_type": "string",
+              "default_value": "Timestep",
+              "value": "Timestep"
+            },
+            {
+              "display_name": "Environment Period",
+              "display_name_short": "environment_period",
+              "name": "environment_period",
+              "value_type": "string",
+              "default_value": "RUN PERIOD 1",
+              "value": "RUN PERIOD 1"
+            },
+            {
+              "display_name": "Norm of the difference of csv and sql",
+              "display_name_short": "norm",
+              "name": "norm",
+              "value_type": "double",
+              "default_value": 1,
+              "value": 1
+            },
+            {
+              "display_name": "Scale factor to apply to the difference",
+              "display_name_short": "scale",
+              "name": "scale",
+              "value_type": "double",
+              "default_value": 1,
+              "value": 1
+            },
+            {
+              "display_name": "Find Available data in the SQL file",
+              "display_name_short": "find_avail",
+              "name": "find_avail",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "algorithm_download",
+              "display_name_short": "algorithm_download",
+              "name": "algorithm_download",
+              "value_type": "boolean",
+              "default_value": false,
+              "value": false
+            },
+            {
+              "display_name": "plot_flag timeseries data",
+              "display_name_short": "plot_flag",
+              "name": "plot_flag",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Plot name",
+              "display_name_short": "plot_name",
+              "name": "plot_name",
+              "value_type": "string",
+              "default_value": "electricity",
+              "value": "electricity"
+            },
+            {
+              "display_name": "verbose_messages",
+              "display_name_short": "verbose_messages",
+              "name": "verbose_messages",
+              "value_type": "boolean",
+              "default_value": false,
+              "value": true
+            },
+            {
+              "display_name": "warning_messages",
+              "display_name_short": "warning_messages",
+              "name": "warning_messages",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "add_first_zero_for_plots",
+              "display_name_short": "add_first_zero_for_plots",
+              "name": "add_first_zero_for_plots",
+              "value_type": "boolean",
+              "default_value": false,
+              "value": false
+            },
+            {
+              "display_name": "add_last_zero_for_plots",
+              "display_name_short": "add_last_zero_for_plots",
+              "name": "add_last_zero_for_plots",
+              "value_type": "boolean",
+              "default_value": false,
+              "value": false
+            }
+          ],
+          "variables": [],
+          "workflow_index": 25
         }
       ],
       "algorithm": {
-        "seed": null,
+        "seed": 1,
         "failed_f_value": 1000000000000000000,
-        "debug_messages": 0,
-        "objective_functions": []
+        "debug_messages": 1,
+        "objective_functions": [
+          "timeseries_objective_function.cvrmse"
+        ]
       },
       "analysis_type": "single_run"
     },
