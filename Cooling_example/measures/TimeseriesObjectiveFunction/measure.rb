@@ -25,7 +25,7 @@ class TimeseriesObjectiveFunction < OpenStudio::Ruleset::ReportingUserScript
   end
 
   # define the arguments that the user will input
-  def arguments()
+  def arguments(model = nil)
     args = OpenStudio::Ruleset::OSArgumentVector.new
 
     # the name of the sql file
