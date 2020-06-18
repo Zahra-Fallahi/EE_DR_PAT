@@ -12,62 +12,9 @@
   "timeoutInitWorker": 28800,
   "remoteSettings": {
     "open": true,
-    "remoteType": "Existing Remote Server",
+    "remoteType": "Amazon Cloud",
     "remoteServerURL": "http://localhost:8080/",
-    "aws": {
-      "cluster_name": "EE_DR_test",
-      "connected": false,
-      "server_instance_type": {
-        "name": "m3.2xlarge",
-        "cpus": "8",
-        "memory": "30 GiB",
-        "storage": "2 x 80 GB",
-        "cost": "$0.56/hr"
-      },
-      "worker_instance_type": {
-        "name": "m3.medium",
-        "cpus": "1",
-        "memory": "3.75 GiB",
-        "storage": "1 x 4 GB",
-        "cost": "$0.07/hr"
-      },
-      "user_id": "zfallahi",
-      "worker_node_number": 0,
-      "aws_tags": [],
-      "openstudio_server_version": {
-        "name": "3.0.0",
-        "notes": null,
-        "standards": {
-          "ref": "0.2.11",
-          "repo": "nrel/openstudio-standards"
-        },
-        "workflow": {
-          "ref": "2.0.0",
-          "repo": "nrel/openstudio-workflow-gem"
-        },
-        "energyplus": "9.3",
-        "radiance": "NREL 5.0.a",
-        "analysis": {
-          "ref": "1.0.2",
-          "repo": "nrel/openstudio-analysis-gem"
-        },
-        "openstudio": {
-          "version_number": "3.0.0",
-          "version_sha": "1c9617fa4e",
-          "url_base": "https://s3.amazonaws.com/openstudio-builds/NUMBER/OpenStudio-NUMBER.SHA-Linux.deb"
-        },
-        "server": {
-          "ref": "a43d33438a8fd6f904c1a4a58b154db5fcb2b24b",
-          "repo": "nrel/openstudio-server"
-        },
-        "R": "3.6.1",
-        "ami": "ami-037ca03cca51aef46"
-      },
-      "cluster_status": "terminated",
-      "server": {
-        "dns": null
-      }
-    },
+    "aws": {},
     "credentials": {
       "yamlFilename": "zfallahi",
       "accessKey": "AKIA****",
@@ -75,11 +22,155 @@
     }
   },
   "samplingMethod": {
-    "id": "single_run",
-    "name": "analysis.type.singleRun",
-    "link": null
+    "id": "pso",
+    "name": "analysis.type.pso",
+    "link": "https://cran.r-project.org/web/packages/hydroPSO/hydroPSO.pdf"
   },
   "algorithmSettings": [
+    {
+      "name": "npart",
+      "displayName": "Number of Particles",
+      "description": "Number of particles in the swarm",
+      "defaultValue": 4,
+      "type": "number",
+      "value": 4,
+      "$$hashKey": "object:10754"
+    },
+    {
+      "name": "maxit",
+      "displayName": "Max Iterations",
+      "description": "Maximum number of iterations",
+      "defaultValue": 20,
+      "type": "number",
+      "value": 4,
+      "$$hashKey": "object:10755"
+    },
+    {
+      "name": "maxfn",
+      "displayName": "Max Function Evaluations",
+      "description": "Maximum number of function evaluations",
+      "defaultValue": 1000,
+      "type": "number",
+      "value": 1000,
+      "$$hashKey": "object:10756"
+    },
+    {
+      "name": "lambda",
+      "displayName": "Lambda",
+      "description": "[0,1] a percentage to limit the maximum velocity (Vmax) for each dimension",
+      "defaultValue": 0.9,
+      "type": "number",
+      "value": 0.9,
+      "$$hashKey": "object:10757"
+    },
+    {
+      "name": "c2",
+      "displayName": "C2",
+      "description": "Social acceleration coefficient",
+      "defaultValue": 1.193147,
+      "type": "number",
+      "value": 1.193147,
+      "$$hashKey": "object:10758"
+    },
+    {
+      "name": "c1",
+      "displayName": "C1",
+      "description": "Cognitive acceleration coefficient",
+      "defaultValue": 1.193147,
+      "type": "number",
+      "value": 1.193147,
+      "$$hashKey": "object:10759"
+    },
+    {
+      "name": "boundary",
+      "displayName": "Boundary",
+      "description": "Options: invisible, damping, reflecting, absorbing2007, absorbing2011, default",
+      "defaultValue": "reflecting",
+      "type": "string",
+      "value": "reflecting",
+      "$$hashKey": "object:10760"
+    },
+    {
+      "name": "topology",
+      "displayName": "Topology",
+      "description": "Options: gbest, lbest, vonneumann, random",
+      "defaultValue": "random",
+      "type": "string",
+      "value": "random",
+      "$$hashKey": "object:10761"
+    },
+    {
+      "name": "xini",
+      "displayName": "Xini",
+      "description": "Options: lhs, random",
+      "defaultValue": "lhs",
+      "type": "string",
+      "value": "lhs",
+      "$$hashKey": "object:10762"
+    },
+    {
+      "name": "vini",
+      "displayName": "Vini",
+      "description": "Options: zero, lhs2011, random2011, lhs2007, random2007, default",
+      "defaultValue": "lhs2011",
+      "type": "string",
+      "value": "lhs2011",
+      "$$hashKey": "object:10763"
+    },
+    {
+      "name": "abstol",
+      "displayName": "Abs Tol",
+      "description": "Absolute convergence tolerance",
+      "defaultValue": 0.01,
+      "type": "number",
+      "value": 0.01,
+      "$$hashKey": "object:10764"
+    },
+    {
+      "name": "reltol",
+      "displayName": "Rel Tol",
+      "description": "Relative convergence tolerance",
+      "defaultValue": 0.01,
+      "type": "number",
+      "value": 0.01,
+      "$$hashKey": "object:10765"
+    },
+    {
+      "name": "method",
+      "displayName": "Method",
+      "description": "Options: spso2007, spso2011, ipso, fips, wfips",
+      "defaultValue": "spso2011",
+      "type": "string",
+      "value": "spso2011",
+      "$$hashKey": "object:10766"
+    },
+    {
+      "name": "norm_type",
+      "displayName": "Norm Type",
+      "description": "Options: minkowski, maximum, euclidean, binary, manhattan",
+      "defaultValue": "minkowski",
+      "type": "string",
+      "value": "minkowski",
+      "$$hashKey": "object:10767"
+    },
+    {
+      "name": "p_power",
+      "displayName": "P Power",
+      "description": "Lp norm power (must be non-negative)",
+      "defaultValue": 2,
+      "type": "number",
+      "value": 2,
+      "$$hashKey": "object:10768"
+    },
+    {
+      "name": "exit_on_guideline_14",
+      "displayName": "Exit on Guideline 14?",
+      "description": "Options: O (off), 1 (both electric and gas), 2 (just electric), 3 (just gas)",
+      "defaultValue": 0,
+      "type": "number",
+      "value": 0,
+      "$$hashKey": "object:10769"
+    },
     {
       "name": "seed",
       "displayName": "Seed",
@@ -106,6 +197,15 @@
       "type": "number",
       "value": 1,
       "$$hashKey": "object:20940"
+    },
+    {
+      "name": "max_queued_jobs",
+      "displayName": "Max Queued Jobs",
+      "description": "Integer specifying the maximum number of queued jobs",
+      "defaultValue": 100,
+      "type": "number",
+      "value": 100,
+      "$$hashKey": "object:10770"
     }
   ],
   "rubyMD5": "",
@@ -242,7 +342,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": true
+            "showWarningIcon": false
           }
         },
         {
@@ -305,13 +405,13 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.9590396853654917,
+      "instanceId": 0.46422575426540913,
       "numberOfOptions": 1,
       "$$hashKey": "object:6880",
       "unlockStatus": true,
       "outputMeasure": false,
       "skip": false,
-      "showWarningText": true
+      "showWarningText": false
     },
     {
       "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
@@ -441,7 +541,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": true
+            "showWarningIcon": false
           }
         },
         {
@@ -504,13 +604,13 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.14697864475878752,
+      "instanceId": 0.34195839929720107,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:7170",
       "outputMeasure": false,
       "skip": false,
-      "showWarningText": true
+      "showWarningText": false
     },
     {
       "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
@@ -640,7 +740,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": true
+            "showWarningIcon": false
           }
         },
         {
@@ -703,13 +803,13 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.43554881328409234,
+      "instanceId": 0.32099207496261317,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:7492",
       "outputMeasure": false,
       "skip": false,
-      "showWarningText": true
+      "showWarningText": false
     },
     {
       "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
@@ -839,7 +939,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": true
+            "showWarningIcon": false
           }
         },
         {
@@ -902,13 +1002,13 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.7947443119826914,
+      "instanceId": 0.5362709237753998,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:7864",
       "outputMeasure": false,
       "skip": false,
-      "showWarningText": true
+      "showWarningText": false
     },
     {
       "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
@@ -1038,7 +1138,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": true
+            "showWarningIcon": false
           }
         },
         {
@@ -1101,13 +1201,13 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.7430172716892998,
+      "instanceId": 0.40298782811619716,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:8287",
       "outputMeasure": false,
       "skip": false,
-      "showWarningText": true
+      "showWarningText": false
     },
     {
       "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
@@ -1237,7 +1337,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": true
+            "showWarningIcon": false
           }
         },
         {
@@ -1300,13 +1400,13 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.5862765191445194,
+      "instanceId": 0.7851399098371981,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:8761",
       "outputMeasure": false,
       "skip": false,
-      "showWarningText": true
+      "showWarningText": false
     },
     {
       "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
@@ -1436,7 +1536,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": true
+            "showWarningIcon": false
           }
         },
         {
@@ -1499,13 +1599,13 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.3921699058582906,
+      "instanceId": 0.034352953128095054,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:9286",
       "outputMeasure": false,
       "skip": false,
-      "showWarningText": true
+      "showWarningText": false
     },
     {
       "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
@@ -1635,7 +1735,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": true
+            "showWarningIcon": false
           }
         },
         {
@@ -1698,13 +1798,13 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.4923134238430662,
+      "instanceId": 0.5635378124526884,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:9862",
       "outputMeasure": false,
       "skip": false,
-      "showWarningText": true
+      "showWarningText": false
     },
     {
       "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
@@ -1834,7 +1934,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": true
+            "showWarningIcon": false
           }
         },
         {
@@ -1897,13 +1997,13 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.2587420755442864,
+      "instanceId": 0.10731226502234725,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:10489",
       "outputMeasure": false,
       "skip": false,
-      "showWarningText": true
+      "showWarningText": false
     },
     {
       "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
@@ -2033,7 +2133,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": true
+            "showWarningIcon": false
           }
         },
         {
@@ -2096,13 +2196,13 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.8523768605597772,
+      "instanceId": 0.5528439309973137,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:11167",
       "outputMeasure": false,
       "skip": false,
-      "showWarningText": true
+      "showWarningText": false
     },
     {
       "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
@@ -2232,7 +2332,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": true
+            "showWarningIcon": false
           }
         },
         {
@@ -2295,13 +2395,13 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.29033390029179595,
+      "instanceId": 0.8045128307918668,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:11896",
       "outputMeasure": false,
       "skip": false,
-      "showWarningText": true
+      "showWarningText": false
     },
     {
       "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
@@ -2431,7 +2531,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": true
+            "showWarningIcon": false
           }
         },
         {
@@ -2494,13 +2594,13 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.5696883911821435,
+      "instanceId": 0.7352179453361971,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:12676",
       "outputMeasure": false,
       "skip": false,
-      "showWarningText": true
+      "showWarningText": false
     },
     {
       "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
@@ -2630,7 +2730,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": true
+            "showWarningIcon": false
           }
         },
         {
@@ -2693,13 +2793,13 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.07291183415664482,
+      "instanceId": 0.2963662568577903,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:13441",
       "outputMeasure": false,
       "skip": false,
-      "showWarningText": true
+      "showWarningText": false
     },
     {
       "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
@@ -2829,7 +2929,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": true
+            "showWarningIcon": false
           }
         },
         {
@@ -2892,13 +2992,13 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.3837479217522066,
+      "instanceId": 0.42059894865513514,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:14155",
       "outputMeasure": false,
       "skip": false,
-      "showWarningText": true
+      "showWarningText": false
     },
     {
       "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
@@ -3028,7 +3128,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": true
+            "showWarningIcon": false
           }
         },
         {
@@ -3091,13 +3191,13 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.7648347116048222,
+      "instanceId": 0.4133026343862145,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:14806",
       "outputMeasure": false,
       "skip": false,
-      "showWarningText": true
+      "showWarningText": false
     },
     {
       "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
@@ -3227,7 +3327,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": true
+            "showWarningIcon": false
           }
         },
         {
@@ -3290,13 +3390,13 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.24011124552004315,
+      "instanceId": 0.590140727633861,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:15361",
       "outputMeasure": false,
       "skip": false,
-      "showWarningText": true
+      "showWarningText": false
     },
     {
       "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
@@ -3426,7 +3526,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": true
+            "showWarningIcon": false
           }
         },
         {
@@ -3489,13 +3589,13 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.35238982506735317,
+      "instanceId": 0.7047160294693662,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:15844",
       "outputMeasure": false,
       "skip": false,
-      "showWarningText": true
+      "showWarningText": false
     },
     {
       "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
@@ -3625,7 +3725,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": true
+            "showWarningIcon": false
           }
         },
         {
@@ -3688,13 +3788,13 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.2605706560134289,
+      "instanceId": 0.15876315328505664,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:16345",
       "outputMeasure": false,
       "skip": false,
-      "showWarningText": true
+      "showWarningText": false
     },
     {
       "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
@@ -3824,7 +3924,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": true
+            "showWarningIcon": false
           }
         },
         {
@@ -3887,13 +3987,13 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.4373116985966985,
+      "instanceId": 0.6097086884697411,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:16777",
       "outputMeasure": false,
       "skip": false,
-      "showWarningText": true
+      "showWarningText": false
     },
     {
       "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
@@ -4023,7 +4123,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": true
+            "showWarningIcon": false
           }
         },
         {
@@ -4086,13 +4186,13 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.9975915876309813,
+      "instanceId": 0.7664119528791309,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:17260",
       "outputMeasure": false,
       "skip": false,
-      "showWarningText": true
+      "showWarningText": false
     },
     {
       "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
@@ -4222,7 +4322,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": true
+            "showWarningIcon": false
           }
         },
         {
@@ -4285,13 +4385,13 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.632662284506319,
+      "instanceId": 0.9520192366201907,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:19855",
       "outputMeasure": false,
       "skip": false,
-      "showWarningText": true
+      "showWarningText": false
     },
     {
       "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
@@ -4421,7 +4521,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": true
+            "showWarningIcon": false
           }
         },
         {
@@ -4484,13 +4584,13 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.47160037554878276,
+      "instanceId": 0.7394527877529791,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:20704",
       "outputMeasure": false,
       "skip": false,
-      "showWarningText": true
+      "showWarningText": false
     },
     {
       "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
@@ -4620,7 +4720,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": true
+            "showWarningIcon": false
           }
         },
         {
@@ -4683,13 +4783,13 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.5923118889446688,
+      "instanceId": 0.13026096380673602,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:21232",
       "outputMeasure": false,
       "skip": false,
-      "showWarningText": true
+      "showWarningText": false
     },
     {
       "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\cooling_setpoints_hourly_adjusted_by_degrees",
@@ -4819,7 +4919,7 @@
             "deltaX": 0,
             "stdDev": 2,
             "default_value": 24,
-            "showWarningIcon": true
+            "showWarningIcon": false
           }
         },
         {
@@ -4882,13 +4982,13 @@
           "description": "Option 1 Description: Cooling Setpoints Hourly Adjusted by Degrees. Determines optimal cooling temperature ranges for load shaping of baseline load to meet the demand response of the target load\n"
         }
       ],
-      "instanceId": 0.5658738234415308,
+      "instanceId": 0.6297429513849262,
       "numberOfOptions": 1,
       "unlockStatus": true,
       "$$hashKey": "object:21688",
       "outputMeasure": false,
       "skip": false,
-      "showWarningText": true
+      "showWarningText": false
     },
     {
       "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\1d1137b1-f65f-4af8-86cd-8137e43fd36f",
@@ -5737,7 +5837,7 @@
       "seed": "in.osm",
       "workflow_index": 24,
       "options": [],
-      "instanceId": 0.6974608192048675,
+      "instanceId": 0.8426226267184924,
       "numberOfOptions": 0,
       "$$hashKey": "object:7037",
       "skip": false,
@@ -5749,7 +5849,7 @@
     {
       "measure_dir": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\TimeseriesObjectiveFunction",
       "name": "timeseries_objective_function",
-      "directory": "C:/Users/zahra/OpenStudio_git/measure_directory_my/TimeseriesObjectiveFunction",
+      "directory": "C:\\Users\\zahra\\OpenStudio_git\\PAT_test\\EE_DR_PAT\\Cooling_example\\measures\\TimeseriesObjectiveFunction",
       "uid": "6804217d-4737-45f3-82df-b81393c29ce3",
       "uuid": "{6804217d-4737-45f3-82df-b81393c29ce3}",
       "version_id": "b49a9711-be10-4194-9d29-485f3b28e925",
@@ -5857,7 +5957,8 @@
             "mean": "../../../lib/resources/mtr.csv",
             "deltaX": "../../../lib/resources/mtr.csv",
             "stdDev": "../../../lib/resources/mtr.csv",
-            "default_value": "../../../lib/resources/in.csv"
+            "default_value": "../../../lib/resources/in.csv",
+            "showWarningIcon": false
           },
           "$$hashKey": "object:5246"
         },
@@ -5881,7 +5982,8 @@
             "mean": "Date/Time",
             "deltaX": "Date/Time",
             "stdDev": "Date/Time",
-            "default_value": "Date/Time"
+            "default_value": "Date/Time",
+            "showWarningIcon": false
           },
           "$$hashKey": "object:5247"
         },
@@ -5905,7 +6007,8 @@
             "mean": "Whole Building:Facility Total Electric Demand Power [W](TimeStep)",
             "deltaX": "Whole Building:Facility Total Electric Demand Power [W](TimeStep)",
             "stdDev": "Whole Building:Facility Total Electric Demand Power [W](TimeStep)",
-            "default_value": "Electricity:Facility [J](TimeStep)"
+            "default_value": "Electricity:Facility [J](TimeStep)",
+            "showWarningIcon": false
           },
           "$$hashKey": "object:5248"
         },
@@ -5949,7 +6052,8 @@
             "mean": "None",
             "deltaX": "None",
             "stdDev": "None",
-            "default_value": "None"
+            "default_value": "None",
+            "showWarningIcon": false
           },
           "$$hashKey": "object:5249"
         },
@@ -5973,7 +6077,8 @@
             "mean": "",
             "deltaX": "",
             "stdDev": "",
-            "default_value": "Electricity:Facility [J](TimeStep)"
+            "default_value": "Electricity:Facility [J](TimeStep)",
+            "showWarningIcon": false
           },
           "$$hashKey": "object:5250"
         },
@@ -5997,7 +6102,8 @@
             "mean": true,
             "deltaX": true,
             "stdDev": true,
-            "default_value": false
+            "default_value": false,
+            "showWarningIcon": false
           },
           "$$hashKey": "object:5251"
         },
@@ -6021,7 +6127,8 @@
             "mean": true,
             "deltaX": true,
             "stdDev": true,
-            "default_value": true
+            "default_value": true,
+            "showWarningIcon": false
           },
           "$$hashKey": "object:5252"
         },
@@ -6045,7 +6152,8 @@
             "mean": "",
             "deltaX": "",
             "stdDev": "",
-            "default_value": "no_key"
+            "default_value": "no_key",
+            "showWarningIcon": false
           },
           "$$hashKey": "object:5253"
         },
@@ -6069,7 +6177,8 @@
             "mean": "Facility Total Electric Demand Power",
             "deltaX": "Facility Total Electric Demand Power",
             "stdDev": "Facility Total Electric Demand Power",
-            "default_value": "Electricity:Facility"
+            "default_value": "Electricity:Facility",
+            "showWarningIcon": false
           },
           "$$hashKey": "object:5254"
         },
@@ -6116,7 +6225,8 @@
             "mean": "",
             "deltaX": "",
             "stdDev": "",
-            "default_value": "Timestep"
+            "default_value": "Timestep",
+            "showWarningIcon": false
           },
           "$$hashKey": "object:5255"
         },
@@ -6140,7 +6250,8 @@
             "mean": "RUN PERIOD 1",
             "deltaX": "RUN PERIOD 1",
             "stdDev": "RUN PERIOD 1",
-            "default_value": "RUN PERIOD 1"
+            "default_value": "RUN PERIOD 1",
+            "showWarningIcon": false
           },
           "$$hashKey": "object:5256"
         },
@@ -6167,7 +6278,8 @@
             "mean": 1,
             "deltaX": 1,
             "stdDev": 1,
-            "default_value": 1
+            "default_value": 1,
+            "showWarningIcon": false
           },
           "$$hashKey": "object:5257"
         },
@@ -6194,7 +6306,8 @@
             "mean": 1,
             "deltaX": 1,
             "stdDev": 1,
-            "default_value": 1
+            "default_value": 1,
+            "showWarningIcon": false
           },
           "$$hashKey": "object:5258"
         },
@@ -6218,7 +6331,8 @@
             "mean": true,
             "deltaX": true,
             "stdDev": true,
-            "default_value": true
+            "default_value": true,
+            "showWarningIcon": false
           },
           "$$hashKey": "object:5259"
         },
@@ -6242,7 +6356,8 @@
             "mean": false,
             "deltaX": false,
             "stdDev": false,
-            "default_value": false
+            "default_value": false,
+            "showWarningIcon": false
           },
           "$$hashKey": "object:5260"
         },
@@ -6266,7 +6381,8 @@
             "mean": true,
             "deltaX": true,
             "stdDev": true,
-            "default_value": true
+            "default_value": true,
+            "showWarningIcon": false
           },
           "$$hashKey": "object:5261"
         },
@@ -6290,7 +6406,8 @@
             "mean": "",
             "deltaX": "",
             "stdDev": "",
-            "default_value": "electricity"
+            "default_value": "electricity",
+            "showWarningIcon": false
           },
           "$$hashKey": "object:5262"
         },
@@ -6314,7 +6431,8 @@
             "mean": false,
             "deltaX": false,
             "stdDev": false,
-            "default_value": false
+            "default_value": false,
+            "showWarningIcon": false
           },
           "$$hashKey": "object:5263"
         },
@@ -6338,7 +6456,8 @@
             "mean": true,
             "deltaX": true,
             "stdDev": true,
-            "default_value": true
+            "default_value": true,
+            "showWarningIcon": false
           },
           "$$hashKey": "object:5264"
         },
@@ -6362,7 +6481,8 @@
             "mean": false,
             "deltaX": false,
             "stdDev": false,
-            "default_value": false
+            "default_value": false,
+            "showWarningIcon": false
           },
           "$$hashKey": "object:5265"
         },
@@ -6386,7 +6506,8 @@
             "mean": false,
             "deltaX": false,
             "stdDev": false,
-            "default_value": false
+            "default_value": false,
+            "showWarningIcon": false
           },
           "$$hashKey": "object:5266"
         }
@@ -6404,7 +6525,7 @@
       "seed": "in.osm",
       "workflow_index": 25,
       "options": [],
-      "instanceId": 0.6073673306841019,
+      "instanceId": 0.7939877113981169,
       "skip": false,
       "$$hashKey": "object:5202",
       "outputMeasure": true,
@@ -6426,7 +6547,8 @@
           "measure_class_name": "TimeseriesObjectiveFunction",
           "measure_uid": "6804217d-4737-45f3-82df-b81393c29ce3"
         }
-      ]
+      ],
+      "showWarningText": false
     }
   ],
   "filesToInclude": [
@@ -6488,6 +6610,6 @@
       "timeseries_objective_function": "None"
     }
   ],
-  "analysisID": "08f1e2b7-1c77-4eff-99cd-9cde46cd6842\r",
+  "analysisID": null,
   "datapoints": []
 }
